@@ -1,0 +1,4 @@
+#+TITLE:	Linux
+#+HUGO_BASE_DIR: ../../../
+#+HUGO_SECTION: /posts/Linux
+#+hugo_menu: :menu sidebar :name Linux :identifier linux :weight auto
