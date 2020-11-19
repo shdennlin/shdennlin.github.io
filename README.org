@@ -1,0 +1,27 @@
+#+STARTUP: content
+#+TITLE:	Shdennlin's Blog
+#+AUTHOR:	Shawn Dennis Lin
+#+EMAIL:	ShawnDennisLin@gmail.com
+#+DATE:	[2020-11-20 Fri]
+
+[[https://actions-badge.atrox.dev/shdennlin/shdennlin.github.io/goto?ref=source][https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fshdennlin%2Fshdennlin.github.io%2Fbadge%3Fref%3Dsource&style=flat]]
+[[https://img.shields.io/github/repo-size/shdennlin/shdennlin.github.io][https://img.shields.io/github/repo-size/shdennlin/shdennlin.github.io.svg]]
+[[https://img.shields.io/github/last-commit/shdennlin/shdennlin.github.io][https://img.shields.io/github/last-commit/shdennlin/shdennlin.github.io.svg]]
+[[https://github.com/shdennlin/shdennlin.github.io/network][https://img.shields.io/github/forks/shdennlin/shdennlin.github.io.svg]]
+[[https://github.com/shdennlin/shdennlin.github.io/issues][https://img.shields.io/github/issues/shdennlin/shdennlin.github.io.svg]]
+[[https://github.com/shdennlin/shdennlin.github.io/stargazers][https://img.shields.io/github/stars/shdennlin/shdennlin.github.io.svg]]
+# [[https://raw.githubusercontent.com/shdennlin/shdennlin.github.io/image-data/LoC_badge][https://raw.githubusercontent.com/shdennlin/shdennlin.github.io/image-data/LoC_badge.svg]]
+# [[https://github.com/shdennlin/shdennlin.github.io/releases][https://img.shields.io/github/release/shdennlin/shdennlin.github.io.svg]]
+
+
+
+* Table of Contents                                      :TOC_2_gh:noexport:
+- [[#preview][Preview]]
+- [[#page-details][Page-Details]]
+- [[#usage][Usage]]
+
+* Preview
+
+* Page-Details
+
+* Usage

@@ -34,3 +34,14 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: main # if your main branch is `master` use that here.
         publish_dir: ./public
+
+    # # Count project Lines of Code & generate a badge for display.
+    # - name: Make Code Badge
+    #   uses: shdennlin/shdennlin.github.io
+    #   id: LoC-badge
+    #   with:
+    #     debug: true
+    #     directory: ./
+    #     badge: ./output/LoC_badge.svg
+    #     patterns: '*.js'  # Patterns in the format of a '.gitignore' file, separated by pipes.
+    #     ignore: 'node_modules'

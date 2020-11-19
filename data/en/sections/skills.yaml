@@ -20,6 +20,7 @@ skills:
 - name: Linux
   icon: "/images/sections/skills/linux.png"
   summary: "Using as the main operating system. Capable of writing bash/shell scripts."
+  url: "https://www.linux.org/"
 
 - name: Git
   icon: "/images/sections/skills/git.png"
@@ -29,7 +30,9 @@ skills:
 - name: python
   icon: "/images/sections/skills/python.png"
   summary: "Know basic python programming. Used for contest programming and problem solving."
+  url: "https://www.python.org/"
 
 - name: spacemacs
   icon: "/images/sections/skills/spacemacs.png"
   summary: "Use spacemacs to programming. Passionate about enhancing the efficiency of the programming"
+  url: "https://www.spacemacs.org/"
