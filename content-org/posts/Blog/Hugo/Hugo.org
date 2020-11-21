@@ -19,7 +19,7 @@
 #+HUGO_DRAFT: false
 #+hugo_custom_front_matter: :hero /posts/Blog/Hugo/images/Hugo.png
 
-This is my note for Hugo
+This is my note for Hugo.
 
 #+HUGO: more
 
@@ -52,5 +52,20 @@ You can find the theme from [[https://themes.gohugo.io/][themes.gohugo.io]], the
 - [[https://ox-hugo.scripter.co/][ox-hugo]] 
 - [[https://www.xianmin.org/post/ox-hugo/][博客写作流程之工具篇： emacs, orgmode, hugo & ox-hugo]]
 - [[https://www.shanesveller.com/blog/2018/02/13/blogging-with-org-mode-and-ox-hugo/][Blogging with org-mode and ox-hugo]]
-
    
+*** useful plugins in emacs
+1. [[https://github.com/kaushalmodi/ox-hugo/tree/f24c9bd522ae22bee2327c2b53858d0a5066707d][ox-hugo]](Github)
+
+   ~ox-hugo~ is an Org exporter backend that exports Org to Hugo-compatible Markdown (Blackfriday) and also generates the front-matter (in TOML or YAML format).
+   
+   If you use spacemacs, you can use ~, e e H~ or ~SPC m e e H~ to export org file to markdown.
+   For More information about spacemacs , please see [[https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bemacs/org][spacemacs/org]].
+   
+3. [[https://github.com/masasam/emacs-easy-hugo/tree/dffe165de354c2e6dc16510edad09839e69fdd35][eaxy-hugo]](Github)
+4. [[https://github.com/rejeep/prodigy.el/tree/6ae71f27b09b172f03fb55b9eeef001206baacd3][prodigy]](Github)
+   
+   Manage external services from within Emacs.
+   If you use spacemacs, you can use ~<SPC> a t p~ to see a list of all defined services.
+   For More information about spacemacs , please see [[https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Btools/prodigy][spacemacs/prodigy]].
+
+

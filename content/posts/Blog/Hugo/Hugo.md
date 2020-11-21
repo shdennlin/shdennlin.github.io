@@ -2,7 +2,7 @@
 title = "Hugo and org-mode"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-15T00:00:00+08:00
-lastmod = 2020-11-19T00:31:34+08:00
+lastmod = 2020-11-21T18:11:37+08:00
 tags = ["Hugo", "org-mode"]
 categories = ["Blog"]
 draft = false
@@ -14,7 +14,7 @@ hero = "/posts/Blog/Hugo/images/Hugo.png"
   name = "Hugo and org-mode"
 +++
 
-This is my note for Hugo
+This is my note for Hugo.
 
 <!--more-->
 
@@ -67,3 +67,20 @@ You can find the theme from [themes.gohugo.io](https://themes.gohugo.io/), these
 -   [ox-hugo](https://ox-hugo.scripter.co/)
 -   [博客写作流程之工具篇： emacs, orgmode, hugo & ox-hugo](https://www.xianmin.org/post/ox-hugo/)
 -   [Blogging with org-mode and ox-hugo](https://www.shanesveller.com/blog/2018/02/13/blogging-with-org-mode-and-ox-hugo/)
+
+
+### useful plugins in emacs {#useful-plugins-in-emacs}
+
+1.  [ox-hugo](https://github.com/kaushalmodi/ox-hugo/tree/f24c9bd522ae22bee2327c2b53858d0a5066707d)(Github)
+
+    `ox-hugo` is an Org exporter backend that exports Org to Hugo-compatible Markdown (Blackfriday) and also generates the front-matter (in TOML or YAML format).
+
+    If you use spacemacs, you can use `, e e H` or `SPC m e e H` to export org file to markdown.
+    For More information about spacemacs , please see [spacemacs/org](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bemacs/org).
+
+2.  [eaxy-hugo](https://github.com/masasam/emacs-easy-hugo/tree/dffe165de354c2e6dc16510edad09839e69fdd35)(Github)
+3.  [prodigy](https://github.com/rejeep/prodigy.el/tree/6ae71f27b09b172f03fb55b9eeef001206baacd3)(Github)
+
+    Manage external services from within Emacs.
+    If you use spacemacs, you can use `<SPC> a t p` to see a list of all defined services.
+    For More information about spacemacs , please see [spacemacs/prodigy](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Btools/prodigy).
