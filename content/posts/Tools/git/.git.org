@@ -1,0 +1,26 @@
+#+STARTUP: content
+#+OPTIONS: \n:t
+#+TITLE:	git
+#+EXPORT_FILE_NAME:	git
+#+AUTHOR:	Shawn Dennis Lin
+#+EMAIL:	ShawnDennisLin@gmail.com
+#+DATE:	[2020-11-30 Mon]
+
+#+HUGO_WEIGHT: auto
+#+HUGO_AUTO_SET_LASTMOD: t
+
+#+SEQ_TODO: TODO DRAFT DONE
+#+PROPERTY: header-args :eval no
+
+#+HUGO_BASE_DIR: ~/shdennlin.github.io
+#+HUGO_SECTION: /posts/Tools/git/
+
+#+hugo_menu: :menu sidebar :name  :identifier  :parent :weight auto
+#+HUGO_CATEGORIES: 
+#+HUGO_TAGS: 
+#+HUGO_DRAFT: false
+#+hugo_custom_front_matter: :hero 
+
+My note for git, there have many useful site to explain git command.
+
+#+HUGO: more

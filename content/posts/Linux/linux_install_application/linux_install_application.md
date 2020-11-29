@@ -2,7 +2,7 @@
 title = "Linux Install Application"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-19T00:00:00+08:00
-lastmod = 2020-11-29T21:31:09+08:00
+lastmod = 2020-11-30T00:23:49+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false

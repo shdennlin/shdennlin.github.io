@@ -13,7 +13,7 @@
 #+PROPERTY: header-args :eval no
 
 #+HUGO_BASE_DIR: ~/shdennlin.github.io
-#+HUGO_SECTION: /posts/Linux/linux_install_application
+#+HUGO_SECTION: /posts/Linux/linux_install_application/
 
 #+hugo_menu: :menu sidebar :name Linux Install Application :identifier linux-install-app :parent linux :weight auto
 #+HUGO_CATEGORIES: OS
