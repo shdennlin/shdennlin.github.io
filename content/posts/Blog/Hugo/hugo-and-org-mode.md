@@ -2,7 +2,7 @@
 title = "Hugo and Org-mode"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-15T00:00:00+08:00
-lastmod = 2020-11-30T18:44:52+08:00
+lastmod = 2020-11-30T21:48:08+08:00
 tags = ["Hugo", "org-mode"]
 categories = ["Blog"]
 draft = false

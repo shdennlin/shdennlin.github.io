@@ -1,7 +1,7 @@
 #+STARTUP: content
 #+OPTIONS: \n:t
 #+TITLE:	Hugo and Org-mode
-#+EXPORT_FILE_NAME: hugo
+#+EXPORT_FILE_NAME: hugo-and-org-mode
 #+AUTHOR:	Shawn Dennis Lin
 #+EMAIL:	ShawnDennisLin@gmail.com
 #+DATE:	[2020-11-15 Wed]

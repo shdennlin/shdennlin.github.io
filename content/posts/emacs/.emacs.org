@@ -1,0 +1,65 @@
+#+STARTUP: content
+#+OPTIONS: \n:t
+#+TITLE:	EMACS
+#+EXPORT_FILE_NAME: emacs
+#+AUTHOR:	Shawn Dennis Lin
+#+EMAIL:	ShawnDennisLin@gmail.com
+#+DATE:	[2020-11-24 Tue]
+
+#+HUGO_WEIGHT: auto
+#+HUGO_AUTO_SET_LASTMOD: t
+
+#+SEQ_TODO: TODO DRAFT DONE
+#+PROPERTY: header-args :eval no
+
+#+HUGO_BASE_DIR: ~/shdennlin.github.io
+#+HUGO_SECTION: /posts/emacs/
+
+#+hugo_menu: :menu sidebar :name Emacs :identifier emacs :weight auto
+#+HUGO_CATEGORIES: Editor tool
+#+HUGO_TAGS: emacs
+#+HUGO_DRAFT: false
+#+hugo_custom_front_matter: :hero /posts/emacs/images/emacs.png
+
+My Emacs note.
+
+#+HUGO: more
+
+* Table of Contents                                       :TOC_2_gh:noexport:
+- [[#org-mode][org mode]]
+  - [[#fundamental][fundamental]]
+  - [[#table][table]]
+  - [[#summary-of-in-buffer-settings][Summary of In-Buffer Settings]]
+
+* org mode
+
+** fundamental
+- [[https://mattduck.github.io/generic-css/demo/org-demo.html#Tables][Org-mode Frequently Asked Questions]](very useful)
+- [[https://www.johneyzheng.top/2019/01/Org_mode/][Org-mode基本功能]]
+- [[http://fuzihao.org/blog/2015/02/19/org-mode%E6%95%99%E7%A8%8B/][org-mode入門教程]]
+- [[https://www.wenhui.space/docs/02-emacs/emacs_org_mode/][emacs org-mode 的使用]]
+- add date
+   - use ~C-c .~ or ~<SPC> d t~ (Spacemacs) to insert date like [%Y-%m-%d %a]
+   - use ~C-c !~ or ~<SPC> d T~ (Spacemacs) to insert date like <%Y-%m-%d %a>
+- [[https://orgmode.org/manual/Structure-of-Code-Blocks.html][Structure of Code Blocks]]
+   - [[https://orgmode.org/manual/Languages.html#Languages][Code Blocks Languages]]
+      
+** table
+- In spacemacs, you can use ~, t t o~ or ~M-x org-table-toggle-coordinate-overlays~ to toggle table coordinate.
+        
+** [[https://orgmode.org/manual/In_002dbuffer-Settings.html][Summary of In-Buffer Settings]] 
+*** ~#+OPTIONS: num:t~
+在 github 上會顯示標號，如1 1 1.1 1.2 1.1.1等
+
+*** ~#+STARTUP:~
+|                |                           |
+|----------------+---------------------------|
+| overview       | top-level headlines only  |
+| content        | all headlines             |
+| showall        | no folding of any entries |
+| showeverything | show even drawer contents |
+
+   
+   
+   
+   
