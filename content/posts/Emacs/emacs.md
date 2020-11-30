@@ -2,11 +2,11 @@
 title = "EMACS"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-24T00:00:00+08:00
-lastmod = 2020-11-29T21:31:19+08:00
+lastmod = 2020-11-30T19:08:08+08:00
 tags = ["emacs"]
 categories = ["Editor", "tool"]
 draft = false
-hero = "/posts/Emacs/images/emacs.png"
+hero = "/posts/emacs/images/emacs.png"
 [menu.sidebar]
   weight = "auto"
   identifier = "emacs"

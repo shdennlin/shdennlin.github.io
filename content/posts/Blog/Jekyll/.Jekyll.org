@@ -1,7 +1,7 @@
 #+STARTUP: content
 #+OPTIONS: \n:t
 #+TITLE:	Jekyll
-#+EXPORT_FILE_NAME: Jekyll
+#+EXPORT_FILE_NAME: jekyll
 #+AUTHOR:	Shawn Dennis Lin
 #+EMAIL:	ShawnDennisLin@gmail.com
 #+DATE:	[2020-11-18 Wed]
@@ -13,13 +13,13 @@
 #+PROPERTY: header-args :eval no
 
 #+HUGO_BASE_DIR: ~/shdennlin.github.io
-#+HUGO_SECTION: /posts/Blog/Jekyll
+#+HUGO_SECTION: /posts/blog/jekyll
 
 #+hugo_menu: :menu sidebar :name Jkeyll :identifier blog-jekyll :parent blog :weight auto
 #+HUGO_CATEGORIES: Blog
 #+HUGO_TAGS: Jekyll
 #+HUGO_DRAFT: false
-#+hugo_custom_front_matter: :hero /posts/Blog/Jekyll/images/Jekyll.png
+#+hugo_custom_front_matter: :hero /posts/blog/jekyll/images/jekyll.png
 
 This is my note for Jkeyll
 
