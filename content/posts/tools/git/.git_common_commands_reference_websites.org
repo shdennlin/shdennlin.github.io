@@ -33,6 +33,7 @@ My note for git, there have many useful site to explain git command.
 - [[https://blog.poychang.net/gitignore-and-delete-untracked-files/][更新成符合 .gitignore 設定的追蹤狀態]]
 - [[https://stackoverflow.com/questions/35942754/how-to-save-username-and-password-in-git][auto save username and password in Git]]
 - [[https://kuanghy.github.io/2017/03/19/git-lf-or-crlf][Git 多平台换行符问题(LF or CRLF)]]
+- [[https://gitbook.tw/posts/2018-06-05-case-sensitive][關於檔名的大小寫]]
    
 ** Common Command Reference Websites
 | Command   | Ref1                           |

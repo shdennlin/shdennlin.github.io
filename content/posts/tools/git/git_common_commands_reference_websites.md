@@ -2,7 +2,7 @@
 title = "Git Common Commands Reference Websites"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-30T00:00:00+08:00
-lastmod = 2020-11-30T19:12:17+08:00
+lastmod = 2020-11-30T22:01:46+08:00
 tags = ["git"]
 categories = ["Tools"]
 draft = false
@@ -31,6 +31,7 @@ My note for git, there have many useful site to explain git command.
 -   [更新成符合 .gitignore 設定的追蹤狀態](https://blog.poychang.net/gitignore-and-delete-untracked-files/)
 -   [auto save username and password in Git](https://stackoverflow.com/questions/35942754/how-to-save-username-and-password-in-git)
 -   [Git 多平台换行符问题(LF or CRLF)](https://kuanghy.github.io/2017/03/19/git-lf-or-crlf)
+-   [關於檔名的大小寫](https://gitbook.tw/posts/2018-06-05-case-sensitive)
 
 
 ## Common Command Reference Websites {#common-command-reference-websites}
