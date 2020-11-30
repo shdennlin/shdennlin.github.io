@@ -1,4 +1,0 @@
-#+TITLE:	Blog
-#+HUGO_BASE_DIR: ../../../
-#+HUGO_SECTION: /posts/Blog
-#+hugo_menu: :menu sidebar :name Blog :identifier blog :weight auto
