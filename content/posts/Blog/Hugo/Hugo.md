@@ -1,17 +1,17 @@
 +++
-title = "Hugo and org-mode"
+title = "Hugo and Org-mode"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-15T00:00:00+08:00
-lastmod = 2020-11-29T21:27:03+08:00
+lastmod = 2020-11-30T18:44:52+08:00
 tags = ["Hugo", "org-mode"]
 categories = ["Blog"]
 draft = false
-hero = "/posts/Blog/Hugo/images/Hugo.png"
+hero = "/posts/blog/hugo/images/hugo.png"
 [menu.sidebar]
   parent = "blog"
   weight = "auto"
   identifier = "blog-hugo-and-org-mode"
-  name = "Hugo and org-mode"
+  name = "Hugo and Org-mode"
 +++
 
 This is my note for Hugo + Emacs.  

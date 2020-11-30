@@ -2,11 +2,11 @@
 title = "Jekyll"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-18T00:00:00+08:00
-lastmod = 2020-11-29T21:27:23+08:00
+lastmod = 2020-11-30T19:07:50+08:00
 tags = ["Jekyll"]
 categories = ["Blog"]
 draft = false
-hero = "/posts/Blog/Jekyll/images/Jekyll.png"
+hero = "/posts/blog/jekyll/images/jekyll.png"
 [menu.sidebar]
   parent = "blog"
   weight = "auto"

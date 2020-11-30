@@ -13,13 +13,13 @@
 #+PROPERTY: header-args :eval no
 
 #+HUGO_BASE_DIR: ~/shdennlin.github.io
-#+HUGO_SECTION: /posts/Emacs/
+#+HUGO_SECTION: /posts/emacs/
 
 #+hugo_menu: :menu sidebar :name Emacs :identifier emacs :weight auto
 #+HUGO_CATEGORIES: Editor tool
 #+HUGO_TAGS: emacs
 #+HUGO_DRAFT: false
-#+hugo_custom_front_matter: :hero /posts/Emacs/images/emacs.png
+#+hugo_custom_front_matter: :hero /posts/emacs/images/emacs.png
 
 My Emacs note.
 

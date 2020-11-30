@@ -13,13 +13,13 @@
 #+PROPERTY: header-args :eval no
 
 #+HUGO_BASE_DIR: ~/shdennlin.github.io
-#+HUGO_SECTION: /posts/Linux/linux_install_application/
+#+HUGO_SECTION: /posts/linux/linux_install_application/
 
 #+hugo_menu: :menu sidebar :name Linux Install Application :identifier linux-install-app :parent linux :weight auto
 #+HUGO_CATEGORIES: OS
 #+HUGO_TAGS: linux
 #+HUGO_DRAFT: false
-#+hugo_custom_front_matter: :hero /posts/Linux/linux_install_application/images/linux.png
+#+hugo_custom_front_matter: :hero /posts/linux/linux_install_application/images/linux.png
 
 These are the applications I installed in linux. If you have any questions about these apps, you can contact me.
 
