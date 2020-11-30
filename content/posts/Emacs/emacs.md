@@ -2,7 +2,7 @@
 title = "EMACS"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-24T00:00:00+08:00
-lastmod = 2020-11-24T13:13:59+08:00
+lastmod = 2020-11-29T21:31:19+08:00
 tags = ["emacs"]
 categories = ["Editor", "tool"]
 draft = false

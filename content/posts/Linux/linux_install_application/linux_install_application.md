@@ -2,9 +2,9 @@
 title = "Linux Install Application"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-19T00:00:00+08:00
-lastmod = 2020-11-19T01:37:50+08:00
+lastmod = 2020-11-30T00:23:49+08:00
 tags = ["linux"]
-categories = ["linux"]
+categories = ["OS"]
 draft = false
 hero = "/posts/Linux/linux_install_application/images/linux.png"
 [menu.sidebar]
@@ -14,7 +14,7 @@ hero = "/posts/Linux/linux_install_application/images/linux.png"
   name = "Linux Install Application"
 +++
 
-These are the applications I installed in linux. If you have any questions about these apps, you can contact me.
+These are the applications I installed in linux. If you have any questions about these apps, you can contact me.  
 
 <!--more-->
 
@@ -28,7 +28,7 @@ These are the applications I installed in linux. If you have any questions about
 sudo apt-get update && sudo apt-get -y upgrade
 ```
 
-or
+or  
 
 ```shell
 sudo apt-get update && sudo apt-get -y dist-upgrade
@@ -71,7 +71,7 @@ sudo apt-get install -y fcitx fcitx-table-boshiamy fcitx-chewing
 ```shell
 sudo apt install -y gnome-tweaks gnome-shell-extensions &&\
 sudo apt install -y chrome-gnome-shell &&\
-sudo apt purge gnome-shell-extenion-appindicator
+sudo apt purge gnome-shell-extenion-appindicator 
 
 sudo apt install gnome-shell-extension-pixelsaver &&\
 sudo apt install gnome-shell-extension-remove-dropdown-arrows &&\
@@ -122,7 +122,7 @@ sudo apt-get install -y boot-repair && boot-repair
 
 ### bpytop {#bpytop}
 
-Resource monitor that shows usage and stats for processor, memory, disks, network and processes. Python port of bashtop.
+Resource monitor that shows usage and stats for processor, memory, disks, network and processes. Python port of bashtop.  
 
 ```shell
 cd ~/Downloads &&\
@@ -136,7 +136,7 @@ sudo make install
 
 ### Crow Translate {#crow-translate}
 
-A small translate tool like QTranslate.
+A small translate tool like QTranslate.  
 
 ```shell
 cd ~/Downloads &&\
@@ -239,8 +239,8 @@ sudo dpkg -i ~/Downloads/gitkraken-amd64.deb
 
 ### Java {#java}
 
-Preparation: Download jre-8u251-linux-x64.tar.gz
-Download location: [Java Downloads for Linux](https://java.com/en/download/linux%5Fmanual.jsp)
+Preparation: Download jre-8u251-linux-x64.tar.gz  
+Download location: [Java Downloads for Linux](https://java.com/en/download/linux%5Fmanual.jsp)   
 
 ```shell
 cd /usr &&\
@@ -297,7 +297,7 @@ sudo make install
 
 ### Logitech MX Master {#logitech-mx-master}
 
-First:
+First:  
 
 ```shell
 sudo apt install -y cmake libevdev-dev libudev-dev libconfig++-dev &&\
@@ -312,7 +312,7 @@ sudo make install &&\
 sudo systemctl start logid
 ```
 
-Second:
+Second:  
 
 ```shell
 mkdir -p ~/Downloads/logitech-mouse-config &&\
@@ -337,7 +337,7 @@ sudo snap install musixmatch
 
 ### nomacs {#nomacs}
 
-nomacs is a free, open source image viewer, which supports multiple platforms. You can use it for viewing all common image formats including RAW and psd images.
+nomacs is a free, open source image viewer, which supports multiple platforms. You can use it for viewing all common image formats including RAW and psd images.  
 
 ```shell
 sudo apt install nomacs &&\
@@ -349,7 +349,7 @@ sudo apt-get install nomacs-l10n
 
 ### nvtop {#nvtop}
 
-Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.
+Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.  
 
 ```shell
 sudo apt install -y nvtop
@@ -360,7 +360,7 @@ sudo apt install -y nvtop
 
 ### Okular {#okular}
 
-Okular is a universal document viewer developed by KDE. Okular works on multiple platforms, including but not limited to Linux, Windows, macOS, \*BSD, etc.
+Okular is a universal document viewer developed by KDE. Okular works on multiple platforms, including but not limited to Linux, Windows, macOS, \*BSD, etc.  
 
 ```shell
 sudo apt-get install okular
@@ -371,7 +371,7 @@ sudo apt-get install okular
 
 ### Open Broadcaster Software Studio (OBS) {#open-broadcaster-software-studio--obs}
 
-Free and open source software for video recording and live streaming.
+Free and open source software for video recording and live streaming.  
 
 ```shell
 sudo add-apt-repository ppa:obsproject/obs-studio ;\
@@ -393,7 +393,7 @@ sudo apt install -y p7zip-full
 
 ### screenfetch {#screenfetch}
 
-screenFetch is a "Bash Screenshot Information Tool". This handy Bash script can be used to generate one of those nifty terminal theme information + ASCII distribution logos you see in everyone's screenshots nowadays. It will auto-detect your distribution and display an ASCII version of that distribution's logo and some valuable information to the right. There are options to specify no ASCII art, colors, taking a screenshot upon displaying info, and even customizing the screenshot command! This script is very easy to add to and can easily be extended.
+screenFetch is a "Bash Screenshot Information Tool". This handy Bash script can be used to generate one of those nifty terminal theme information + ASCII distribution logos you see in everyone's screenshots nowadays. It will auto-detect your distribution and display an ASCII version of that distribution's logo and some valuable information to the right. There are options to specify no ASCII art, colors, taking a screenshot upon displaying info, and even customizing the screenshot command! This script is very easy to add to and can easily be extended.  
 
 ```shell
 apt install screenfetch
@@ -404,13 +404,13 @@ apt install screenfetch
 
 ### spacemacs {#spacemacs}
 
-Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.
+Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.  
 
-Just clone it, launch it, then press the space bar to explore the interactive list of carefully-chosen key bindings. You can also press the home buffer's [?] button for some great first key bindings to try.
+Just clone it, launch it, then press the space bar to explore the interactive list of carefully-chosen key bindings. You can also press the home buffer's [?] button for some great first key bindings to try.  
 
-Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix the two editing styles. Switching easily between input styles makes Spacemacs a great tool for pair-programming.
+Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix the two editing styles. Switching easily between input styles makes Spacemacs a great tool for pair-programming.  
 
-Spacemacs is currently in beta, and contributions are very welcome.
+Spacemacs is currently in beta, and contributions are very welcome.  
 
 ```shell
 git clone -b develop https://github.com/syl20bnr/spacemacs.git ~/.emacs.d &&\
@@ -443,9 +443,9 @@ wget http://tw.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_
 
 ### Terminator {#terminator}
 
-Originally created and developed for a long time by Chris Jones, the goal of this project is to produce a useful tool for arranging terminals. It is inspired by programs such as gnome-multi-term, quadkonsole, etc. in that the main focus is arranging terminals in grids (tabs is the most common default method, which Terminator also supports).
+Originally created and developed for a long time by Chris Jones, the goal of this project is to produce a useful tool for arranging terminals. It is inspired by programs such as gnome-multi-term, quadkonsole, etc. in that the main focus is arranging terminals in grids (tabs is the most common default method, which Terminator also supports).  
 
-Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)
+Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)  
 
 ```shell
 sudo apt install terminator
@@ -456,11 +456,11 @@ sudo apt install terminator
 
 ### Linux Advanced Power Management (TLP) {#linux-advanced-power-management--tlp}
 
-TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.
+TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.  
 
-TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.
+TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.  
 
-Nevertheless TLP is highly customizable to fulfil your specific requirements.
+Nevertheless TLP is highly customizable to fulfil your specific requirements.  
 
 ```shell
 sudo add-apt-repository ppa:linrunner/tlp &&\
@@ -487,7 +487,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 ### Wine {#wine}
 
-Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, & BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on-the-fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
+Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, & BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on-the-fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.  
 
 -   Ref: [Supported Wine](https://wiki.winehq.org/Download)
 -   Ref: [winehq.org](https://wiki.winehq.org)
@@ -495,7 +495,7 @@ Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility la
 
 ### xclip {#xclip}
 
-xclip is a command line interface to the X11 clipboard. It allows you to put the output of a command directly into the clipboard so that you don't have to copy&paste from the terminal manually (which can be a tedious task especially if the output is very long). It also allows you to put the contents of a file directly into the clipboard.
+xclip is a command line interface to the X11 clipboard. It allows you to put the output of a command directly into the clipboard so that you don't have to copy&paste from the terminal manually (which can be a tedious task especially if the output is very long). It also allows you to put the contents of a file directly into the clipboard.  
 
 ```shell
 sudo apt-get install -y xclip

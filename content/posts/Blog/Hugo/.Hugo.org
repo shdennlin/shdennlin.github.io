@@ -1,4 +1,5 @@
 #+STARTUP: content
+#+OPTIONS: \n:t
 #+TITLE:	Hugo and org-mode
 #+EXPORT_FILE_NAME: Hugo
 #+AUTHOR:	Shawn Dennis Lin

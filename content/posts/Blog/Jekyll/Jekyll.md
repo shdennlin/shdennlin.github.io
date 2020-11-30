@@ -2,7 +2,7 @@
 title = "Jekyll"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-18T00:00:00+08:00
-lastmod = 2020-11-19T00:29:50+08:00
+lastmod = 2020-11-29T21:27:23+08:00
 tags = ["Jekyll"]
 categories = ["Blog"]
 draft = false
@@ -14,14 +14,14 @@ hero = "/posts/Blog/Jekyll/images/Jekyll.png"
   name = "Jkeyll"
 +++
 
-This is my note for Jkeyll
+This is my note for Jkeyll  
 
 <!--more-->
 
 
 ## Install {#install}
 
-To see [Official Website](https://jekyllrb.com/)(English) or [Official Website](http://jekyllcn.com/)(Chinese)
+To see [Official Website](https://jekyllrb.com/)(English) or [Official Website](http://jekyllcn.com/)(Chinese)  
 
 
 ## Tutorials {#tutorials}
@@ -37,13 +37,13 @@ To see [Official Website](https://jekyllrb.com/)(English) or [Official Website](
 
 ## Plugins {#plugins}
 
-you can find **jekyll's plugins & extensions** below:
+you can find **jekyll's plugins & extensions** below:  
 
 -   [jekyll official website](https://jekyllcn.com/docs/plugins/)
 -   [planet jekyll's plugins & extensions](https://planetjekyll.github.io/plugins/top)
 -   [jekyll-plugins](http://www.jekyll-plugins.com/)
 
-These are the plugins I recommend:
+These are the plugins I recommend:  
 
 | name     | Github                                                | Ref                                                                         |
 |----------|-------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -54,7 +54,7 @@ These are the plugins I recommend:
 
 ## Theme {#theme}
 
-You can find the theme from [jekyllthemes.org](http://jekyllthemes.org/), these is my recommended theme:
+You can find the theme from [jekyllthemes.org](http://jekyllthemes.org/), these is my recommended theme:  
 
 1.  [Wiki blog](http://jekyllthemes.org/themes/wiki-blog/)
 2.  [Cool Concise High-end](http://jekyllthemes.org/themes/cool-concise-high-end/)
