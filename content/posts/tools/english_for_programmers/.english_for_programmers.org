@@ -19,7 +19,7 @@
 #+HUGO_CATEGORIES: Tools
 #+HUGO_TAGS: programer
 #+HUGO_DRAFT: false
-#+hugo_custom_front_matter: :hero ../images/hero/hero.svg
+#+hugo_custom_front_matter: :hero /posts/tools/english_for_programmers/images/hero.svg
 
 「英文」是不少人學程式的關卡，而「命名」是電腦科學最難的問題之一:mag_right:。
 

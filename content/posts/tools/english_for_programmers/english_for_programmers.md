@@ -2,11 +2,11 @@
 title = "English for Programmers"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-30T00:00:00+08:00
-lastmod = 2020-11-30T19:05:57+08:00
+lastmod = 2020-12-01T14:41:25+08:00
 tags = ["programer"]
 categories = ["Tools"]
 draft = false
-hero = "../images/hero/hero.svg"
+hero = "/posts/tools/english_for_programmers/images/hero.svg"
 [menu.sidebar]
   parent = "tools"
   weight = "auto"
