@@ -1,0 +1,34 @@
+#+STARTUP: content
+#+OPTIONS: \n:t
+#+TITLE:	Software Engineer Wiki
+#+EXPORT_FILE_NAME:	software-engineer-wiki
+#+AUTHOR:	Shawn Dennis Lin
+#+EMAIL:	ShawnDennisLin@gmail.com
+#+DATE:	[2020-12-03 Thu]
+
+#+HUGO_WEIGHT: auto
+#+HUGO_AUTO_SET_LASTMOD: t
+
+#+SEQ_TODO: TODO DRAFT DONE
+#+PROPERTY: header-args :eval no
+
+#+HUGO_BASE_DIR: ~/shdennlin.github.io
+#+HUGO_SECTION: /posts/tools/software-engineer-wiki/
+
+#+hugo_menu: :menu sidebar :name Software Engineer Wiki :identifier software-engineer-wiki :parent tools :weight auto
+#+HUGO_CATEGORIES: Tools
+#+HUGO_TAGS: programmer
+#+HUGO_DRAFT: false
+#+hugo_custom_front_matter: :hero /posts/tools/english_for_programmers/images/hero.svg
+
+This is the Software Engineer Wiki with I organize. You can find many useful documentation in is article.
+
+#+HUGO: more
+
+*** English for Programmers
+「英文」是不少人學程式的關卡，而「命名」是電腦科學最難的問題之一:mag_right:。
+- [[https://github.com/EngTW/English-for-Programmers][《程式英文》 English for Programmers]].
+
+*** Programming language
+- [[https://learnxinyminutes.com/][Learn X in Y minutes]]
+
