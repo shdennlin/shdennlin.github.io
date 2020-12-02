@@ -2,7 +2,7 @@
 title = "Hugo and Org-mode"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-15T00:00:00+08:00
-lastmod = 2020-11-30T21:48:08+08:00
+lastmod = 2020-12-03T01:01:35+08:00
 tags = ["Hugo", "org-mode"]
 categories = ["Blog"]
 draft = false
@@ -55,6 +55,11 @@ hugo server -t toha -w
 If you navigate to <http://localhost:1313>, you should see a basic site with Toha theme. In the next section, we are going to configure the site to look like the hugo-toha.github.io. As we have run the server in watch mode, any changes we make to the site will be instantly visible in the browser.  
 
 
+## Hugo Related Documentation {#hugo-related-documentation}
+
+-   [Hugo development environment in WSL 2](https://www.saotn.org/hugo-development-environment-in-wsl-2/)
+
+
 ## Theme {#theme}
 
 You can find the theme from [themes.gohugo.io](https://themes.gohugo.io/), these is my recommended theme:  
@@ -84,3 +89,6 @@ You can find the theme from [themes.gohugo.io](https://themes.gohugo.io/), these
     Manage external services from within Emacs.  
     If you use spacemacs, you can use `<SPC> a t p` to see a list of all defined services.  
     For More information about spacemacs , please see [spacemacs/prodigy](https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Btools/prodigy).
+
+
+###  {#}

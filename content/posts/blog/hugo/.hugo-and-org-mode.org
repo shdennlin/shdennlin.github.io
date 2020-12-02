@@ -46,6 +46,9 @@ hugo server -t toha -w
 #+end_src
 If you navigate to http://localhost:1313, you should see a basic site with Toha theme. In the next section, we are going to configure the site to look like the hugo-toha.github.io. As we have run the server in watch mode, any changes we make to the site will be instantly visible in the browser.
 
+** Hugo Related Documentation
+- [[https://www.saotn.org/hugo-development-environment-in-wsl-2/][Hugo development environment in WSL 2]]
+
 ** Theme
 You can find the theme from [[https://themes.gohugo.io/][themes.gohugo.io]], these is my recommended theme:
 1. [[https://themes.gohugo.io/toha/][Toha]](Download) [[https://github.com/hugo-toha/toha][hugo-toha/toha]](GitHub) [[https://github.com/hugo-toha/guides][hugo-toha/guides]](GitHub)
@@ -69,5 +72,7 @@ You can find the theme from [[https://themes.gohugo.io/][themes.gohugo.io]], the
    Manage external services from within Emacs.
    If you use spacemacs, you can use ~<SPC> a t p~ to see a list of all defined services.
    For More information about spacemacs , please see [[https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Btools/prodigy][spacemacs/prodigy]].
+   
+***  
 
 
