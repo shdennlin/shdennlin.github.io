@@ -1,7 +1,7 @@
 #+STARTUP: content
 #+OPTIONS: \n:t
 #+TITLE: Install GUI in WSL2 using VcXsrv
-#+EXPORT_FILE_NAME:	install_gui_in_wsl2_using_vcxsrv
+#+EXPORT_FILE_NAME:	install-gui-in-wsl2-using-vcxsrv
 #+AUTHOR:	Shawn Dennis Lin
 #+EMAIL:	ShawnDennisLin@gmail.com
 #+DATE:	[2020-12-02 Wed]
@@ -13,13 +13,13 @@
 #+PROPERTY: header-args :eval no
 
 #+HUGO_BASE_DIR: ~/shdennlin.github.io
-#+HUGO_SECTION: /posts/linux/install_gui_in_wsl2_using_vcxsrv/
+#+HUGO_SECTION: /posts/linux/install-gui-in-wsl2-using-vcxsrv/
 
-#+hugo_menu: :menu sidebar :name Install GUI in WSL2 using VcXsrv :identifier install_gui_in_wsl2_using_vcxsrv :parent linux :weight auto
+#+hugo_menu: :menu sidebar :name Install GUI in WSL2 using VcXsrv :identifier install-gui-in-wsl2-using-vcxsrv :parent linux :weight auto
 #+HUGO_CATEGORIES: linux
 #+HUGO_TAGS: wsl vcxsrv gui 
 #+HUGO_DRAFT: false
-#+hugo_custom_front_matter: :hero /posts/linux/install_gui_in_wsl2_using_vcxsrv/images/hero.svg
+#+hugo_custom_front_matter: :hero /posts/linux/install-gui-in-wsl2-using-vcxsrv/images/hero.svg
 
 Introduction how to install GUI desktop in WSL2 with VcSxrv in winsows 10.
 

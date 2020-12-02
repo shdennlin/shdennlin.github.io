@@ -2,15 +2,15 @@
 title = "Install GUI in WSL2 using VcXsrv"
 author = ["Shawn Dennis Lin"]
 date = 2020-12-02T00:00:00+08:00
-lastmod = 2020-12-02T17:25:23+08:00
+lastmod = 2020-12-03T01:40:50+08:00
 tags = ["wsl", "vcxsrv", "gui"]
 categories = ["linux"]
 draft = false
-hero = "/posts/linux/install_gui_in_wsl2_using_vcxsrv/images/hero.svg"
+hero = "/posts/linux/install-gui-in-wsl2-using-vcxsrv/images/hero.svg"
 [menu.sidebar]
   parent = "linux"
   weight = "auto"
-  identifier = "install_gui_in_wsl2_using_vcxsrv"
+  identifier = "install-gui-in-wsl2-using-vcxsrv"
   name = "Install GUI in WSL2 using VcXsrv"
 +++
 

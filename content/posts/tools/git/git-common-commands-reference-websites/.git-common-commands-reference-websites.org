@@ -1,7 +1,7 @@
 #+STARTUP: content
 #+OPTIONS: \n:t
 #+TITLE:	Git Common Commands Reference Websites
-#+EXPORT_FILE_NAme:	git_common_commands_reference_websites
+#+EXPORT_FILE_NAme:	git-common-commands-reference-websites
 #+AUTHOR:	Shawn Dennis Lin
 #+EMAIL:	ShawnDennisLin@gmail.com
 #+DATE:	[2020-11-30 Mon]
@@ -13,13 +13,13 @@
 #+PROPERTY: header-args :eval no
 
 #+HUGO_BASE_DIR: ~/shdennlin.github.io
-#+HUGO_SECTION: /posts/tools/git/
+#+HUGO_SECTION: /posts/tools/git/git-common-commands-reference-websites/
 
 #+hugo_menu: :menu sidebar :name Git Common Commands and Reference Websites :identifier git-commmands-websites :parent git :weight auto
 #+HUGO_CATEGORIES: Tools
 #+HUGO_TAGS: git
 #+HUGO_DRAFT: false
-#+hugo_custom_front_matter: :hero /posts/tools/git/images/git.jpg
+#+hugo_custom_front_matter: :hero /posts/tools/git/git-common-commands-reference-websites/images/git.jpg
 
 My note for git, there have many useful site to explain git command.
 

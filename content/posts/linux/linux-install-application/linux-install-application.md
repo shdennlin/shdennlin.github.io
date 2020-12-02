@@ -2,11 +2,11 @@
 title = "Linux Install Application"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-19T00:00:00+08:00
-lastmod = 2020-11-30T19:08:26+08:00
+lastmod = 2020-12-03T01:44:17+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
-hero = "/posts/linux/linux_install_application/images/linux.png"
+hero = "/posts/linux/linux-install-application/images/linux.png"
 [menu.sidebar]
   parent = "linux"
   weight = "auto"

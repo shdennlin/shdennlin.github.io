@@ -2,11 +2,11 @@
 title = "Git Common Commands Reference Websites"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-30T00:00:00+08:00
-lastmod = 2020-12-01T14:53:19+08:00
+lastmod = 2020-12-03T01:46:55+08:00
 tags = ["git"]
 categories = ["Tools"]
 draft = false
-hero = "/posts/tools/git/images/git.jpg"
+hero = "/posts/tools/git/git-common-commands-reference-websites/images/git.jpg"
 [menu.sidebar]
   parent = "git"
   weight = "auto"
