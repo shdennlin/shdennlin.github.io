@@ -58,7 +58,9 @@ $ vi .bashrc
 
 Go to the last line and write this
 #+begin_src bash
-export DISPLAY=:0.0
+# For WSL2
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
+export LIBGL_ALWAYS_INDIRECT=1
 #+end_src
 and Exit your WSL and run it again.
 

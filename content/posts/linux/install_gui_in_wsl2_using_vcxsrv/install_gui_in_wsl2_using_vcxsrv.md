@@ -2,7 +2,7 @@
 title = "Install GUI in WSL2 using VcXsrv"
 author = ["Shawn Dennis Lin"]
 date = 2020-12-02T00:00:00+08:00
-lastmod = 2020-12-02T11:21:58+08:00
+lastmod = 2020-12-02T17:25:23+08:00
 tags = ["wsl", "vcxsrv", "gui"]
 categories = ["linux"]
 draft = false
@@ -63,7 +63,9 @@ $ vi .bashrc
 Go to the last line and write this  
 
 ```bash
-export DISPLAY=:0.0
+# For WSL2
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
+export LIBGL_ALWAYS_INDIRECT=1
 ```
 
 and Exit your WSL and run it again.  
