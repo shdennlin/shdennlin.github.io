@@ -2,7 +2,7 @@
 title = "EMACS"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-24T00:00:00+08:00
-lastmod = 2020-11-30T19:08:08+08:00
+lastmod = 2020-12-03T01:32:05+08:00
 tags = ["emacs"]
 categories = ["Editor", "tool"]
 draft = false
@@ -18,10 +18,20 @@ My Emacs note.
 <!--more-->
 
 
+## Emacs {#emacs}
+
+
+### Tutorials {#tutorials}
+
+-   [Common Lisp in Learn X in Y minutes](https://learnxinyminutes.com/docs/common-lisp/)
+-   [The Common Lisp Cookbook](https://learnxinyminutes.com)
+-   [21天学会Emacs](https://www.youtube.com/playlist?list=PLZx9tb9Niew8qMjpCjeYnsezCE-s5mKw%5F)
+
+
 ## org mode {#org-mode}
 
 
-### fundamental {#fundamental}
+### Fundamental {#fundamental}
 
 -   [Org-mode Frequently Asked Questions](https://mattduck.github.io/generic-css/demo/org-demo.html#Tables)(very useful)
 -   [Org-mode基本功能](https://www.johneyzheng.top/2019/01/Org%5Fmode/)
@@ -34,12 +44,14 @@ My Emacs note.
     -   [Code Blocks Languages](https://orgmode.org/manual/Languages.html#Languages)
 
 
-### table {#table}
+### Table {#table}
 
 -   In spacemacs, you can use `, t t o` or `M-x org-table-toggle-coordinate-overlays` to toggle table coordinate.
 
 
-### [Summary of In-Buffer Settings](https://orgmode.org/manual/In%5F002dbuffer-Settings.html) {#summary-of-in-buffer-settings}
+### Summary of In-Buffer Settings {#summary-of-in-buffer-settings}
+
+-   ref: [Summary of In-Buffer Settings](https://orgmode.org/manual/In%5F002dbuffer-Settings.html)
 
 
 #### `#+OPTIONS: num:t` {#plus-options-num-t}
