@@ -1,7 +1,7 @@
 #+STARTUP: content
 #+OPTIONS: \n:t
-#+TITLE:	EMACS
-#+EXPORT_FILE_NAME: emacs
+#+TITLE:	Getting Started with GNU Emacs
+#+EXPORT_FILE_NAME: getting-started-with-gnu-emacs
 #+AUTHOR:	Shawn Dennis Lin
 #+EMAIL:	ShawnDennisLin@gmail.com
 #+DATE:	[2020-11-24 Tue]
@@ -13,13 +13,13 @@
 #+PROPERTY: header-args :eval no
 
 #+HUGO_BASE_DIR: ~/shdennlin.github.io
-#+HUGO_SECTION: /posts/emacs/
+#+HUGO_SECTION: /posts/emacs/getting-started-with-gnu-emacs/
 
-#+hugo_menu: :menu sidebar :name Emacs :identifier emacs :weight auto
-#+HUGO_CATEGORIES: Editor tool
-#+HUGO_TAGS: emacs
+#+hugo_menu: :menu sidebar :name Getting Started with GNU Emacs :identifier getting-started-with-gnu-emacs :parent emacs :weight auto
+#+HUGO_CATEGORIES: Editor
+#+HUGO_TAGS: editor emacs vim
 #+HUGO_DRAFT: false
-#+hugo_custom_front_matter: :hero /posts/emacs/images/emacs.png
+#+hugo_custom_front_matter: :hero /posts/emacs/getting-started-with-gnu-emacs/images/emacs.png
 
 My Emacs note.
 
@@ -35,8 +35,6 @@ My Emacs note.
 
 * Emacs
 ** Tutorials
-- [[https://learnxinyminutes.com/docs/common-lisp/][Common Lisp in Learn X in Y minutes]]
-- [[https://learnxinyminutes.com][The Common Lisp Cookbook]]
 - [[https://www.youtube.com/playlist?list=PLZx9tb9Niew8qMjpCjeYnsezCE-s5mKw_][21天学会Emacs]]
 
 

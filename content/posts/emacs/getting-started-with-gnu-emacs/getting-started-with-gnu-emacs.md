@@ -1,16 +1,17 @@
 +++
-title = "EMACS"
+title = "Getting Started with GNU Emacs"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-24T00:00:00+08:00
-lastmod = 2020-12-03T01:32:05+08:00
-tags = ["emacs"]
-categories = ["Editor", "tool"]
+lastmod = 2020-12-04T00:49:32+08:00
+tags = ["editor", "emacs", "vim"]
+categories = ["Editor"]
 draft = false
-hero = "/posts/emacs/images/emacs.png"
+hero = "/posts/emacs/getting-started-with-gnu-emacs/images/emacs.png"
 [menu.sidebar]
+  parent = "emacs"
   weight = "auto"
-  identifier = "emacs"
-  name = "Emacs"
+  identifier = "getting-started-with-gnu-emacs"
+  name = "Getting Started with GNU Emacs"
 +++
 
 My Emacs note.  
@@ -24,6 +25,7 @@ My Emacs note.
 ### Tutorials {#tutorials}
 
 -   [Common Lisp in Learn X in Y minutes](https://learnxinyminutes.com/docs/common-lisp/)
+-   [elisp in Learn X in Y minutes](https://learnxinyminutes.com/docs/elisp/)
 -   [The Common Lisp Cookbook](https://learnxinyminutes.com)
 -   [21天学会Emacs](https://www.youtube.com/playlist?list=PLZx9tb9Niew8qMjpCjeYnsezCE-s5mKw%5F)
 
