@@ -1,0 +1,38 @@
+#+STARTUP: content
+#+OPTIONS: \n:t
+#+TITLE:	Elisp Common Function 
+#+EXPORT_FILE_NAME:	elisp-common-function
+#+AUTHOR:	Shawn Dennis Lin
+#+EMAIL:	ShawnDennisLin@gmail.com
+#+DATE:	[2020-12-04 Fri]
+
+#+HUGO_WEIGHT: auto
+#+HUGO_AUTO_SET_LASTMOD: t
+
+#+SEQ_TODO: TODO DRAFT DONE
+#+PROPERTY: header-args :eval no
+
+#+HUGO_BASE_DIR: ~/shdennlin.github.io
+#+HUGO_SECTION: /posts/emacs/elisp-common-function/
+
+#+hugo_menu: :menu sidebar :name  Elisp Common Command :identifier elisp-common-function :parent emacs :weight auto
+#+HUGO_CATEGORIES: Editor program-language
+#+HUGO_TAGS: editor emacs lisp
+#+HUGO_DRAFT: false
+#+hugo_custom_front_matter: :hero /posts/emacs/elisp-common-function/images/emacs.png
+
+My elisp note.
+
+#+HUGO: more
+
+**** Learn Elisp
+- [[https://learnxinyminutes.com/docs/common-lisp/][Common Lisp in Learn X in Y minutes]]
+- [[https://learnxinyminutes.com/docs/elisp/][elisp in Learn X in Y minutes]]
+- [[https://learnxinyminutes.com][The Common Lisp Cookbook]]
+- [[https://caiorss.github.io/Emacs-Elisp-Programming/Elisp_Programming.html][Elisp Programming]]
+
+**** Elisp Common Function 
+
+| Function         | Describes                   | Ref |
+|------------------+-----------------------------+-----|
+| ~save-excursion~ | saves the location of point | [[https://www.gnu.org/software/emacs/manual/html_node/eintr/save_002dexcursion.html][Ref]] |
