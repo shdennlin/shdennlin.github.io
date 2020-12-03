@@ -2,11 +2,11 @@
 title = "Software Engineer Wiki"
 author = ["Shawn Dennis Lin"]
 date = 2020-12-03T00:00:00+08:00
-lastmod = 2020-12-03T01:26:44+08:00
+lastmod = 2020-12-03T15:40:44+08:00
 tags = ["programmer"]
 categories = ["Tools"]
 draft = false
-hero = "/posts/tools/english_for_programmers/images/hero.svg"
+hero = "/posts/tools/software-engineer-wiki/images/hero.svg"
 [menu.sidebar]
   parent = "tools"
   weight = "auto"

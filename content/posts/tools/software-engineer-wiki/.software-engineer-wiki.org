@@ -19,7 +19,7 @@
 #+HUGO_CATEGORIES: Tools
 #+HUGO_TAGS: programmer
 #+HUGO_DRAFT: false
-#+hugo_custom_front_matter: :hero /posts/tools/english_for_programmers/images/hero.svg
+#+hugo_custom_front_matter: :hero /posts/tools/software-engineer-wiki/images/hero.svg
 
 This is the Software Engineer Wiki with I organize. You can find many useful documentation in is article.
 
