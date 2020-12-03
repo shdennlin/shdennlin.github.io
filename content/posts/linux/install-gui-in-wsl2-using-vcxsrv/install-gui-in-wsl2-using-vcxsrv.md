@@ -2,7 +2,7 @@
 title = "Install GUI in WSL2 using VcXsrv"
 author = ["Shawn Dennis Lin"]
 date = 2020-12-02T00:00:00+08:00
-lastmod = 2020-12-03T01:40:50+08:00
+lastmod = 2020-12-03T18:45:15+08:00
 tags = ["wsl", "vcxsrv", "gui"]
 categories = ["linux"]
 draft = false
@@ -87,5 +87,6 @@ Congratulations!! Now you can use your WSL using Graphical User Interface.
 -   [What's the easiest way to run GUI apps on Windows Subsystem for Linux as of 2018?](https://askubuntu.com/questions/993225/whats-the-easiest-way-to-run-gui-apps-on-windows-subsystem-for-linux-as-of-2018)
 -   [Window10 建置Ubuntu(WSL2)與GUI桌面配置筆記](https://s123600g.medium.com/window10-%E5%BB%BA%E7%BD%AEubuntu-wsl2-%E8%88%87gui%E6%A1%8C%E9%9D%A2%E9%85%8D%E7%BD%AE%E7%AD%86%E8%A8%98-58796915ed4d)
 -   [Installing WSL with GUI using VcXsrv](https://medium.com/@dhanar.santika/installing-wsl-with-gui-using-vcxsrv-6f307e96fac0)
+-   [Development Environment in WSL2](https://derkoe.dev/blog/development-environment-in-wsl2/)
 -   [How to Change the Default Display Manager in Ubuntu 20.04](http://ubuntuhandbook.org/index.php/2020/07/change-default-display-manager-ubuntu-20-04/)
 -   [What is LightDM and GDM](https://unix.stackexchange.com/questions/131496/what-is-lightdm-and-gdm/131497#131497)
