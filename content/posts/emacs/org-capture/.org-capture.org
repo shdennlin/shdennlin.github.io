@@ -1,0 +1,33 @@
+#+STARTUP: content
+#+OPTIONS: \n:t
+#+TITLE:	org-capture introduction
+#+EXPORT_FILE_NAME:	org-capture
+#+AUTHOR:	Shawn Dennis Lin
+#+EMAIL:	ShawnDennisLin@gmail.com
+#+DATE:	[2020-12-05 Sat]
+
+#+HUGO_WEIGHT: auto
+#+HUGO_AUTO_SET_LASTMOD: t
+
+#+SEQ_TODO: TODO DRAFT DONE
+#+PROPERTY: header-args :eval no
+
+#+HUGO_BASE_DIR: ~/shdennlin.github.io
+#+HUGO_SECTION: /posts/emacs/org-capture/
+
+#+hugo_menu: :menu sidebar :name  :identifier  :parent :weight auto
+#+HUGO_CATEGORIES: 
+#+HUGO_TAGS: 
+#+HUGO_DRAFT: false
+#+hugo_custom_front_matter: :hero 
+
+
+#+HUGO: more
+
+
+** Ref
+- [[https://www.zmonster.me/2018/02/28/org-mode-capture.html][强大的 Org mode(4): 使用 capture 功能快速记录]]
+- [[https://github.com/jueqingsizhe66/zhaoEmacs.d#37-org-capture-template%E7%9A%84%E4%BF%AE%E6%94%B9][org-capture-template的修改]]
+- [[https://liutos.github.io/2019/08/11/%E4%B8%80%E4%B8%AA%E6%9C%89%E7%94%A8%E7%9A%84org-agenda-custom-commands%E7%9A%84%E4%BE%8B%E5%AD%90/][一个有用的org-agenda-custom-commands的例子]]
+
+
