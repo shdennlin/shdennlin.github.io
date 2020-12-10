@@ -1,0 +1,92 @@
+#+STARTUP: content
+#+OPTIONS: \n:t
+#+TITLE:	Windows Install Application
+#+EXPORT_FILE_NAME:	windows_install_application
+#+AUTHOR:	Shawn Dennis Lin
+#+EMAIL:	ShawnDennisLin@gmail.com
+#+DATE:	[2020-11-29 Sun]
+
+#+HUGO_WEIGHT: auto
+#+HUGO_AUTO_SET_LASTMOD: t
+
+#+SEQ_TODO: TODO DRAFT DONE
+#+PROPERTY: header-args :eval no
+
+#+HUGO_BASE_DIR: ~/shdennlin.github.io
+#+HUGO_SECTION: /posts/windows/
+
+#+hugo_menu: :menu sidebar :name windows :identifier windows-install-app :parent :weight auto
+#+HUGO_CATEGORIES: OS
+#+HUGO_TAGS: windows
+#+HUGO_DRAFT: false
+#+hugo_custom_front_matter: :hero 
+
+My install application for windows
+
+#+HUGO: more
+
+* Table of Contents                                       :TOC_3_gh:noexport:
+- [[#windows-install-application][Windows Install Application]]
+  - [[#tools][Tools]]
+  - [[#pdf-xchange-editor][PDF-XChange Editor]]
+
+* Windows Install Application
+
+** Tools
+
+| NO. | ck | Name                       | Ref Website                | Installation(cmd) | GitHub              | Note                                         |
+|-----+----+----------------------------+----------------------------+-------------------+---------------------+----------------------------------------------|
+|   1 |    |                            |                            |                   |                     |                                              |
+|   2 | v  | Advanced IP Scanner        | [[https://www.advanced-ip-scanner.com/][Advanced IP Scanner]]        |                   |                     |                                              |
+|   3 | v  | anaconda                   | [[https://docs.anaconda.com/anaconda/install/][anaconda documentation]]     |                   |                     |                                              |
+|   4 | v  | Andriod studio             | [[https://developer.android.com/studio][Android Studio]]             |                   |                     |                                              |
+|   5 | v  | AutoHotkey                 | [[https://www.autohotkey.com/][AutoHotkey]]                 |                   |                     |                                              |
+|   6 | v  | Backup and Sync            | [[https://www.google.com/intl/en-GB/drive/download/][Google Drive Download]]      |                   |                     |                                              |
+|   7 | v  | Bandzip                    | [[https://en.bandisoft.com/bandizip/][Bandizip for Windows]]       |                   |                     |                                              |
+|   8 | v  | Bing Wallpaper             | [[https://www.microsoft.com/en-us/bing/bing-wallpaper][Bing Wallpaper]]             |                   |                     |                                              |
+|   9 | v  | CopyTrans HEIC for Windows | [[https://www.copytrans.net/copytransheic/][CopyTrans HEIC for Windows]] |                   |                     |                                              |
+|  10 | v  | discord                    | [[https://discord.com/][discord]]                    |                   |                     |                                              |
+|  11 | v  | Drive File Stream          | [[https://support.google.com/a/answer/7491144?utm_medium=et&utm_source=aboutdrive&utm_content=getstarted&utm_campaign=en_us&hl=en-GB][Deploy Drive File Stream]]   |                   |                     |                                              |
+|  12 | v  | dropbox                    | [[https://www.dropbox.com/downloading][dropbox/download]]           |                   |                     |                                              |
+|  13 | v  | emacs                      | [[https://www.gnu.org/software/emacs/download.html][GNU Emacs]]                  |                   |                     |                                              |
+|  14 | v  | everything                 | [[https://everything.en.softonic.com/download][Download Everything]]        |                   |                     |                                              |
+|  15 | v  | FastStone Image Viewer     | [[https://www.faststone.org/FSIVDownload.htm][FastStone Image Viewer]]     |                   |                     |                                              |
+|  16 | v  | FileZilla                  | [[https://filezilla-project.org/download.php?platform=win64][FileZilla Client]]           |                   |                     |                                              |
+|  17 | v  | Firefox                    | [[https://www.mozilla.org/en-US/firefox/new/][Firefox]]                    |                   |                     |                                              |
+|  18 | v  | Git                        | [[https://git-scm.com/download/win][Downloading Git]]            |                   |                     |                                              |
+|  19 | v  | GitKraken                  | [[https://www.gitkraken.com/][gitkraken]]                  |                   |                     |                                              |
+|  20 | v  | iCloud                     | [[https://support.apple.com/en-us/HT204283][iCloud]]                     |                   |                     |                                              |
+|  21 | v  | KidCad                     | [[https://kicad.org/download/][KidCad/Download]]            |                   |                     |                                              |
+|  22 | v  | Legion Accessory Central   | [[https://support.lenovo.com/us/en/downloads/ds539788-legion-accessory-central-for-windows-7-10-64-bit][Legion Accessory Central]]   |                   |                     |                                              |
+|  23 | v  | Lenovo Vantage             | [[https://pcsupport.lenovo.com/us/en/solutions/ht505081][Lenovo Vantage]]             |                   |                     |                                              |
+|  24 | v  | LINE                       | [[https://line.me/en/][LINE]]                       |                   |                     |                                              |
+|  25 | v  | Listary                    | [[https://www.listary.com/][Listary]]                    |                   |                     |                                              |
+|  26 | v  | Logitech Options           | [[https://www.logitech.com/zh-tw/product/options][Logitech Options]]           |                   |                     |                                              |
+|  27 | v  | matlab                     |                            |                   |                     |                                              |
+|  28 | v  | mp3DirectCut               | [[https://www.techspot.com/downloads/530-mp3directcut.html#specs][mp3DirectCut]]               |                   |                     |                                              |
+|  29 | v  | office                     | [[https://ntut.onthehub.com/][onthehub.com]]               |                   |                     |                                              |
+|  30 | v  | Open Broadcaster Software  | [[https://obsproject.com/][Open Broadcaster Software]]  |                   |                     |                                              |
+|  31 | v  | [[PDF-XChange Editor][PDF-XChange Editor]]         | [[https://www.tracker-software.com/product/downloads/enduser/pdf-xchange-editor][PDF-XChange Editor]]         |                   |                     |                                              |
+|  32 | v  | Pixillion Image Converter  | [[https://www.nchsoftware.com/imageconverter/index.html#][Pixillion Image Converter]]  |                   |                     |                                              |
+|  33 | v  | Potplayer                  | [[https://potplayer.daum.net/][Potplayer]]                  |                   |                     |                                              |
+|  34 | v  | PowerToys                  | [[https://github.com/microsoft/PowerToys/releases/tag/v0.28.0][PowerToys]]                  |                   | [[https://github.com/microsoft/PowerToys][microsoft/PowerToys]] |                                              |
+|  35 | v  | Putty                      | [[https://www.putty.org/][Putty]]                      |                   |                     |                                              |
+|  36 | v  | QTranslate                 | [[https://quest-app.appspot.com/][QTranslate]]                 |                   |                     |                                              |
+|  37 | v  | QTTabBar                   | [[http://qttabbar.wikidot.com/][QTTabBar]]                   |                   |                     |                                              |
+|  38 | v  | spacemcs                   | [[https://develop.spacemacs.org/][spacemacs]]                  |                   |                     |                                              |
+|  39 |    | specemacs-aspell           | [[https://sheishe.xyz/post/using-aspell-in-windows-10-and-emacs-26-above/][Using aspell in windows 10]] |                   |                     |                                              |
+|  40 | v  | Sublime                    | [[https://www.sublimetext.com/][Sublime]]                    |                   |                     |                                              |
+|  41 | v  | SyncBackFree               | [[https://www.2brightsparks.com/downloads-beta.html][SyncBackFree]]               |                   |                     |                                              |
+|  42 | v  | Thunderbird                | [[https://www.thunderbird.net/zh-TW/][Thunderbird]]                |                   |                     |                                              |
+|  43 | v  | Trayconizer                | [[http://www.whitsoftdev.com/trayconizer/][Trayconizer]]                |                   |                     | [[https://www.playpcesor.com/2008/06/trayconizer.html][Trayconizer 幫特定程式添加"縮小到系統列"功能]] |
+|  44 | v  | VcXsrv Windows X Server    | [[https://sourceforge.net/projects/vcxsrv/][VcXsrv]]                     |                   |                     |                                              |
+|  45 | v  | windows                    | [[https://ntut.onthehub.com/][onthehub.com]]               |                   |                     |                                              |
+|  46 | v  | WinSCP                     | [[https://winscp.net/eng/download.php][WinSCP]]                     |                   |                     |                                              |
+|  47 | v  | WizTree                    | [[https://wiztreefree.com/][WizTree]]                    |                   |                     |                                              |
+#+tblfm: $1=@#-1
+
+** PDF-XChange Editor
+- [[https://www.tracker-software.com/knowledgebase/456-How-do-I-Customize-toolbars-in-the-Editor][Customize toolbars in the Editor]]
+- [[https://defkey.com/pdf-xchange-editor-shortcuts][keyboard shortcuts]]
+- [[https://www.journeybytes.com/how-to-change-pdf-background-color-on-pdf-xchange/][Changing PDF Background Color in PDF-XChange Editor]]
+
