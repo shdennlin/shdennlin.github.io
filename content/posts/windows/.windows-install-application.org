@@ -69,20 +69,21 @@ My install application for windows
 |  31 | v  | [[PDF-XChange Editor][PDF-XChange Editor]]         | [[https://www.tracker-software.com/product/downloads/enduser/pdf-xchange-editor][PDF-XChange Editor]]         |                   |                     |                                              |
 |  32 | v  | Pixillion Image Converter  | [[https://www.nchsoftware.com/imageconverter/index.html#][Pixillion Image Converter]]  |                   |                     |                                              |
 |  33 | v  | Potplayer                  | [[https://potplayer.daum.net/][Potplayer]]                  |                   |                     |                                              |
-|  34 | v  | PowerToys                  | [[https://github.com/microsoft/PowerToys/releases/tag/v0.28.0][PowerToys]]                  |                   | [[https://github.com/microsoft/PowerToys][microsoft/PowerToys]] |                                              |
-|  35 | v  | Putty                      | [[https://www.putty.org/][Putty]]                      |                   |                     |                                              |
-|  36 | v  | QTranslate                 | [[https://quest-app.appspot.com/][QTranslate]]                 |                   |                     |                                              |
-|  37 | v  | QTTabBar                   | [[http://qttabbar.wikidot.com/][QTTabBar]]                   |                   |                     |                                              |
-|  38 | v  | spacemcs                   | [[https://develop.spacemacs.org/][spacemacs]]                  |                   |                     |                                              |
-|  39 |    | specemacs-aspell           | [[https://sheishe.xyz/post/using-aspell-in-windows-10-and-emacs-26-above/][Using aspell in windows 10]] |                   |                     |                                              |
-|  40 | v  | Sublime                    | [[https://www.sublimetext.com/][Sublime]]                    |                   |                     |                                              |
-|  41 | v  | SyncBackFree               | [[https://www.2brightsparks.com/downloads-beta.html][SyncBackFree]]               |                   |                     |                                              |
-|  42 | v  | Thunderbird                | [[https://www.thunderbird.net/zh-TW/][Thunderbird]]                |                   |                     |                                              |
-|  43 | v  | Trayconizer                | [[http://www.whitsoftdev.com/trayconizer/][Trayconizer]]                |                   |                     | [[https://www.playpcesor.com/2008/06/trayconizer.html][Trayconizer 幫特定程式添加"縮小到系統列"功能]] |
-|  44 | v  | VcXsrv Windows X Server    | [[https://sourceforge.net/projects/vcxsrv/][VcXsrv]]                     |                   |                     |                                              |
-|  45 | v  | windows                    | [[https://ntut.onthehub.com/][onthehub.com]]               |                   |                     |                                              |
-|  46 | v  | WinSCP                     | [[https://winscp.net/eng/download.php][WinSCP]]                     |                   |                     |                                              |
-|  47 | v  | WizTree                    | [[https://wiztreefree.com/][WizTree]]                    |                   |                     |                                              |
+|  34 | v  | PowerShell                 |                            |                   | [[https://github.com/dahlbyk/posh-git][dahlbyk/posh-git]]    | [[https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/set-alias?view=powershell-7.1][Set-Alias]]                                    |
+|  35 | v  | PowerToys                  | [[https://github.com/microsoft/PowerToys/releases/tag/v0.28.0][PowerToys]]                  |                   | [[https://github.com/microsoft/PowerToys][microsoft/PowerToys]] |                                              |
+|  36 | v  | Putty                      | [[https://www.putty.org/][Putty]]                      |                   |                     |                                              |
+|  37 | v  | QTranslate                 | [[https://quest-app.appspot.com/][QTranslate]]                 |                   |                     |                                              |
+|  38 | v  | QTTabBar                   | [[http://qttabbar.wikidot.com/][QTTabBar]]                   |                   |                     |                                              |
+|  39 | v  | spacemcs                   | [[https://develop.spacemacs.org/][spacemacs]]                  |                   |                     |                                              |
+|  40 | v  | specemacs-aspell           | [[https://sheishe.xyz/post/using-aspell-in-windows-10-and-emacs-26-above/][Using aspell in windows 10]] |                   |                     |                                              |
+|  41 | v  | Sublime                    | [[https://www.sublimetext.com/][Sublime]]                    |                   |                     |                                              |
+|  42 | v  | SyncBackFree               | [[https://www.2brightsparks.com/downloads-beta.html][SyncBackFree]]               |                   |                     |                                              |
+|  43 | v  | Thunderbird                | [[https://www.thunderbird.net/zh-TW/][Thunderbird]]                |                   |                     |                                              |
+|  44 | v  | Trayconizer                | [[http://www.whitsoftdev.com/trayconizer/][Trayconizer]]                |                   |                     | [[https://www.playpcesor.com/2008/06/trayconizer.html][Trayconizer 幫特定程式添加"縮小到系統列"功能]] |
+|  45 | v  | VcXsrv Windows X Server    | [[https://sourceforge.net/projects/vcxsrv/][VcXsrv]]                     |                   |                     |                                              |
+|  46 | v  | windows                    | [[https://ntut.onthehub.com/][onthehub.com]]               |                   |                     |                                              |
+|  47 | v  | WinSCP                     | [[https://winscp.net/eng/download.php][WinSCP]]                     |                   |                     |                                              |
+|  48 | v  | WizTree                    | [[https://wiztreefree.com/][WizTree]]                    |                   |                     |                                              |
 #+tblfm: $1=@#-1
 
 ** PDF-XChange Editor
