@@ -36,3 +36,5 @@ params:
   # Currently, you can just hide it from the footer.
   newsletter:
     enable: true
+
+disqusShortname: shdennlin
