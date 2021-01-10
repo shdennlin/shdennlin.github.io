@@ -12,11 +12,6 @@ section:
 # Give a summary of you each skill in the summary section.
 skills:
 
-# - name: Docker
-#   icon: "/images/sections/skills/docker.svg"
-#   summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
-#   url: "https://www.docker.com/"
-
 - name: Linux
   icon: "/images/sections/skills/linux.png"
   summary: "Using as the main operating system. Capable of writing bash/shell scripts."
@@ -36,3 +31,9 @@ skills:
   icon: "/images/sections/skills/spacemacs.png"
   summary: "Use spacemacs to programming. Passionate about enhancing the efficiency of the programming"
   url: "https://www.spacemacs.org/"
+
+
+# - name: Docker
+#   icon: "/images/sections/skills/docker.svg"
+#   summary: "Write most of the programs as dockerized container. Experienced with multi-stage, multi-arch build process."
+#   url: "https://www.docker.com/"
