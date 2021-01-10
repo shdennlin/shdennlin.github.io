@@ -25,7 +25,7 @@ markup:
 # googleAnalytics: UA-XXXXXXXXX-X
 
 # Enable Disqus forum
-# disqusShortname: shdennlin
+disqusShortname: shdennlin
 
 # Enable global emoji support
 enableEmoji: true
