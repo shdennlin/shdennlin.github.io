@@ -6,7 +6,6 @@ description: Portfolio and personal blog of Shawn Dennis Lin.
 
 # specify the list of custom menus that you want to show in the top navbar.
 # they will be separated by a divider from the main menus.
-
 # customMenus:
 # - name: Docs
 #   url: https://shdennlin.github.io/Docs/

@@ -2,7 +2,7 @@
 title = "Git Common Commands Reference Websites"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-30T00:00:00+08:00
-lastmod = 2020-12-03T15:41:51+08:00
+lastmod = 2021-01-05T14:13:16+08:00
 tags = ["git"]
 categories = ["Tools"]
 draft = false
@@ -51,6 +51,31 @@ My note for git, there have many useful site to explain git command.
 1.  When you try to change branches and get error with:  
     `error: The following untracked working tree files would be overwritten by checkout`  
     You may be able to solve your problem with [.gitignore and “The following untracked working tree files would be overwritten by checkout”](https://stackoverflow.com/questions/4858047/gitignore-and-the-following-untracked-working-tree-files-would-be-overwritten/14228841#14228841?newreg=7b0ffcab0a8e43eb9ad7c49c16295f14)
+2.  Resolve git submodule conflict if submodule is not initialized  
+    
+    ```shell
+    $ git diff sub
+    diff --cc sub
+    index 533da4e,ab2af77..0000000
+    --- a/sub
+    +++ b/sub
+    @@@ -1,1 -1,1 +1,1 @@@
+    ​- Subproject commit 533da4ea00703f4ad6d5518e1ce81d20261c40c0
+     -Subproject commit ab2af775ec467ebb328a7374653f247920f258f3
+    ++Subproject commit 0000000000000000000000000000000000000000
+    ```
+    
+    You may be able to solve your problem with [How to resolve git submodule conflict if submodule is not initialized](https://stackoverflow.com/questions/26617838/how-to-resolve-git-submodule-conflict-if-submodule-is-not-initialized/31411086)
+3.  if you use emacs, you might get the error when use git:  
+    
+    ```shell
+    error:
+    "git fatal: unable to auto-detect email address windows"
+    ```
+    
+    you can try to modify `windows credentials` form following:  
+    `Control Panel → All Control Panel Items → Credential Manager` and click `Windows Credentials`, to see `Generic Credentials`, and modify the **User name** and **Password**.  
+    ![](/ox-hugo/windows-credentials.png)
 
 
 ## More {#more}
