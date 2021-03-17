@@ -1,8 +1,8 @@
 +++
 title = "Linux Install Application"
 author = ["Shawn Dennis Lin"]
-date = 2020-11-19T00:00:00+08:00
-lastmod = 2021-01-13T03:55:22+08:00
+date = 2021-03-16T00:00:00+08:00
+lastmod = 2021-03-18T01:43:33+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -32,6 +32,8 @@ sudo apt-get install -y silversearcher-ag
 
 -   GitHub: [ggreer/the\_silver\_searcher](https://github.com/ggreer/the%5Fsilver%5Fsearcher)
 
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
 
 ### Anaconda {#anaconda}
 
@@ -46,17 +48,61 @@ conda activate tf-gpu
 
 ### Angry IP scanner {#angry-ip-scanner}
 
--   GitHub: [angryip/ipscan](https://github.com/angryip/ipscan/tree/3.7.2)
--   Ref: [Angry IP Scanner](https://angryip.org/about/)
+Angry IP Scanner - fast and friendly network scanner  
+
+-   Official Website: [Angry IP Scanner](https://angryip.org/about/)
+-   Download Page: <https://angryip.org/download/#linux>
+-   GitHub: <https://github.com/angryip/ipscan/tree/3.7.2>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
 
 
 ### BingWall - Bing wallpaper of the day {#bingwall-bing-wallpaper-of-the-day}
+
+Bing wallpaper of the day application for Gnome desktop.  
 
 ```shell
 sudo snap install bing-wall
 ```
 
--   Ref: [BingWall - Bing wallpaper of the day](https://snapcraft.io/bing-wall)
+-   Snapcraft: <https://snapcraft.io/bing-wall>
+-   GitHub: <https://github.com/keshavbhatt/BingWall>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
+
+### Bluetooth {#bluetooth}
+
+Enable bluetooth when system startup.  
+
+18.04\* users who don't naturally have a /etc/rc.local, you'll need to create one and make it executable. To make things slightly easier, you can just paste the following command into a terminal:  
+
+```shell
+sudo install -b -m 755 /dev/stdin /etc/rc.local << EOF
+#!/bin/sh
+rfkill unblock bluetooth
+exit 0
+EOF
+```
+
+> OS information  
+> 
+> NAME="Ubuntu"  
+> VERSION="20.04.2 LTS (Focal Fossa)"  
+> ID=ubuntu  
+> ID\_LIKE=debian  
+> PRETTY\_NAME="Ubuntu 20.04.2 LTS"  
+> VERSION\_ID="20.04"  
+> HOME\_URL="<https://www.ubuntu.com/>"  
+> SUPPORT\_URL="<https://help.ubuntu.com/>"  
+> BUG\_REPORT\_URL="<https://bugs.launchpad.net/ubuntu/>"  
+> PRIVACY\_POLICY\_URL="<https://www.ubuntu.com/legal/terms-and-policies/privacy-policy>"  
+> VERSION\_CODENAME=focal  
+> UBUNTU\_CODENAME=focal  
+
+-   Ref Website: <https://askubuntu.com/a/2568/1193335>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
 
 
 ### boot-repair {#boot-repair}
@@ -121,6 +167,20 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
 -   GitHub: [shdennlin/dotfiles](https://github.com/shdennlin/dotfiles)
+
+
+### emacs {#emacs}
+
+An extensible, customizable, free/libre text editor — and more.  
+
+```shell
+sudo snap install emacs --classic
+```
+
+-   Official Website: <https://www.gnu.org/software/emacs/>
+-   Snapcraft:
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
 
 
 ### extra-cmake-modules {#extra-cmake-modules}
@@ -233,6 +293,23 @@ sudo apt-get install gnome-shell-pomodoro
 -   Ref: [針對Gnome 3的Linux桌面進行美化](https://www.itread01.com/content/1544311459.html)
 
 
+### HUGO {#hugo}
+
+A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.  
+
+```shell
+# sudo snap install hugo  # version 0.80.0, or
+# sudo apt  install hugo  # version 0.68.3-1
+sudo snap install hugo
+```
+
+-   Official Website: <https://gohugo.io/>
+-   Install tutorial: <https://gohugo.io/getting-started/installing>
+-   GitHub: <https://github.com/gohugoio/hugo>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
+
 ### Java {#java}
 
 Preparation: Download jre-8u251-linux-x64.tar.gz  
@@ -273,6 +350,13 @@ sudo apt-get install texlive-xetex
 ```
 
 -   Ref: [How to install LaTex on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux)
+
+
+### LINE {#line}
+
+-   Ref: [如何在 Ubuntu 20.04 中安裝 LINE 通訊軟體](https://tedliou.com/archives/howto-install-line-on-ubuntu-20-04/)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
 
 
 ### Linux Advanced Power Management (TLP) {#linux-advanced-power-management--tlp}
@@ -350,6 +434,22 @@ sudo snap install musixmatch
 
 -   GitHub:
 -   Ref: [Install Musixmatch on your Linux distribution](https://snapcraft.io/musixmatch)
+
+
+### <span class="org-todo todo TODO">TODO</span> NFS {#nfs}
+
+```shell
+sudo apt install -y nfs-kernel-server nfs-common
+```
+
+show status  
+
+```shell
+systemctl status rpcbind.service
+systemctl status 
+```
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
 
 
 ### nomacs {#nomacs}
@@ -430,8 +530,7 @@ Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix 
 Spacemacs is currently in beta, and contributions are very welcome.  
 
 ```shell
-git clone -b develop https://github.com/syl20bnr/spacemacs.git ~/.emacs.d &&\
-git clone https://github.com/bitjockey42/spacemacs-jekyll.git ~/.emacs.d/private/jekyll &&\
+git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d &&\
 git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
 ```
 
@@ -443,9 +542,20 @@ git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
 ### Spotify {#spotify}
 
 ```shell
-sudo apt install -y snapd &&\
 sudo snap install spotify
 ```
+
+
+### systemback {#systemback}
+
+```shell
+sudo apt install systemback
+```
+
+-   Install tutorial: <https://ubuntuqa.com/zh-tw/article/10012.html>
+-   Install tutorial: <https://www.linuxbabe.com/ubuntu/install-systemback-ubuntu-18-04-bionic-18-10>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
 
 
 ### Tensorflow-gpu {#tensorflow-gpu}
@@ -465,10 +575,14 @@ Originally created and developed for a long time by Chris Jones, the goal of thi
 Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)  
 
 ```shell
-sudo apt install terminator
+sudo apt install -y terminator
 ```
 
--   Ref: [Introduction-Terminator](https://gnometerminator.blogspot.com/p/introduction.html)
+-   Office Website: <https://gnometerminator.blogspot.com/>
+-   Install tutorial: <https://gnometerminator.blogspot.com/p/introduction.html>
+-   My configuration: <https://github.com/shdennlin/dotfiles>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
 
 
 ### update & upgrade {#update-and-upgrade}

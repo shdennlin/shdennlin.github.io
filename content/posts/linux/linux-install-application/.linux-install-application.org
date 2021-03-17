@@ -4,7 +4,7 @@
 #+EXPORT_FILE_NAME: linux-install-application
 #+AUTHOR:	Shawn Dennis Lin
 #+EMAIL:	ShawnDennisLin@gmail.com
-#+DATE:	[2020-11-19 Thu]
+#+DATE:	[2021-03-16 Tue]
 
 #+HUGO_WEIGHT: auto
 #+HUGO_AUTO_SET_LASTMOD: t
@@ -31,8 +31,10 @@ A code searching tool similar to ack, with a focus on speed.
 #+BEGIN_SRC shell
 sudo apt-get install -y silversearcher-ag
 #+END_SRC
-+ GitHub: [[https://github.com/ggreer/the_silver_searcher][ggreer/the_silver_searcher]] 
-
++ GitHub: [[https://github.com/ggreer/the_silver_searcher][ggreer/the_silver_searcher]]
+ 
+<2021-03-16 Tue>
+  
 *** Anaconda
 #+BEGIN_SRC shell
 cd ~/Downloads
@@ -43,14 +45,55 @@ conda activate tf-gpu
 #+END_SRC
 
 *** Angry IP scanner
-+ GitHub: [[https://github.com/angryip/ipscan/tree/3.7.2][angryip/ipscan]]  
-+ Ref: [[https://angryip.org/about/][Angry IP Scanner]] 
+Angry IP Scanner - fast and friendly network scanner 
+
++ Official Website: [[https://angryip.org/about/][Angry IP Scanner]] 
++ Download Page: https://angryip.org/download/#linux
++ GitHub: [[https://github.com/angryip/ipscan/tree/3.7.2]]
+
+<2021-03-16 Tue>
 
 *** BingWall - Bing wallpaper of the day
+Bing wallpaper of the day application for Gnome desktop.
 #+BEGIN_SRC shell
 sudo snap install bing-wall
 #+END_SRC
-+ Ref: [[https://snapcraft.io/bing-wall][BingWall - Bing wallpaper of the day]] 
++ Snapcraft: https://snapcraft.io/bing-wall
++ GitHub: https://github.com/keshavbhatt/BingWall
+
+<2021-03-16 Tue>
+
+*** Bluetooth
+Enable bluetooth when system startup.
+
+18.04* users who don't naturally have a /etc/rc.local, you'll need to create one and make it executable. To make things slightly easier, you can just paste the following command into a terminal:
+#+begin_src shell
+sudo install -b -m 755 /dev/stdin /etc/rc.local << EOF
+#!/bin/sh
+rfkill unblock bluetooth
+exit 0
+EOF
+#+end_src
+
+#+begin_quote
+OS information
+
+NAME="Ubuntu"
+VERSION="20.04.2 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.2 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+#+end_quote
+
++ Ref Website: https://askubuntu.com/a/2568/1193335
+<2021-03-18 Thu>
 
 *** boot-repair
 #+BEGIN_SRC shell
@@ -99,6 +142,17 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #+END_SRC
 + GitHub: [[https://github.com/shdennlin/dotfiles][shdennlin/dotfiles]]  
     
+*** emacs
+An extensible, customizable, free/libre text editor — and more.
+#+begin_src shell
+sudo snap install emacs --classic
+#+end_src
+
++ Official Website: https://www.gnu.org/software/emacs/
++ Snapcraft: 
+
+<2021-03-16 Tue>
+
 *** extra-cmake-modules
 #+BEGIN_SRC shell
 cd ~/Downloads &&\
@@ -181,6 +235,19 @@ sudo apt-get install gnome-shell-pomodoro
 #+END_SRC
 + Ref: [[https://www.itread01.com/content/1544311459.html][針對Gnome 3的Linux桌面進行美化]] 
 
+*** HUGO
+A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.
+#+BEGIN_SRC shell
+# sudo snap install hugo  # version 0.80.0, or
+# sudo apt  install hugo  # version 0.68.3-1
+sudo snap install hugo
+#+END_SRC
++ Official Website: https://gohugo.io/
++ Install tutorial: [[https://gohugo.io/getting-started/installing]]
++ GitHub: [[https://github.com/gohugoio/hugo]]
+
+<2021-03-16 Tue>
+
 *** Java
 Preparation: Download jre-8u251-linux-x64.tar.gz
 Download location: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]] 
@@ -212,6 +279,11 @@ sudo apt-get install texlive-latex-extra &&\
 sudo apt-get install texlive-xetex
 #+END_SRC
 + Ref: [[https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux][How to install LaTex on Ubuntu 20.04 Focal Fossa Linux]] 
+
+*** LINE
++ Ref: [[https://tedliou.com/archives/howto-install-line-on-ubuntu-20-04/][如何在 Ubuntu 20.04 中安裝 LINE 通訊軟體]]
+
+<2021-03-16 Tue>
 
 *** Linux Advanced Power Management (TLP)
 TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.
@@ -275,6 +347,18 @@ sudo snap install musixmatch
 + GitHub:   
 + Ref: [[https://snapcraft.io/musixmatch][Install Musixmatch on your Linux distribution]] 
 
+*** TODO NFS
+#+begin_src shell
+sudo apt install -y nfs-kernel-server nfs-common
+#+end_src
+show status
+#+begin_src shell
+systemctl status rpcbind.service
+systemctl status 
+#+end_src
+
+<2021-03-18 Thu>
+
 *** nomacs
 nomacs is a free, open source image viewer, which supports multiple platforms. You can use it for viewing all common image formats including RAW and psd images.
 #+BEGIN_SRC shell
@@ -329,8 +413,7 @@ Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix 
 
 Spacemacs is currently in beta, and contributions are very welcome.
 #+BEGIN_SRC shell
-git clone -b develop https://github.com/syl20bnr/spacemacs.git ~/.emacs.d &&\
-git clone https://github.com/bitjockey42/spacemacs-jekyll.git ~/.emacs.d/private/jekyll &&\
+git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d &&\
 git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
 #+END_SRC
 + GitHub1: [[https://github.com/syl20bnr/spacemacs][syl20bnr/spacemacs]] 
@@ -339,9 +422,18 @@ git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
 
 *** Spotify
 #+BEGIN_SRC shell
-sudo apt install -y snapd &&\
 sudo snap install spotify
 #+END_SRC
+
+*** systemback
+#+begin_src shell
+sudo apt install systemback
+#+end_src
+
++ Install tutorial: https://ubuntuqa.com/zh-tw/article/10012.html
++ Install tutorial: https://www.linuxbabe.com/ubuntu/install-systemback-ubuntu-18-04-bionic-18-10
+
+<2021-03-18 Thu>
 
 *** Tensorflow-gpu
 #+BEGIN_SRC shell
@@ -355,9 +447,13 @@ Originally created and developed for a long time by Chris Jones, the goal of thi
 
 Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)
 #+BEGIN_SRC shell
-sudo apt install terminator
+sudo apt install -y terminator
 #+END_SRC
-+ Ref: [[https://gnometerminator.blogspot.com/p/introduction.html][Introduction-Terminator]] 
++ Office Website: https://gnometerminator.blogspot.com/
++ Install tutorial: https://gnometerminator.blogspot.com/p/introduction.html
++ My configuration: https://github.com/shdennlin/dotfiles
+
+<2021-03-16 Tue>
 
 *** update & upgrade  
 #+BEGIN_SRC shell
