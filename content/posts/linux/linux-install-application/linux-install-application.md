@@ -2,7 +2,7 @@
 title = "Linux Install Application"
 author = ["Shawn Dennis Lin"]
 date = 2020-11-19T00:00:00+08:00
-lastmod = 2020-12-03T01:44:17+08:00
+lastmod = 2021-01-13T03:55:22+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -22,65 +22,15 @@ These are the applications I installed in linux. If you have any questions about
 ## My Install Application in Linux {#my-install-application-in-linux}
 
 
-### update & upgrade {#update-and-upgrade}
+### ag {#ag}
+
+A code searching tool similar to ack, with a focus on speed.  
 
 ```shell
-sudo apt-get update && sudo apt-get -y upgrade
+sudo apt-get install -y silversearcher-ag
 ```
 
-or  
-
-```shell
-sudo apt-get update && sudo apt-get -y dist-upgrade
-```
-
--   Ref: [APT upgrade 和 dist-upgrade 的差別](https://blog.longwin.com.tw/2008/03/debian%5Fubuntu%5Fapt%5Fdist%5Fupgrade%5Fdifference%5F2008/)
-
-
-### Git {#git}
-
-```shell
-sudo apt-get -y install git
-```
-
-
-### dotfiles {#dotfiles}
-
-```shell
-mkdir ~/.dotfiles &&\
-git clone https://github.com/shdennlin/dotfiles.git ~/.dotfiles/. &&\
-cd ~/.dotfiles &&\
-bash install.sh &&\
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-```
-
--   GitHub: [shdennlin/dotfiles](https://github.com/shdennlin/dotfiles)
-
-
-### fcitx & boshiamy {#fcitx-and-boshiamy}
-
-```shell
-sudo apt-get install -y fcitx fcitx-table-boshiamy fcitx-chewing
-```
-
--   Ref: [Linux Ubuntu 嘸蝦米輸入法的FCITX安裝](https://thorasgard520.blogspot.com/2019/04/linux-ubuntu-fcitx.html)
-
-
-### GNOME {#gnome}
-
-```shell
-sudo apt install -y gnome-tweaks gnome-shell-extensions &&\
-sudo apt install -y chrome-gnome-shell &&\
-sudo apt purge gnome-shell-extenion-appindicator 
-
-sudo apt install gnome-shell-extension-pixelsaver &&\
-sudo apt install gnome-shell-extension-remove-dropdown-arrows &&\
-sudo apt install gnome-shell-extension-system-monitor &&\
-sudo apt install gnome-shell-extension-prefs &&\
-sudo apt-get install gnome-shell-pomodoro
-```
-
--   Ref: [針對Gnome 3的Linux桌面進行美化](https://www.itread01.com/content/1544311459.html)
+-   GitHub: [ggreer/the\_silver\_searcher](https://github.com/ggreer/the%5Fsilver%5Fsearcher)
 
 
 ### Anaconda {#anaconda}
@@ -160,6 +110,19 @@ sudo dpkg -i discord.deb
 -   Ref: [Discord](https://discord.com/)
 
 
+### dotfiles {#dotfiles}
+
+```shell
+mkdir ~/.dotfiles &&\
+git clone https://github.com/shdennlin/dotfiles.git ~/.dotfiles/. &&\
+cd ~/.dotfiles &&\
+bash install.sh &&\
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
+
+-   GitHub: [shdennlin/dotfiles](https://github.com/shdennlin/dotfiles)
+
+
 ### extra-cmake-modules {#extra-cmake-modules}
 
 ```shell
@@ -174,6 +137,15 @@ sudo make install
 ```
 
 -   GitHub: [KDE/extra-cmake-modules](https://github.com/KDE/extra-cmake-modules)
+
+
+### fcitx & boshiamy {#fcitx-and-boshiamy}
+
+```shell
+sudo apt-get install -y fcitx fcitx-table-boshiamy fcitx-chewing
+```
+
+-   Ref: [Linux Ubuntu 嘸蝦米輸入法的FCITX安裝](https://thorasgard520.blogspot.com/2019/04/linux-ubuntu-fcitx.html)
 
 
 ### flatpak {#flatpak}
@@ -227,6 +199,13 @@ sudo install drive /usr/local/bin/drive
 -   Ref: [如何在終端機介面使用 Google Drive (gdrive cmd)](https://hiraku.tw/2020/01/5894/)
 
 
+### Git {#git}
+
+```shell
+sudo apt-get -y install git
+```
+
+
 ### GitKraken {#gitkraken}
 
 ```shell
@@ -235,6 +214,23 @@ sudo dpkg -i ~/Downloads/gitkraken-amd64.deb
 ```
 
 -   Ref: [GitKrakon](https://www.gitkraken.com/)
+
+
+### GNOME {#gnome}
+
+```shell
+sudo apt install -y gnome-tweaks gnome-shell-extensions &&\
+sudo apt install -y chrome-gnome-shell &&\
+sudo apt purge gnome-shell-extenion-appindicator 
+
+sudo apt install gnome-shell-extension-pixelsaver &&\
+sudo apt install gnome-shell-extension-remove-dropdown-arrows &&\
+sudo apt install gnome-shell-extension-system-monitor &&\
+sudo apt install gnome-shell-extension-prefs &&\
+sudo apt-get install gnome-shell-pomodoro
+```
+
+-   Ref: [針對Gnome 3的Linux桌面進行美化](https://www.itread01.com/content/1544311459.html)
 
 
 ### Java {#java}
@@ -277,6 +273,27 @@ sudo apt-get install texlive-xetex
 ```
 
 -   Ref: [How to install LaTex on Ubuntu 20.04 Focal Fossa Linux](https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux)
+
+
+### Linux Advanced Power Management (TLP) {#linux-advanced-power-management--tlp}
+
+TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.  
+
+TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.  
+
+Nevertheless TLP is highly customizable to fulfil your specific requirements.  
+
+```shell
+sudo add-apt-repository ppa:linrunner/tlp &&\
+sudo apt update &&\
+sudo apt install tlp tlp-rdw &&\
+sudo apt-get install smartmontools &&\
+sudo systemctl start tlp &&\
+sudo tlp-stat | less
+```
+
+-   Ref: [linux tlp tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial)
+-   Ref: [TLP - Optimize Linux Laptop Battery Life](https://linrunner.de/tlp/)
 
 
 ### linux-wifi-hotspot {#linux-wifi-hotspot}
@@ -454,25 +471,19 @@ sudo apt install terminator
 -   Ref: [Introduction-Terminator](https://gnometerminator.blogspot.com/p/introduction.html)
 
 
-### Linux Advanced Power Management (TLP) {#linux-advanced-power-management--tlp}
-
-TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.  
-
-TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.  
-
-Nevertheless TLP is highly customizable to fulfil your specific requirements.  
+### update & upgrade {#update-and-upgrade}
 
 ```shell
-sudo add-apt-repository ppa:linrunner/tlp &&\
-sudo apt update &&\
-sudo apt install tlp tlp-rdw &&\
-sudo apt-get install smartmontools &&\
-sudo systemctl start tlp &&\
-sudo tlp-stat | less
+sudo apt-get update && sudo apt-get -y upgrade
 ```
 
--   Ref: [linux tlp tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial)
--   Ref: [TLP - Optimize Linux Laptop Battery Life](https://linrunner.de/tlp/)
+or  
+
+```shell
+sudo apt-get update && sudo apt-get -y dist-upgrade
+```
+
+-   Ref: [APT upgrade 和 dist-upgrade 的差別](https://blog.longwin.com.tw/2008/03/debian%5Fubuntu%5Fapt%5Fdist%5Fupgrade%5Fdifference%5F2008/)
 
 
 ### Vim {#vim}
@@ -501,5 +512,4 @@ xclip is a command line interface to the X11 clipboard. It allows you to put the
 sudo apt-get install -y xclip
 ```
 
--   GitHub:
 -   Ref: [Command-Line Copy&Paste With xclip (Debian/Ubuntu)](https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu)
