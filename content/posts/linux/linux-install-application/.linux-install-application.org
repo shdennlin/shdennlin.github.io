@@ -617,10 +617,11 @@ EOF
 <2021-03-20 Sat>
 
 ***** [ =X= ] Suspend and hibernate configuration in Debian Jessie
-Ref: https://wiki.debian.org/Hibernation
-Ref: https://wiki.debian.org/SystemdSuspendSedation
 1. edit =/etc/systemd/logind.conf=
 2. create the file =/etc/systemd/system/suspend-sedation.service=
+
+Ref: https://wiki.debian.org/Hibernation
+Ref: https://wiki.debian.org/SystemdSuspendSedation
 
 ***** [ =X= ] Hibernate with hibernate command
 #+begin_src shell
@@ -631,8 +632,7 @@ sudo hibernate
 ***** [ =X= ] edit =/etc/systemd/logind.conf= 
 Ref: https://askubuntu.com/a/1245763/1193335
 
-***** [ =X= ] edit =/etc/default/grub= like
-Ref: https://askubuntu.com/a/1041395/1193335
+***** [ =X= ] edit =/etc/default/grub= file
 #+begin_src shell
 GRUB_CMDLINE_LINUX="nouveau.modeset=0"
 #+end_src
@@ -643,8 +643,9 @@ sudo update-grub
 sudo reboot
 #+end_src
 
+Ref: https://askubuntu.com/a/1041395/1193335
+
 ***** [ =X= ] sudo apt-get install pm-utils
-Ref: https://askubuntu.com/a/1081639/1193335
 I got a workaround for suspend working on Ubuntu 18.04 with a NVIDIA
 GeForce GTX 1050 Mobile and proprietary nvidia drivers 390. I installed
 pm-suspend via =sudo apt-get install pm-utils=. Then, I switch from
@@ -652,8 +653,9 @@ Gnome Shell to the terminal via Ctrl+Alt+f6. After the login, I do
 =sudo pm-suspend=. After waking up from standby, I change back to Gnome
 Shell via Ctrl+Alt+f1. Done!
 
+Ref: https://askubuntu.com/a/1081639/1193335
+
 ***** [ =V= ] add-apt-repository ppa:graphics-drivers/ppa 
-Ref: https://bugs.launchpad.net/ubuntu/+source/nvidia-graphics-drivers-460/+bug/1911055 #9
 #+begin_src shell
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
@@ -661,10 +663,47 @@ sudo apt upgrade
 sudo reboot
 #+end_src
 
+Ref: https://bugs.launchpad.net/ubuntu/+source/nvidia-graphics-drivers-460/+bug/1911055 #9
+
 ***** [ =not test= ] edit =/etc/gdm3/custom.conf=
-Ref: https://askubuntu.com/a/61433/1193335 1. The quick way
 If your desktop does not load after installing the corresponding driver, then do the following:
 =sudo nano /etc/gdm3/custom.conf=
 then remove the comment (# symbol) from the line that says 
 =# WaylandEnable=false=
 and save. Then reboot. If this still does not work, then please disable Secure Boot since you might actually be using UEFI. 
+
+Ref: https://askubuntu.com/a/61433/1193335 1. The quick way
+
+**** Change the login screen resolution in Ubuntu 20.04
+
+***** [ =X= ] edit =/etc/default/grub= file
+Step:
+1. Open a terminal and enter:
+   #+begin_src shell
+   sudo vi /etc/default/grub
+   #+end_src
+2. Find the =#GRUB_GFXMODE=640x480=, Below that line, enter the following, substituting the 1920x1080 for a supported resolution:
+   #+begin_src shell
+   GRUB_GFXMODE=1920x1080
+   GRUB_GFXPAYLOAD_LINUX=keep
+   #+end_src
+
+Ref: https://askubuntu.com/a/1041697/1193335
+
+***** [ =V= ] edit =/etc/default/grub= file
+Just want to add that I found a way to change the login screen resolution. That part of my problem has been asked and answered, see [[https://askubuntu.com/questions/912052/how-do-i-change-gdm3-login-screen-resolution][how to change gdm3 thread]].
+
+After setting up the monitor resolution and zoom level I wanted, I simply copy the settings to gdm3 .config directory, make any further changes you need and then reboot the PC.
+#+begin_src shell
+sudo cp -i ~/.config/monitors.xml /var/lib/gdm3/.config/
+less /var/lib/gdm3/.config/monitors.xml
+#+end_src
+You probably also need to do the following before rebooting. Select gdm3 when prompted.
+#+begin_src shell
+sudo dpkg-reconfigure gdm3
+#+end_src
+
+Ref: https://askubuntu.com/a/1041697/1193335
+
+**** TODO Changing login background automatically
+Ref: https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme-or-background-in-ubuntu-20-04
