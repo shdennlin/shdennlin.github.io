@@ -1,8 +1,8 @@
 +++
-title = "Linux Install Application"
+title = "My Install Application in Linux"
 author = ["Shawn Dennis Lin"]
 date = 2021-03-16T00:00:00+08:00
-lastmod = 2021-03-18T01:43:33+08:00
+lastmod = 2021-03-20T20:38:44+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -14,7 +14,7 @@ hero = "/posts/linux/linux-install-application/images/linux.png"
   name = "Linux Install Application"
 +++
 
-These are the applications I installed in linux. If you have any questions about these apps, you can contact me.  
+These are the applications I installed in Linux. If you have any questions about these apps, you can contact me.  
 
 <!--more-->
 
@@ -30,7 +30,7 @@ A code searching tool similar to ack, with a focus on speed.
 sudo apt-get install -y silversearcher-ag
 ```
 
--   GitHub: [ggreer/the\_silver\_searcher](https://github.com/ggreer/the%5Fsilver%5Fsearcher)
+-   GitHub: <https://github.com/ggreer/the%5Fsilver%5Fsearcher>
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
 
@@ -49,12 +49,18 @@ conda activate tf-gpu
 ### Angry IP scanner {#angry-ip-scanner}
 
 Angry IP Scanner - fast and friendly network scanner  
+**Go to Download Page to Download `deb` file** and type below:  
 
--   Official Website: [Angry IP Scanner](https://angryip.org/about/)
+```shell
+cd ~/Downloads
+sudo apt install ipscan_3.7.6_all.deb # your version
+```
+
+-   Official Website: <https://angryip.org/about/>
 -   Download Page: <https://angryip.org/download/#linux>
 -   GitHub: <https://github.com/angryip/ipscan/tree/3.7.2>
 
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
 
 
 ### BingWall - Bing wallpaper of the day {#bingwall-bing-wallpaper-of-the-day}
@@ -71,40 +77,6 @@ sudo snap install bing-wall
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
 
 
-### Bluetooth {#bluetooth}
-
-Enable bluetooth when system startup.  
-
-18.04\* users who don't naturally have a /etc/rc.local, you'll need to create one and make it executable. To make things slightly easier, you can just paste the following command into a terminal:  
-
-```shell
-sudo install -b -m 755 /dev/stdin /etc/rc.local << EOF
-#!/bin/sh
-rfkill unblock bluetooth
-exit 0
-EOF
-```
-
-> OS information  
-> 
-> NAME="Ubuntu"  
-> VERSION="20.04.2 LTS (Focal Fossa)"  
-> ID=ubuntu  
-> ID\_LIKE=debian  
-> PRETTY\_NAME="Ubuntu 20.04.2 LTS"  
-> VERSION\_ID="20.04"  
-> HOME\_URL="<https://www.ubuntu.com/>"  
-> SUPPORT\_URL="<https://help.ubuntu.com/>"  
-> BUG\_REPORT\_URL="<https://bugs.launchpad.net/ubuntu/>"  
-> PRIVACY\_POLICY\_URL="<https://www.ubuntu.com/legal/terms-and-policies/privacy-policy>"  
-> VERSION\_CODENAME=focal  
-> UBUNTU\_CODENAME=focal  
-
--   Ref Website: <https://askubuntu.com/a/2568/1193335>
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
-
-
 ### boot-repair {#boot-repair}
 
 ```shell
@@ -113,7 +85,9 @@ sudo apt-get update &&\
 sudo apt-get install -y boot-repair && boot-repair
 ```
 
--   Ref: [Boot-Repair](https://help.ubuntu.com/community/Boot-Repair)
+-   Ref: <https://help.ubuntu.com/community/Boot-Repair>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
 
 
 ### bpytop {#bpytop}
@@ -127,7 +101,25 @@ cd bpytop &&\
 sudo make install
 ```
 
--   GitHub: [aristocratos/bpytop](https://github.com/aristocratos/bpytop)
+-   GitHub: <https://github.com/aristocratos/bpytop>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
+
+### 中文 Language pack {#中文-language-pack}
+
+```shell
+echo $LANG
+
+sudo apt-get install -y language-pack-zh-han* &&\
+sudo apt install $(check-language-support)
+
+sudo apt-get install language-pack-gnome-zh-han*
+```
+
+-   Ref: [Ubuntu 18.04 LTS 命令行方式安裝中文語言包](https://www.twblogs.net/a/5c38452dbd9eee35b21d8750)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
 
 
 ### Crow Translate {#crow-translate}
@@ -135,41 +127,44 @@ sudo make install
 A small translate tool like QTranslate.  
 
 ```shell
-cd ~/Downloads &&\
-git clone https://aur.archlinux.org/crow-translate.git
-cd crow-translate
-makepkg -si
+sudo add-apt-repository ppa:jonmagon/crow-translate &&\
+sudo apt update &&\
+sudo apt install crow-translate
 ```
 
--   GitHub: [crow-translate/crow-translate](https://github.com/crow-translate/crow-translate)
--   Ref: [Crow Translate](https://crow-translate.github.io/)
+-   Official Website: <https://crow-translate.github.io/>
+-   GitHub: <https://github.com/crow-translate/crow-translate>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
 
 
 ### Discord {#discord}
 
 ```shell
-cd ~/Downloads &&\
-wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb" &&\
-sudo dpkg -i discord.deb
+sudo snap install discord
 ```
 
--   Ref: [Discord](https://discord.com/)
+-   Official Website: <https://discord.com/>
+-   Snapcraft: <https://snapcraft.io/discord>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;  </span></span>    
 
 
-### dotfiles {#dotfiles}
+### Dotfiles {#dotfiles}
 
 ```shell
 mkdir ~/.dotfiles &&\
 git clone https://github.com/shdennlin/dotfiles.git ~/.dotfiles/. &&\
 cd ~/.dotfiles &&\
 bash install.sh &&\
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
--   GitHub: [shdennlin/dotfiles](https://github.com/shdennlin/dotfiles)
+-   GitHub: <https://github.com/shdennlin/dotfiles>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
 
 
-### emacs {#emacs}
+### Emacs {#emacs}
 
 An extensible, customizable, free/libre text editor — and more.  
 
@@ -178,9 +173,10 @@ sudo snap install emacs --classic
 ```
 
 -   Official Website: <https://www.gnu.org/software/emacs/>
--   Snapcraft:
+-   Snapcraft: <https://snapcraft.io/emacs>
+-   GitHub: <https://github.com/emacs-mirror/emacs>
 
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
 
 
 ### extra-cmake-modules {#extra-cmake-modules}
@@ -206,6 +202,8 @@ sudo apt-get install -y fcitx fcitx-table-boshiamy fcitx-chewing
 ```
 
 -   Ref: [Linux Ubuntu 嘸蝦米輸入法的FCITX安裝](https://thorasgard520.blogspot.com/2019/04/linux-ubuntu-fcitx.html)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;  </span></span>    
 
 
 ### flatpak {#flatpak}
@@ -261,9 +259,17 @@ sudo install drive /usr/local/bin/drive
 
 ### Git {#git}
 
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.  
+
 ```shell
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
 sudo apt-get -y install git
 ```
+
+-   Official Website: <https://git-scm.com/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-20 Sat&gt;</span></span>  
 
 
 ### GitKraken {#gitkraken}
@@ -278,19 +284,29 @@ sudo dpkg -i ~/Downloads/gitkraken-amd64.deb
 
 ### GNOME {#gnome}
 
+Install gnome extensions and web plugins  
+
 ```shell
 sudo apt install -y gnome-tweaks gnome-shell-extensions &&\
-sudo apt install -y chrome-gnome-shell &&\
-sudo apt purge gnome-shell-extenion-appindicator 
-
-sudo apt install gnome-shell-extension-pixelsaver &&\
-sudo apt install gnome-shell-extension-remove-dropdown-arrows &&\
-sudo apt install gnome-shell-extension-system-monitor &&\
-sudo apt install gnome-shell-extension-prefs &&\
-sudo apt-get install gnome-shell-pomodoro
+sudo apt install -y chrome-gnome-shell
+gnome-shell --version
 ```
 
 -   Ref: [針對Gnome 3的Linux桌面進行美化](https://www.itread01.com/content/1544311459.html)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
+
+#### My extensions {#my-extensions}
+
+1.  [Auto Move Windows](https://extensions.gnome.org/extension/16/auto-move-windows/)
+2.  [Caffeine](https://extensions.gnome.org/extension/517/caffeine/)
+3.  [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
+4.  [Desktop Icons](https://extensions.gnome.org/extension/1465/desktop-icons/)
+5.  [Hide Top Bar](https://extensions.gnome.org/extension/545/hide-top-bar/)
+6.  [OpenWeather](https://extensions.gnome.org/extension/750/openweather/)
+7.  [Remove Dropdown Arrows](https://extensions.gnome.org/extension/800/remove-dropdown-arrows/)
+8.  [system-monitor](https://extensions.gnome.org/extension/120/system-monitor/)
 
 
 ### HUGO {#hugo}
@@ -382,18 +398,42 @@ sudo tlp-stat | less
 
 ### linux-wifi-hotspot {#linux-wifi-hotspot}
 
+Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10).  
+
 ```shell
-git clone https://github.com/lakinduakash/linux-wifi-hotspot
-cd linux-wifi-hotspot
-
-#build binaries
-make
-
-#install
-sudo make install
+sudo add-apt-repository ppa:lakinduakash/lwh
+sudo apt install linux-wifi-hotspot
 ```
 
--   GitHub: [lakinduakash/linux-wifi-hotspot](https://github.com/lakinduakash/linux-wifi-hotspot)
+-   GitHub: <https://github.com/lakinduakash/linux-wifi-hotspot>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
+
+### lm Sensors {#lm-sensors}
+
+```shell
+sudo apt install -y lm-sensors
+
+sudo sensors-detect
+
+sensors
+```
+
+-   Ref: [How to Install lm Sensors on Linux](https://linoxide.com/install-lm-sensors-linux/)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
+
+
+### locate {#locate}
+
+```shell
+sudo apt install -y mlocate
+```
+
+-   Ref: [搜尋指令 which, whereis, locate, find的差別](http://blog.faq-book.com/?p=1013)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
 
 
 ### Logitech MX Master {#logitech-mx-master}
@@ -464,15 +504,18 @@ sudo apt-get install nomacs-l10n
 -   Ref: [nomacs.org](https://nomacs.org/%5C)
 
 
-### nvtop {#nvtop}
+### NVTOP {#nvtop}
 
 Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.  
 
 ```shell
+sudo apt install cmake libncurses5-dev libncursesw5-dev
 sudo apt install -y nvtop
 ```
 
--   GitHub: [Syllo/nvtop](https://github.com/Syllo/nvtop)
+-   GitHub: <https://github.com/Syllo/nvtop>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
 
 
 ### Okular {#okular}
@@ -519,7 +562,7 @@ apt install screenfetch
 -   GitHub:  [KittyKatt/screenFetch](https://github.com/KittyKatt/screenFetch)
 
 
-### spacemacs {#spacemacs}
+### sp acemacs {#sp-acemacs}
 
 Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.  
 
@@ -538,12 +581,19 @@ git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
 -   GitHub2: [shdennlin/spacemacs-private](https://github.com/shdennlin/spacemacs-private)
 -   Ref: [spacemacs.org](https://www.spacemacs.org/)
 
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
 
 ### Spotify {#spotify}
 
 ```shell
 sudo snap install spotify
 ```
+
+-   Official Website: <https://www.spotify.com/>
+-   Snapcraft: <https://snapcraft.io/spotify>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt; </span></span>   
 
 
 ### systemback {#systemback}
@@ -578,7 +628,7 @@ Much of the behaviour of Terminator is based on GNOME Terminal, and we are addin
 sudo apt install -y terminator
 ```
 
--   Office Website: <https://gnometerminator.blogspot.com/>
+-   Official Website: <https://gnometerminator.blogspot.com/>
 -   Install tutorial: <https://gnometerminator.blogspot.com/p/introduction.html>
 -   My configuration: <https://github.com/shdennlin/dotfiles>
 
@@ -603,7 +653,8 @@ sudo apt-get update && sudo apt-get -y dist-upgrade
 ### Vim {#vim}
 
 ```shell
-sudo apt-get install vim
+sudo apt purge vim
+sudo apt-get install vim-gtk3
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ```
 
@@ -627,3 +678,185 @@ sudo apt-get install -y xclip
 ```
 
 -   Ref: [Command-Line Copy&Paste With xclip (Debian/Ubuntu)](https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu)
+
+
+### System Problem {#system-problem}
+
+
+#### OS Information {#os-information}
+
+`cat /etc/os-release`  
+
+```shell
+NAME="Ubuntu"
+VERSION="20.04.2 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.2 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+```
+
+`lshw -class display`  
+
+```shell
+*-display                 
+      description: VGA compatible controller
+      product: GP107M [GeForce GTX 1050 3 GB Max-Q]
+      vendor: NVIDIA Corporation
+      physical id: 0
+      bus info: pci@0000:01:00.0
+      version: a1
+      width: 64 bits
+      clock: 33MHz
+      configuration: driver=nvidia latency=0
+      resources: irq:138 memory:a3000000-a3ffffff memory:90000000-9fffffff memory:a0000000-a1ffffff ioport:4000(size=128) memory:a4080000-a40fffff
+
+*-display
+      description: VGA compatible controller
+      product: UHD Graphics 630 (Mobile)
+      vendor: Intel Corporation
+      physical id: 2
+      bus info: pci@0000:00:02.0
+      version: 00
+      width: 64 bits
+      clock: 33MHz
+      capabilities: pciexpress msi pm vga_controller bus_master cap_list rom
+      configuration: driver=i915 latency=0
+      resources: irq:137 memory:a2000000-a2ffffff memory:b0000000-bfffffff ioport:5000(size=64) memory:c0000-dffff
+```
+
+`nvidia-smi`  
+
+```shell
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 460.67       Driver Version: 460.67       CUDA Version: 11.2     |
+|-------------------------------|----------------------|----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 1050    Off  | 00000000:01:00.0  On |                  N/A |
+| N/A   43C    P0    N/A /  N/A |    335MiB /  3020MiB |      0%      Default |
+|                               |                      |                  N/A |
++-------------------------------|----------------------|----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A      1752      G   /usr/lib/xorg/Xorg                 57MiB |
+|    0   N/A  N/A      2432      G   /usr/lib/xorg/Xorg                196MiB |
+|    0   N/A  N/A      2629      G   /usr/bin/gnome-shell               70MiB |
++-----------------------------------------------------------------------------+
+```
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-20 Sat&gt;</span></span>  
+
+
+#### Doesn't auto enable Bluetooth when system startup. {#doesn-t-auto-enable-bluetooth-when-system-startup-dot}
+
+18.04\* users who don't naturally have a /etc/rc.local, you'll need to create one and make it executable. To make things slightly easier, you can just paste the following command into a terminal:  
+
+```shell
+sudo install -b -m 755 /dev/stdin /etc/rc.local << EOF
+#!/bin/sh
+rfkill unblock bluetooth
+exit 0
+EOF
+```
+
+-   Ref Website: <https://askubuntu.com/a/2568/1193335>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
+
+
+#### System doesn't resume after suspend {#system-doesn-t-resume-after-suspend}
+
+[ `V` ] means it's work for me  
+[ `X` ] means it's not work for me  
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-20 Sat&gt;</span></span>  
+
+<!--list-separator-->
+
+-  [ `X` ] Suspend and hibernate configuration in Debian Jessie
+
+    Ref: <https://wiki.debian.org/Hibernation>  
+    Ref: <https://wiki.debian.org/SystemdSuspendSedation>  
+    
+    1.  edit `/etc/systemd/logind.conf`
+    2.  create the file `/etc/systemd/system/suspend-sedation.service`
+
+<!--list-separator-->
+
+-  [ `X` ] Hibernate with hibernate command
+
+    ```shell
+    sudo apt-get install hibernate
+    sudo hibernate
+    ```
+
+<!--list-separator-->
+
+-  [ `X` ] edit `/etc/systemd/logind.conf`
+
+    Ref: <https://askubuntu.com/a/1245763/1193335>  
+
+<!--list-separator-->
+
+-  [ `X` ] edit `/etc/default/grub` like
+
+    Ref: <https://askubuntu.com/a/1041395/1193335>  
+    
+    ```shell
+    GRUB_CMDLINE_LINUX="nouveau.modeset=0"
+    ```
+    
+    after that run:  
+    
+    ```shell
+    sudo update-grub
+    sudo reboot
+    ```
+
+<!--list-separator-->
+
+-  [ `X` ] sudo apt-get install pm-utils
+
+    Ref: <https://askubuntu.com/a/1081639/1193335>  
+    I got a workaround for suspend working on Ubuntu 18.04 with a NVIDIA  
+    GeForce GTX 1050 Mobile and proprietary nvidia drivers 390. I installed  
+    pm-suspend via `sudo apt-get install pm-utils`. Then, I switch from  
+    Gnome Shell to the terminal via Ctrl+Alt+f6. After the login, I do  
+    `sudo pm-suspend`. After waking up from standby, I change back to Gnome  
+    Shell via Ctrl+Alt+f1. Done!  
+
+<!--list-separator-->
+
+-  [ `V` ] add-apt-repository ppa:graphics-drivers/ppa
+
+    Ref: <https://bugs.launchpad.net/ubuntu/+source/nvidia-graphics-drivers-460/+bug/1911055> #9  
+    
+    ```shell
+    sudo add-apt-repository ppa:graphics-drivers/ppa
+    sudo apt update
+    sudo apt upgrade
+    sudo reboot
+    ```
+
+<!--list-separator-->
+
+-  [ `not test` ] edit `/etc/gdm3/custom.conf`
+
+    Ref: <https://askubuntu.com/a/61433/1193335> 1. The quick way  
+    If your desktop does not load after installing the corresponding driver, then do the following:  
+    `sudo nano /etc/gdm3/custom.conf`  
+    then remove the comment (# symbol) from the line that says  
+    `# WaylandEnable=false`  
+    and save. Then reboot. If this still does not work, then please disable Secure Boot since you might actually be using UEFI.
