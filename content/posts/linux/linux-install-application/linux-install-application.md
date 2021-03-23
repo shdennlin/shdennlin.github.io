@@ -2,7 +2,7 @@
 title = "My Install Application in Linux"
 author = ["Shawn Dennis Lin"]
 date = 2021-03-16T00:00:00+08:00
-lastmod = 2021-03-20T22:31:12+08:00
+lastmod = 2021-03-21T18:17:36+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -177,6 +177,22 @@ sudo snap install emacs --classic
 -   GitHub: <https://github.com/emacs-mirror/emacs>
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
+
+#### Emacs GUI can't activation Fcitx input method {#emacs-gui-can-t-activation-fcitx-input-method}
+
+<style>.org-center { margin-left: auto; margin-right: auto; text-align: center; }</style>
+
+<div class="org-center">
+  <div></div>
+
+echo "export LC\_CTYPE=zh\_TW.UTF-8" >> ~/.xprofile  
+
+</div>
+
+-   Ref: [Arch Linux：環境設定與常用套件](https://blog.rex-tsou.com/2017/12/arch-linux%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A%E8%88%87%E5%B8%B8%E7%94%A8%E5%A5%97%E4%BB%B6/)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-21 Sun&gt;</span></span>  
 
 
 ### extra-cmake-modules {#extra-cmake-modules}
@@ -562,7 +578,7 @@ apt install screenfetch
 -   GitHub:  [KittyKatt/screenFetch](https://github.com/KittyKatt/screenFetch)
 
 
-### sp acemacs {#sp-acemacs}
+### Spacemacs {#spacemacs}
 
 Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.  
 
