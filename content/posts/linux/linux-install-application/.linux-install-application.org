@@ -25,49 +25,34 @@ These are the applications I installed in Linux. If you have any questions about
 
 #+HUGO: more
 
-* My Install Application in Linux
-** ag
-A code searching tool similar to ack, with a focus on speed.
-#+BEGIN_SRC shell
-sudo apt-get install -y silversearcher-ag
-#+END_SRC
-+ GitHub: https://github.com/ggreer/the_silver_searcher
- 
-<2021-03-16 Tue>
-  
-** Anaconda
-#+BEGIN_SRC shell
-cd ~/Downloads
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
-bash ~/Dwonloads/Anaconda3-2020.02-Linux-x86_64.sh
-conda create -n tf-gpu tensorflow-gpu
-conda activate tf-gpu
-#+END_SRC
-
-** Angry IP scanner
-Angry IP Scanner - fast and friendly network scanner 
-*Go to Download Page to Download =deb= file* and type below:
-#+begin_src shell
-cd ~/Downloads
-sudo apt install ipscan_3.7.6_all.deb # your version
+My OS information
+#+begin_src sh
+                          ./+o+-       shdennlin@nb
+                  yyyyy- -yyyyyy+      OS: Ubuntu 20.04 focal
+               ://+//////-yyyyyyo      Kernel: x86_64 Linux 5.8.0-48-generic
+           .++ .:/++++++/-.+sss/`      Uptime: 52m
+         .:++o:  /++++++++/:--:/-      Packages: 2706
+        o:+o+:++.`..```.-/oo+++++/     Shell: bash 5.0.17
+       .:+o:+o/.          `+sssoo+/    Resolution: 1920x1080
+  .++/+:+oo+o:`             /sssooo.   DE: GNOME 3.36.5
+ /+++//+:`oo+o               /::--:.   WM: Mutter
+ \+/+o+++`o++o               ++////.   WM Theme: 
+  .++.o+++oo+:`             /dddhhh.   GTK Theme: Yaru-dark [GTK2/3]
+       .+.o+oo:.          `oddhhhh+    Icon Theme: Yaru
+        \+.++o+o``-````.:ohdhhhhh+     Font: Ubuntu 11
+         `:o+++ `ohhhhhhhhyo++os:      Disk: 89G / 471G (20%)
+           .o:`.syhhhhhhh/.oo++o`      CPU: Intel Core i5-9300H @ 8x 2.4GHz [52.0°C]
+               /osyyyyyyo++ooo+++/     GPU: GeForce GTX 1050
+                   ````` +oo+++o\:     RAM: 4700MiB / 15891MiB
+                          `oo++.     
 #+end_src
 
-+ Official Website: https://angryip.org/about/
-+ Download Page: https://angryip.org/download/#linux
-+ GitHub: [[https://github.com/angryip/ipscan/tree/3.7.2]]
+# + GitHub: 
+# + Official Website: 
+# + Install tutorial: 
+# + Ref:
 
-<2021-03-19 Fri>
-
-** BingWall - Bing wallpaper of the day
-Bing wallpaper of the day application for Gnome desktop.
-#+BEGIN_SRC shell
-sudo snap install bing-wall
-#+END_SRC
-+ Snapcraft: https://snapcraft.io/bing-wall
-+ GitHub: https://github.com/keshavbhatt/BingWall
-
-<2021-03-16 Tue>
-
+* System
 ** boot-repair
 #+BEGIN_SRC shell
 sudo add-apt-repository ppa:yannubuntu/boot-repair &&\
@@ -77,52 +62,6 @@ sudo apt-get install -y boot-repair && boot-repair
 + Ref: https://help.ubuntu.com/community/Boot-Repair
 
 <2021-03-19 Fri>
-
-** bpytop
-Resource monitor that shows usage and stats for processor, memory, disks, network and processes. Python port of bashtop.
-#+BEGIN_SRC shell
-cd ~/Downloads &&\
-git clone https://github.com/aristocratos/bpytop.git &&\
-cd bpytop &&\
-sudo make install
-#+END_SRC
-+ GitHub: https://github.com/aristocratos/bpytop
-
-<2021-03-19 Fri>
-
-** 中文 Language pack
-#+begin_src shell
-echo $LANG
-
-sudo apt-get install -y language-pack-zh-han* &&\
-sudo apt install $(check-language-support)
-
-sudo apt-get install language-pack-gnome-zh-han*
-#+end_src
-+ Ref: [[https://www.twblogs.net/a/5c38452dbd9eee35b21d8750][Ubuntu 18.04 LTS 命令行方式安裝中文語言包]]
-
-<2021-03-19 Fri>
-
-** Crow Translate
-A small translate tool like QTranslate.
-#+BEGIN_SRC shell
-sudo add-apt-repository ppa:jonmagon/crow-translate &&\
-sudo apt update &&\
-sudo apt install crow-translate
-#+END_SRC
-+ Official Website: https://crow-translate.github.io/
-+ GitHub: https://github.com/crow-translate/crow-translate
-  
-<2021-03-19 Fri>
-
-** Discord
-#+BEGIN_SRC shell
-sudo snap install discord
-#+END_SRC
-+ Official Website: https://discord.com/
-+ Snapcraft: https://snapcraft.io/discord
-
-<2021-03-19 Fri>  
 
 ** Dotfiles
 #+BEGIN_SRC shell
@@ -135,35 +74,6 @@ bash install.sh &&\
 
 <2021-03-19 Fri>
   
-** draw.io
-#+BEGIN_SRC shell
-sudo snap install drawio
-#+END_SRC
-+ GitHub: https://github.com/jgraph/drawio-desktop
-+ Snapcraft: https://snapcraft.io/drawio
-
-<2021-03-23 Tue>
-
-** Emacs
-An extensible, customizable, free/libre text editor — and more.
-#+begin_src shell
-sudo snap install emacs --classic
-#+end_src
-
-+ Official Website: https://www.gnu.org/software/emacs/
-+ Snapcraft: https://snapcraft.io/emacs
-+ GitHub: https://github.com/emacs-mirror/emacs
-
-<2021-03-19 Fri>
-
-*** Emacs GUI can't activation Fcitx input method
-#+begin_center shell
-echo "export LC_CTYPE=zh_TW.UTF-8" >> ~/.xprofile
-#+end_center
-+ Ref: [[https://blog.rex-tsou.com/2017/12/arch-linux%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A%E8%88%87%E5%B8%B8%E7%94%A8%E5%A5%97%E4%BB%B6/][Arch Linux：環境設定與常用套件]]
-
-<2021-03-21 Sun>
-
 ** extra-cmake-modules
 #+BEGIN_SRC shell
 cd ~/Downloads &&\
@@ -185,12 +95,6 @@ sudo apt-get install -y fcitx fcitx-table-boshiamy fcitx-chewing
 
 <2021-03-19 Fri>  
 
-** flatpak
-#+BEGIN_SRC shell
-sudo apt install -y flatpak
-#+END_SRC
-+ Ref: [[https://zh.wikipedia.org/wiki/Flatpak][flatpak]](wiki)
-
 ** font
 #+BEGIN_SRC shell
 cd ~/Downloads &&\
@@ -199,46 +103,6 @@ cd ~/Downloads/linux-configuration/fonts &&\
 bash install.sh
 #+END_SRC
 + GitHub: [[https://github.com/shdennlin/linux-configuration][shdennlin/linux-configuration]] 
-
-** FreeCAD
-#+BEGIN_SRC shell
-sudo apt install -y freecad
-#+END_SRC
-
-** FSearch
-#+BEGIN_SRC shell
-sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily &&\
-sudo apt-get update &&\
-sudo apt install fsearch-trunk
-#+END_SRC
-+ GitHub: [[https://github.com/cboxdoerfer/fsearch][cboxdoerfer/fsearch]] 
-  
-** gdrive
-#+BEGIN_SRC shell
-cd ~/Downloads &&\
-wget -O drive https://drive.google.com/uc?id=0B3X9GlR6Embnb095MGxEYmJhY2c &&\
-sudo install drive /usr/local/bin/drive
-#+END_SRC
-+ GitHub: [[https://github.com/prasmussen/gdrive][prasmussen/gdrive]]  
-+ Ref: [[https://hiraku.tw/2020/01/5894/][如何在終端機介面使用 Google Drive (gdrive cmd)]] 
-
-** Git
-Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
-#+BEGIN_SRC shell
-sudo add-apt-repository ppa:git-core/ppa
-sudo apt update
-sudo apt-get -y install git
-#+END_SRC
-+ Official Website: https://git-scm.com/
-
-<2021-03-20 Sat>
-
-** GitKraken
-#+BEGIN_SRC shell
-wget https://release.gitkraken.com/linux/gitkraken-amd64.deb ~/Downloads &&\
-sudo dpkg -i ~/Downloads/gitkraken-amd64.deb
-#+END_SRC
-+ Ref: [[https://www.gitkraken.com/][GitKrakon]] 
 
 ** GNOME
 
@@ -262,153 +126,6 @@ gnome-shell --version
 7. [[https://extensions.gnome.org/extension/800/remove-dropdown-arrows/][Remove Dropdown Arrows]]
 8. [[https://extensions.gnome.org/extension/120/system-monitor/][system-monitor]]
 
-** HUGO
-A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.
-#+BEGIN_SRC shell
-# sudo snap install hugo  # version 0.80.0, or
-# sudo apt  install hugo  # version 0.68.3-1
-sudo snap install hugo
-#+END_SRC
-+ Official Website: https://gohugo.io/
-+ Install tutorial: [[https://gohugo.io/getting-started/installing]]
-+ GitHub: [[https://github.com/gohugoio/hugo]]
-
-<2021-03-16 Tue>
-
-** Java
-Preparation: Download jre-8u251-linux-x64.tar.gz
-Download location: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]] 
-#+BEGIN_SRC shell
-cd /usr &&\
-sudo mkdir java &&\
-cd java &&\
-sudo mv ~/Downloads/jre-8u251-linux-x64.tar.gz . &&\
-sudo tar zxvf jre-8u251-linux-x64.tar.gz &&\
-sudo rm -rf jre-8u251-linux-x64.tar.gz
-#+END_SRC
-+ Preparation: Download jre-8u251-linux-x64.tar.gz
-+ Ref: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]]  
-
-** KiCad
-#+BEGIN_SRC shell
-sudo add-apt-repository --yes ppa:js-reynaud/kicad-4 ; &&\
-sudo apt-get update ; &&\
-sudo apt-get install -y kicad
-#+END_SRC
-+ Ref: [[https://kicad.org/download/ubuntu/][KiCad Install on Ubuntu]]
-
-** Latex
-#+BEGIN_SRC shell
-sudo apt-get install texlive-base &&\
-sudo apt-get install texlive-latex-recommended &&\
-sudo apt-get install texlive &&\
-sudo apt-get install texlive-latex-extra &&\
-sudo apt-get install texlive-xetex
-#+END_SRC
-+ Ref: [[https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux][How to install LaTex on Ubuntu 20.04 Focal Fossa Linux]] 
-
-** LINE
-+ Ref: [[https://tedliou.com/archives/howto-install-line-on-ubuntu-20-04/][如何在 Ubuntu 20.04 中安裝 LINE 通訊軟體]]
-
-<2021-03-16 Tue>
-
-** Linux Advanced Power Management (TLP)
-TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.
-
-TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.
-
-Nevertheless TLP is highly customizable to fulfil your specific requirements.
-
-#+BEGIN_SRC shell
-sudo add-apt-repository ppa:linrunner/tlp &&\
-sudo apt update &&\
-sudo apt install tlp tlp-rdw &&\
-sudo apt-get install smartmontools &&\
-sudo systemctl start tlp &&\
-sudo tlp-stat | less
-#+END_SRC
-+ Ref: [[https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial][linux tlp tutorial]]
-+ Ref: [[https://linrunner.de/tlp/][TLP - Optimize Linux Laptop Battery Life]] 
-
-** linux-wifi-hotspot
-Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10).
-#+BEGIN_SRC shell
-sudo add-apt-repository ppa:lakinduakash/lwh
-sudo apt install linux-wifi-hotspot
-#+END_SRC
-+ GitHub: https://github.com/lakinduakash/linux-wifi-hotspot
-
-<2021-03-19 Fri>
-
-** lm Sensors
-#+begin_src shell
-sudo apt install -y lm-sensors
-
-sudo sensors-detect
-
-sensors
-#+end_src
-
-+ Ref: [[https://linoxide.com/install-lm-sensors-linux/][How to Install lm Sensors on Linux]]
-
-<2021-03-18 Thu>
-
-** locate
-#+begin_src shell
-sudo apt install -y mlocate
-#+end_src
-
-+ Ref: [[http://blog.faq-book.com/?p=1013][搜尋指令 which, whereis, locate, find的差別]]
-
-<2021-03-19 Fri>
-
-** Logitech MX Master
-First:
-#+BEGIN_SRC shell
-sudo apt install -y cmake libevdev-dev libudev-dev libconfig++-dev &&\
-mkdir -p ~/Downloads/logiops &&\
-git clone https://github.com/PixlOne/logiops.git ~/Downloads/logiops/  &&\
-cd ~/Downloads/logiops &&\
-mkdir build &&\
-cd build &&\
-cmake .. &&\
-make &&\
-sudo make install &&\
-sudo systemctl start logid
-#+END_SRC
-Second:
-#+BEGIN_SRC shell
-mkdir -p ~/Downloads/logitech-mouse-config &&\
-git clone https://github.com/shdennlin/logitech-mouse-config.git ~/Downloads/logitech-mouse-config/ &&\
-cd ~/Downloads/logitech-mouse-config/ &&\
-bash install.sh
-#+END_SRC
-+ GitHub: [[https://github.com/shdennlin/logitech-mouse-config][shdennlin/logitech-mouse-config]]  
-+ Ref: See GitHub
-
-** MusixMatch
-#+BEGIN_SRC shell
-sudo snap install musixmatch
-#+END_SRC
-+ GitHub:   
-+ Ref: [[https://snapcraft.io/musixmatch][Install Musixmatch on your Linux distribution]] 
-
-** MySQL
-#+BEGIN_SRC shell
-sudo apt-get install mysql-server
-sudo apt install mysql-client
-sudo apt install libmysqlclient-dev
-#+END_SRC
-
-check insall
-#+begin_src shell
-sudo netstat -tap | grep mysql
-#+end_src
-
-+ Ref: [[https://snapcraft.io/musixmatch][Install Musixmatch on your Linux distribution]]
-
-<2021-03-25 Thu>
-
 ** TODO NFS
 #+begin_src shell
 sudo apt install -y nfs-kernel-server nfs-common
@@ -421,97 +138,6 @@ systemctl status
 
 <2021-03-18 Thu>
 
-** NPM
-#+begin_src shell
-sudo apt install -y npm
-sudo npm i -g npm
-
-sudo npm install -g chokidar
-sudo npm install -g urix
-sudo npm install -g resolve-url
-
-
-sudo npm install -g vmd
-
-sudo npm audit fix
-#+end_src
-
-** nomacs
-nomacs is a free, open source image viewer, which supports multiple platforms. You can use it for viewing all common image formats including RAW and psd images.
-#+BEGIN_SRC shell
-sudo apt install nomacs &&\
-sudo apt-get install nomacs-l10n
-#+END_SRC
-+ Ref: [[https://nomacs.org/\\][nomacs.org]] 
-
-** NVTOP
-Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.
-#+BEGIN_SRC shell
-sudo apt install cmake libncurses5-dev libncursesw5-dev
-sudo apt install -y nvtop
-#+END_SRC
-+ GitHub: https://github.com/Syllo/nvtop
-
-<2021-03-18 Thu>
-
-** Okular
-Okular is a universal document viewer developed by KDE. Okular works on multiple platforms, including but not limited to Linux, Windows, macOS, *BSD, etc.
-#+BEGIN_SRC shell
-sudo apt-get install okular
-#+END_SRC
-+ Ref: [[https://okular.kde.org/][okular.kde.org]] 
-
-** Open Broadcaster Software Studio (OBS)
-Free and open source software for video recording and live streaming.
-#+BEGIN_SRC shell
-sudo add-apt-repository ppa:obsproject/obs-studio ;\
-sudo apt update ;\
-sudo apt install -y obs-studio
-#+END_SRC
-+ Ref1: [[https://obsproject.com/][obsproject.com]] 
-+ Ref2: [[https://itsfoss.com/best-linux-screen-recorders/][9 Best Screen Recorders For Linux]]
-
-** rar, zip
-#+BEGIN_SRC shell
-apt-get install -y unrar &&\
-sudo apt install -y p7zip-full
-#+END_SRC
-
-** screenfetch
-screenFetch is a "Bash Screenshot Information Tool". This handy Bash script can be used to generate one of those nifty terminal theme information + ASCII distribution logos you see in everyone's screenshots nowadays. It will auto-detect your distribution and display an ASCII version of that distribution's logo and some valuable information to the right. There are options to specify no ASCII art, colors, taking a screenshot upon displaying info, and even customizing the screenshot command! This script is very easy to add to and can easily be extended.
-#+BEGIN_SRC shell
-apt install screenfetch
-#+END_SRC
-+ GitHub:  [[https://github.com/KittyKatt/screenFetch][KittyKatt/screenFetch]] 
-
-** Spacemacs
-Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.
-
-Just clone it, launch it, then press the space bar to explore the interactive list of carefully-chosen key bindings. You can also press the home buffer's [?] button for some great first key bindings to try.
-
-Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix the two editing styles. Switching easily between input styles makes Spacemacs a great tool for pair-programming.
-
-Spacemacs is currently in beta, and contributions are very welcome.
-#+BEGIN_SRC shell
-git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d &&\
-git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
-#+END_SRC
-+ GitHub1: [[https://github.com/syl20bnr/spacemacs][syl20bnr/spacemacs]] 
-+ GitHub2: [[https://github.com/shdennlin/spacemacs-private][shdennlin/spacemacs-private]] 
-+ Ref: [[https://www.spacemacs.org/][spacemacs.org]]  
-
-<2021-03-19 Fri>
-
-** Spotify
-#+BEGIN_SRC shell
-sudo snap install spotify
-#+END_SRC
-
-+ Official Website: https://www.spotify.com/
-+ Snapcraft: https://snapcraft.io/spotify
-
-<2021-03-19 Fri> 
-  
 ** systemback
 #+begin_src shell
 sudo apt install systemback
@@ -521,51 +147,6 @@ sudo apt install systemback
 + Install tutorial: https://www.linuxbabe.com/ubuntu/install-systemback-ubuntu-18-04-bionic-18-10
 
 <2021-03-18 Thu>
-
-** Tensorflow-gpu
-#+BEGIN_SRC shell
-cd ~/Downloads
-wget http://tw.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run
-#+END_SRC
-+ Ref: [[https://illya13.github.io/RL/tutorial/2020/04/26/installing-tensorflow-on-ubuntu-20.html][Installing TensorFlow 2 with GPU support on Ubuntu 20.04 LTS]] 
-
-** Terminator
-Originally created and developed for a long time by Chris Jones, the goal of this project is to produce a useful tool for arranging terminals. It is inspired by programs such as gnome-multi-term, quadkonsole, etc. in that the main focus is arranging terminals in grids (tabs is the most common default method, which Terminator also supports).
-
-Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)
-#+BEGIN_SRC shell
-sudo apt install -y terminator
-#+END_SRC
-
-+ Official Website: https://gnometerminator.blogspot.com/
-+ Install tutorial: https://gnometerminator.blogspot.com/p/introduction.html
-+ My configuration: https://github.com/shdennlin/dotfiles
-
-<2021-03-16 Tue>
-
-** typora
-Typora gives you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Instead, it provides a real live preview feature to help you concentrate on the content itself.
-
-#+begin_src shell
-# or run:
-# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
-
-wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
-
-# add Typora's repository
-
-sudo add-apt-repository 'deb https://typora.io/linux ./'
-
-sudo apt-get update
-
-# install typora
-
-sudo apt-get install typora
-#+end_src
-
-+ Official Website: https://typora.io/
-
-<2021-03-24 Wed>
 
 ** update & upgrade  
 #+BEGIN_SRC shell
@@ -578,25 +159,18 @@ sudo apt-get update && sudo apt-get -y dist-upgrade
 
 + Ref: [[https://blog.longwin.com.tw/2008/03/debian_ubuntu_apt_dist_upgrade_difference_2008/][APT upgrade 和 dist-upgrade 的差別]] 
     
-** Vim
-#+BEGIN_SRC shell
-sudo apt purge vim
-sudo apt-get install vim-gtk3
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-#+END_SRC
-+ Ref: [[https://github.com/shdennlin/dotfiles][shdennlin/dotfiles]] 
+** 中文 Language pack
+#+begin_src shell
+echo $LANG
 
-** Wine
-Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, & BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on-the-fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
-+ Ref: [[https://wiki.winehq.org/Download][Supported Wine]] 
-+ Ref: [[https://wiki.winehq.org][winehq.org]] 
+sudo apt-get install -y language-pack-zh-han* &&\
+sudo apt install $(check-language-support)
 
-** xclip
-xclip is a command line interface to the X11 clipboard. It allows you to put the output of a command directly into the clipboard so that you don't have to copy&paste from the terminal manually (which can be a tedious task especially if the output is very long). It also allows you to put the contents of a file directly into the clipboard. 
-#+BEGIN_SRC shell
-sudo apt-get install -y xclip
-#+END_SRC
-+ Ref: [[https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu][Command-Line Copy&Paste With xclip (Debian/Ubuntu)]]
+sudo apt-get install language-pack-gnome-zh-han*
+#+end_src
++ Ref: [[https://www.twblogs.net/a/5c38452dbd9eee35b21d8750][Ubuntu 18.04 LTS 命令行方式安裝中文語言包]]
+
+<2021-03-19 Fri>
 
 ** System Problem
 *** OS Information
@@ -783,8 +357,166 @@ Ref: https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme-
 *** Login Screen language doesn't Chinese
 Ref: [[https://www.arthurtoday.com/2015/02/how-to-make-ubuntu-terminal-speak-your-language.html][Ubuntu 用指令設定終端機顯示中文訊息]]
 
+* Editor & IDE
+** Emacs
+An extensible, customizable, free/libre text editor — and more.
+#+begin_src shell
+sudo snap install emacs --classic
+#+end_src
 
-* Program Design
++ Official Website: https://www.gnu.org/software/emacs/
++ Snapcraft: https://snapcraft.io/emacs
++ GitHub: https://github.com/emacs-mirror/emacs
+
+<2021-03-19 Fri>
+
+*** Emacs GUI can't activation Fcitx input method
+#+begin_center shell
+echo "export LC_CTYPE=zh_TW.UTF-8" >> ~/.xprofile
+#+end_center
++ Ref: [[https://blog.rex-tsou.com/2017/12/arch-linux%E7%92%B0%E5%A2%83%E8%A8%AD%E5%AE%9A%E8%88%87%E5%B8%B8%E7%94%A8%E5%A5%97%E4%BB%B6/][Arch Linux：環境設定與常用套件]]
+
+<2021-03-21 Sun>
+
+** Intellij IDEA
+IntelliJ IDEA is an integrated development environment (IDE) written in Java for developing computer software. It is developed by JetBrains (formerly known as IntelliJ), and is available as an Apache 2 Licensed community edition, and in a proprietary commercial edition. Both can be used for commercial development.
+#+begin_src sh
+sudo snap install intellij-idea-community --classic
+#+end_src
+
++ Official Website: https://www.jetbrains.com/idea/
+
+<2021-03-25 Thu>
+
+** Spacemacs
+Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.
+
+Just clone it, launch it, then press the space bar to explore the interactive list of carefully-chosen key bindings. You can also press the home buffer's [?] button for some great first key bindings to try.
+
+Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix the two editing styles. Switching easily between input styles makes Spacemacs a great tool for pair-programming.
+
+Spacemacs is currently in beta, and contributions are very welcome.
+#+BEGIN_SRC shell
+git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d &&\
+git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
+#+END_SRC
++ GitHub1: [[https://github.com/syl20bnr/spacemacs][syl20bnr/spacemacs]] 
++ GitHub2: [[https://github.com/shdennlin/spacemacs-private][shdennlin/spacemacs-private]] 
++ Ref: [[https://www.spacemacs.org/][spacemacs.org]]  
+
+<2021-03-19 Fri>
+
+** typora
+Typora gives you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Instead, it provides a real live preview feature to help you concentrate on the content itself.
+
+#+begin_src shell
+# or run:
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+
+# add Typora's repository
+
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+
+sudo apt-get update
+
+# install typora
+
+sudo apt-get install typora
+#+end_src
+
++ Official Website: https://typora.io/
+
+<2021-03-24 Wed>
+
+** Vim
+#+BEGIN_SRC shell
+sudo apt purge vim
+sudo apt-get install vim-gtk3
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#+END_SRC
++ Ref: [[https://github.com/shdennlin/dotfiles][shdennlin/dotfiles]] 
+
+* Software Engineering
+** Anaconda
+#+BEGIN_SRC shell
+cd ~/Downloads
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+bash ~/Dwonloads/Anaconda3-2020.02-Linux-x86_64.sh
+conda create -n tf-gpu tensorflow-gpu
+conda activate tf-gpu
+#+END_SRC
+** Java
+Preparation: Download jre-8u251-linux-x64.tar.gz
+Download location: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]] 
+#+BEGIN_SRC shell
+cd /usr &&\
+sudo mkdir java &&\
+cd java &&\
+sudo mv ~/Downloads/jre-8u251-linux-x64.tar.gz . &&\
+sudo tar zxvf jre-8u251-linux-x64.tar.gz &&\
+sudo rm -rf jre-8u251-linux-x64.tar.gz
+#+END_SRC
++ Preparation: Download jre-8u251-linux-x64.tar.gz
++ Ref: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]]  
+
+** JavaScirpt-Node Package Manager(NPM)
+npm (originally short for Node Package Manager)[4] is a package manager for the JavaScript programming language. 
+#+begin_src shell
+sudo apt install -y npm
+sudo npm i -g npm
+
+sudo npm install -g chokidar
+sudo npm install -g urix
+sudo npm install -g resolve-url
+
+sudo npm install -g vmd
+
+sudo npm audit fix
+#+end_src
+
+<2021-03-25 Thu>
+
+** KiCad
+A Cross Platform and Open Source Electronics Design Automation Suite
+#+BEGIN_SRC shell
+sudo add-apt-repository --yes ppa:js-reynaud/kicad-4 ; &&\
+sudo apt-get update ; &&\
+sudo apt-get install -y kicad
+#+END_SRC
+
++ Official Website: https://kicad.org/
++ Install tutorial: https://kicad.org/download/ubuntu/
+
+<2021-03-25 Thu>
+
+** Latex
+#+BEGIN_SRC shell
+sudo apt-get install texlive-base &&\
+sudo apt-get install texlive-latex-recommended &&\
+sudo apt-get install texlive &&\
+sudo apt-get install texlive-latex-extra &&\
+sudo apt-get install texlive-xetex
+#+END_SRC
++ Ref: [[https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux][How to install LaTex on Ubuntu 20.04 Focal Fossa Linux]] 
+
+** MySQL
+#+BEGIN_SRC shell
+sudo apt-get install mysql-server
+sudo apt install mysql-client
+sudo apt install libmysqlclient-dev
+#+END_SRC
+
+check insall
+#+begin_src shell
+sudo netstat -tap | grep mysql
+#+end_src
+
++ Ref: [[https://snapcraft.io/musixmatch][Install Musixmatch on your Linux distribution]]
+
+<2021-03-25 Thu>
+
 ** Ruby-RVM
 Ruby Version Manager (RVM)
 
@@ -802,9 +534,317 @@ Install Step:
 + Official Website: https://rvm.io/
 + Install tutorial: https://rvm.io/rvm/install
 
+** Tensorflow-gpu
+#+BEGIN_SRC shell
+cd ~/Downloads
+wget http://tw.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run
+#+END_SRC
++ Ref: [[https://illya13.github.io/RL/tutorial/2020/04/26/installing-tensorflow-on-ubuntu-20.html][Installing TensorFlow 2 with GPU support on Ubuntu 20.04 LTS]] 
 
+* Engineering Tool
+** Angry IP scanner
+Angry IP Scanner - fast and friendly network scanner 
+*Go to Download Page to Download =deb= file* and type below:
+#+begin_src shell
+cd ~/Downloads
+sudo apt install ipscan_3.7.6_all.deb # your version
+#+end_src
 
-# + GitHub: 
-# + Official Website: https://rvm.io/
-# + Install tutorial: https://rvm.io/rvm/install
-# + Ref:
++ Official Website: https://angryip.org/about/
++ Download Page: https://angryip.org/download/#linux
++ GitHub: [[https://github.com/angryip/ipscan/tree/3.7.2]]
+
+<2021-03-19 Fri>
+
+** flatpak
+#+BEGIN_SRC shell
+sudo apt install -y flatpak
+#+END_SRC
++ Ref: [[https://zh.wikipedia.org/wiki/Flatpak][flatpak]](wiki)
+
+** Git
+Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
+#+BEGIN_SRC shell
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
+sudo apt-get -y install git
+#+END_SRC
++ Official Website: https://git-scm.com/
+
+<2021-03-20 Sat>
+
+** GitKraken
+#+BEGIN_SRC shell
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb ~/Downloads &&\
+sudo dpkg -i ~/Downloads/gitkraken-amd64.deb
+#+END_SRC
++ Ref: [[https://www.gitkraken.com/][GitKrakon]] 
+
+** HUGO
+A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.
+#+BEGIN_SRC shell
+# sudo snap install hugo  # version 0.80.0, or
+# sudo apt  install hugo  # version 0.68.3-1
+sudo snap install hugo
+#+END_SRC
++ Official Website: https://gohugo.io/
++ Install tutorial: [[https://gohugo.io/getting-started/installing]]
++ GitHub: [[https://github.com/gohugoio/hugo]]
+
+<2021-03-16 Tue>
+
+* Terminal Tool
+** ag
+A code searching tool similar to ack, with a focus on speed.
+#+BEGIN_SRC shell
+sudo apt-get install -y silversearcher-ag
+#+END_SRC
++ GitHub: https://github.com/ggreer/the_silver_searcher
+ 
+<2021-03-16 Tue>
+  
+** gdrive
+#+BEGIN_SRC shell
+cd ~/Downloads &&\
+wget -O drive https://drive.google.com/uc?id=0B3X9GlR6Embnb095MGxEYmJhY2c &&\
+sudo install drive /usr/local/bin/drive
+#+END_SRC
++ GitHub: [[https://github.com/prasmussen/gdrive][prasmussen/gdrive]]  
++ Ref: [[https://hiraku.tw/2020/01/5894/][如何在終端機介面使用 Google Drive (gdrive cmd)]] 
+
+** Linux Advanced Power Management (TLP)
+TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.
+
+TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.
+
+Nevertheless TLP is highly customizable to fulfil your specific requirements.
+
+#+BEGIN_SRC shell
+sudo add-apt-repository ppa:linrunner/tlp &&\
+sudo apt update &&\
+sudo apt install tlp tlp-rdw &&\
+sudo apt-get install smartmontools &&\
+sudo systemctl start tlp &&\
+sudo tlp-stat | less
+#+END_SRC
++ Ref: [[https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial][linux tlp tutorial]]
++ Ref: [[https://linrunner.de/tlp/][TLP - Optimize Linux Laptop Battery Life]] 
+
+** lm Sensors
+#+begin_src shell
+sudo apt install -y lm-sensors
+
+sudo sensors-detect
+
+sensors
+#+end_src
+
++ Ref: [[https://linoxide.com/install-lm-sensors-linux/][How to Install lm Sensors on Linux]]
+
+<2021-03-18 Thu>
+
+** locate
+#+begin_src shell
+sudo apt install -y mlocate
+#+end_src
+
++ Ref: [[http://blog.faq-book.com/?p=1013][搜尋指令 which, whereis, locate, find的差別]]
+
+<2021-03-19 Fri>
+
+** rar, zip
+#+BEGIN_SRC shell
+apt-get install -y unrar &&\
+sudo apt install -y p7zip-full
+#+END_SRC
+
+** screenfetch
+screenFetch is a "Bash Screenshot Information Tool". This handy Bash script can be used to generate one of those nifty terminal theme information + ASCII distribution logos you see in everyone's screenshots nowadays. It will auto-detect your distribution and display an ASCII version of that distribution's logo and some valuable information to the right. There are options to specify no ASCII art, colors, taking a screenshot upon displaying info, and even customizing the screenshot command! This script is very easy to add to and can easily be extended.
+#+BEGIN_SRC shell
+sudo apt install screenfetch
+#+END_SRC
++ GitHub: https://github.com/KittyKatt/screenFetch
+
+<2021-03-25 Thu>
+
+** Terminator
+Originally created and developed for a long time by Chris Jones, the goal of this project is to produce a useful tool for arranging terminals. It is inspired by programs such as gnome-multi-term, quadkonsole, etc. in that the main focus is arranging terminals in grids (tabs is the most common default method, which Terminator also supports).
+
+Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)
+#+BEGIN_SRC shell
+sudo apt install -y terminator
+#+END_SRC
+
++ Official Website: https://gnometerminator.blogspot.com/
++ Install tutorial: https://gnometerminator.blogspot.com/p/introduction.html
++ My configuration: https://github.com/shdennlin/dotfiles
+
+<2021-03-16 Tue>
+
+** top-bpytop
+Resource monitor that shows usage and stats for processor, memory, disks, network and processes. Python port of bashtop.
+#+BEGIN_SRC shell
+cd ~/Downloads &&\
+git clone https://github.com/aristocratos/bpytop.git &&\
+cd bpytop &&\
+sudo make install
+#+END_SRC
++ GitHub: https://github.com/aristocratos/bpytop
+
+<2021-03-19 Fri>
+
+** top-NVTOP
+Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.
+#+BEGIN_SRC shell
+sudo apt install cmake libncurses5-dev libncursesw5-dev
+sudo apt install -y nvtop
+#+END_SRC
++ GitHub: https://github.com/Syllo/nvtop
+
+<2021-03-18 Thu>
+
+** xclip
+xclip is a command line interface to the X11 clipboard. It allows you to put the output of a command directly into the clipboard so that you don't have to copy&paste from the terminal manually (which can be a tedious task especially if the output is very long). It also allows you to put the contents of a file directly into the clipboard. 
+#+BEGIN_SRC shell
+sudo apt-get install -y xclip
+#+END_SRC
++ Ref: [[https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu][Command-Line Copy&Paste With xclip (Debian/Ubuntu)]]
+
+* Life Tool
+** BingWall - Bing wallpaper of the day
+Bing wallpaper of the day application for Gnome desktop.
+#+BEGIN_SRC shell
+sudo snap install bing-wall
+#+END_SRC
++ Snapcraft: https://snapcraft.io/bing-wall
++ GitHub: https://github.com/keshavbhatt/BingWall
+
+<2021-03-16 Tue>
+
+** Crow Translate
+A small translate tool like QTranslate.
+#+BEGIN_SRC shell
+sudo add-apt-repository ppa:jonmagon/crow-translate &&\
+sudo apt update &&\
+sudo apt install crow-translate
+#+END_SRC
++ Official Website: https://crow-translate.github.io/
++ GitHub: https://github.com/crow-translate/crow-translate
+  
+<2021-03-19 Fri>
+
+** draw.io
+#+BEGIN_SRC shell
+sudo snap install drawio
+#+END_SRC
++ GitHub: https://github.com/jgraph/drawio-desktop
++ Snapcraft: https://snapcraft.io/drawio
+
+<2021-03-23 Tue>
+
+** FreeCAD
+#+BEGIN_SRC shell
+sudo apt install -y freecad
+#+END_SRC
+
+** FSearch
+FSearch is a fast file search utility, inspired by Everything Search Engine. It's written in C and based on GTK+3.
+#+BEGIN_SRC shell
+sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily &&\
+sudo apt-get update &&\
+sudo apt install fsearch-trunk
+#+END_SRC
+
++ GitHub: [[https://github.com/cboxdoerfer/fsearch][cboxdoerfer/fsearch]] 
+  
+** linux-wifi-hotspot
+Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10).
+#+BEGIN_SRC shell
+sudo add-apt-repository ppa:lakinduakash/lwh
+sudo apt install linux-wifi-hotspot
+#+END_SRC
++ GitHub: https://github.com/lakinduakash/linux-wifi-hotspot
+
+<2021-03-19 Fri>
+
+** Logitech MX Master
+First:
+#+BEGIN_SRC shell
+sudo apt install -y cmake libevdev-dev libudev-dev libconfig++-dev &&\
+mkdir -p ~/Downloads/logiops &&\
+git clone https://github.com/PixlOne/logiops.git ~/Downloads/logiops/  &&\
+cd ~/Downloads/logiops &&\
+mkdir build &&\
+cd build &&\
+cmake .. &&\
+make &&\
+sudo make install &&\
+sudo systemctl start logid
+#+END_SRC
+Second:
+#+BEGIN_SRC shell
+mkdir -p ~/Downloads/logitech-mouse-config &&\
+git clone https://github.com/shdennlin/logitech-mouse-config.git ~/Downloads/logitech-mouse-config/ &&\
+cd ~/Downloads/logitech-mouse-config/ &&\
+bash install.sh
+#+END_SRC
++ GitHub: [[https://github.com/shdennlin/logitech-mouse-config][shdennlin/logitech-mouse-config]]  
++ Ref: See GitHub
+
+** MusixMatch
+#+BEGIN_SRC shell
+sudo snap install musixmatch
+#+END_SRC
++ GitHub:   
++ Ref: [[https://snapcraft.io/musixmatch][Install Musixmatch on your Linux distribution]] 
+
+** nomacs
+nomacs is a free, open source image viewer, which supports multiple platforms. You can use it for viewing all common image formats including RAW and psd images.
+#+BEGIN_SRC shell
+sudo apt install nomacs &&\
+sudo apt-get install nomacs-l10n
+#+END_SRC
++ Ref: [[https://nomacs.org/\\][nomacs.org]] 
+
+** Okular
+Okular is a universal document viewer developed by KDE. Okular works on multiple platforms, including but not limited to Linux, Windows, macOS, *BSD, etc.
+#+BEGIN_SRC shell
+sudo apt-get install okular
+#+END_SRC
++ Ref: [[https://okular.kde.org/][okular.kde.org]] 
+
+** Open Broadcaster Software Studio (OBS)
+Free and open source software for video recording and live streaming.
+#+BEGIN_SRC shell
+sudo add-apt-repository ppa:obsproject/obs-studio ;\
+sudo apt update ;\
+sudo apt install -y obs-studio
+#+END_SRC
++ Ref1: [[https://obsproject.com/][obsproject.com]] 
++ Ref2: [[https://itsfoss.com/best-linux-screen-recorders/][9 Best Screen Recorders For Linux]]
+
+** Spotify
+#+BEGIN_SRC shell
+sudo snap install spotify
+#+END_SRC
+
++ Official Website: https://www.spotify.com/
++ Snapcraft: https://snapcraft.io/spotify
+
+<2021-03-19 Fri> 
+  
+* Communication
+** Discord
+#+BEGIN_SRC shell
+sudo snap install discord
+#+END_SRC
++ Official Website: https://discord.com/
++ Snapcraft: https://snapcraft.io/discord
+
+<2021-03-19 Fri>  
+
+** LINE
++ Ref: [[https://tedliou.com/archives/howto-install-line-on-ubuntu-20-04/][如何在 Ubuntu 20.04 中安裝 LINE 通訊軟體]]
+
+<2021-03-16 Tue>
+
