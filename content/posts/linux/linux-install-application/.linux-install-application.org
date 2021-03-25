@@ -25,8 +25,8 @@ These are the applications I installed in Linux. If you have any questions about
 
 #+HUGO: more
 
-** My Install Application in Linux
-*** ag
+* My Install Application in Linux
+** ag
 A code searching tool similar to ack, with a focus on speed.
 #+BEGIN_SRC shell
 sudo apt-get install -y silversearcher-ag
@@ -35,7 +35,7 @@ sudo apt-get install -y silversearcher-ag
  
 <2021-03-16 Tue>
   
-*** Anaconda
+** Anaconda
 #+BEGIN_SRC shell
 cd ~/Downloads
 wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
@@ -44,7 +44,7 @@ conda create -n tf-gpu tensorflow-gpu
 conda activate tf-gpu
 #+END_SRC
 
-*** Angry IP scanner
+** Angry IP scanner
 Angry IP Scanner - fast and friendly network scanner 
 *Go to Download Page to Download =deb= file* and type below:
 #+begin_src shell
@@ -58,7 +58,7 @@ sudo apt install ipscan_3.7.6_all.deb # your version
 
 <2021-03-19 Fri>
 
-*** BingWall - Bing wallpaper of the day
+** BingWall - Bing wallpaper of the day
 Bing wallpaper of the day application for Gnome desktop.
 #+BEGIN_SRC shell
 sudo snap install bing-wall
@@ -68,7 +68,7 @@ sudo snap install bing-wall
 
 <2021-03-16 Tue>
 
-*** boot-repair
+** boot-repair
 #+BEGIN_SRC shell
 sudo add-apt-repository ppa:yannubuntu/boot-repair &&\
 sudo apt-get update &&\
@@ -78,7 +78,7 @@ sudo apt-get install -y boot-repair && boot-repair
 
 <2021-03-19 Fri>
 
-*** bpytop
+** bpytop
 Resource monitor that shows usage and stats for processor, memory, disks, network and processes. Python port of bashtop.
 #+BEGIN_SRC shell
 cd ~/Downloads &&\
@@ -90,7 +90,7 @@ sudo make install
 
 <2021-03-19 Fri>
 
-*** 中文 Language pack
+** 中文 Language pack
 #+begin_src shell
 echo $LANG
 
@@ -103,7 +103,7 @@ sudo apt-get install language-pack-gnome-zh-han*
 
 <2021-03-19 Fri>
 
-*** Crow Translate
+** Crow Translate
 A small translate tool like QTranslate.
 #+BEGIN_SRC shell
 sudo add-apt-repository ppa:jonmagon/crow-translate &&\
@@ -115,7 +115,7 @@ sudo apt install crow-translate
   
 <2021-03-19 Fri>
 
-*** Discord
+** Discord
 #+BEGIN_SRC shell
 sudo snap install discord
 #+END_SRC
@@ -124,7 +124,7 @@ sudo snap install discord
 
 <2021-03-19 Fri>  
 
-*** Dotfiles
+** Dotfiles
 #+BEGIN_SRC shell
 mkdir ~/.dotfiles &&\
 git clone https://github.com/shdennlin/dotfiles.git ~/.dotfiles/. &&\
@@ -135,7 +135,16 @@ bash install.sh &&\
 
 <2021-03-19 Fri>
   
-*** Emacs
+** draw.io
+#+BEGIN_SRC shell
+sudo snap install drawio
+#+END_SRC
++ GitHub: https://github.com/jgraph/drawio-desktop
++ Snapcraft: https://snapcraft.io/drawio
+
+<2021-03-23 Tue>
+
+** Emacs
 An extensible, customizable, free/libre text editor — and more.
 #+begin_src shell
 sudo snap install emacs --classic
@@ -147,7 +156,7 @@ sudo snap install emacs --classic
 
 <2021-03-19 Fri>
 
-**** Emacs GUI can't activation Fcitx input method
+*** Emacs GUI can't activation Fcitx input method
 #+begin_center shell
 echo "export LC_CTYPE=zh_TW.UTF-8" >> ~/.xprofile
 #+end_center
@@ -155,7 +164,7 @@ echo "export LC_CTYPE=zh_TW.UTF-8" >> ~/.xprofile
 
 <2021-03-21 Sun>
 
-*** extra-cmake-modules
+** extra-cmake-modules
 #+BEGIN_SRC shell
 cd ~/Downloads &&\
 git clone https://github.com/KDE/extra-cmake-modules.git &&\
@@ -168,7 +177,7 @@ sudo make install
 #+END_SRC
 + GitHub: [[https://github.com/KDE/extra-cmake-modules][KDE/extra-cmake-modules]] 
 
-*** fcitx & boshiamy
+** fcitx & boshiamy
 #+BEGIN_SRC shell
 sudo apt-get install -y fcitx fcitx-table-boshiamy fcitx-chewing
 #+END_SRC
@@ -176,13 +185,13 @@ sudo apt-get install -y fcitx fcitx-table-boshiamy fcitx-chewing
 
 <2021-03-19 Fri>  
 
-*** flatpak
+** flatpak
 #+BEGIN_SRC shell
 sudo apt install -y flatpak
 #+END_SRC
 + Ref: [[https://zh.wikipedia.org/wiki/Flatpak][flatpak]](wiki)
 
-*** font
+** font
 #+BEGIN_SRC shell
 cd ~/Downloads &&\
 git clone https://github.com/shdennlin/linux-configuration.git &&\
@@ -191,12 +200,12 @@ bash install.sh
 #+END_SRC
 + GitHub: [[https://github.com/shdennlin/linux-configuration][shdennlin/linux-configuration]] 
 
-*** FreeCAD
+** FreeCAD
 #+BEGIN_SRC shell
 sudo apt install -y freecad
 #+END_SRC
 
-*** FSearch
+** FSearch
 #+BEGIN_SRC shell
 sudo add-apt-repository ppa:christian-boxdoerfer/fsearch-daily &&\
 sudo apt-get update &&\
@@ -204,7 +213,7 @@ sudo apt install fsearch-trunk
 #+END_SRC
 + GitHub: [[https://github.com/cboxdoerfer/fsearch][cboxdoerfer/fsearch]] 
   
-*** gdrive
+** gdrive
 #+BEGIN_SRC shell
 cd ~/Downloads &&\
 wget -O drive https://drive.google.com/uc?id=0B3X9GlR6Embnb095MGxEYmJhY2c &&\
@@ -213,7 +222,7 @@ sudo install drive /usr/local/bin/drive
 + GitHub: [[https://github.com/prasmussen/gdrive][prasmussen/gdrive]]  
 + Ref: [[https://hiraku.tw/2020/01/5894/][如何在終端機介面使用 Google Drive (gdrive cmd)]] 
 
-*** Git
+** Git
 Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. 
 #+BEGIN_SRC shell
 sudo add-apt-repository ppa:git-core/ppa
@@ -224,14 +233,14 @@ sudo apt-get -y install git
 
 <2021-03-20 Sat>
 
-*** GitKraken
+** GitKraken
 #+BEGIN_SRC shell
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb ~/Downloads &&\
 sudo dpkg -i ~/Downloads/gitkraken-amd64.deb
 #+END_SRC
 + Ref: [[https://www.gitkraken.com/][GitKrakon]] 
 
-*** GNOME
+** GNOME
 
 Install gnome extensions and web plugins
 #+BEGIN_SRC shell
@@ -243,7 +252,7 @@ gnome-shell --version
 + Ref: [[https://www.itread01.com/content/1544311459.html][針對Gnome 3的Linux桌面進行美化]] 
 <2021-03-19 Fri>
 
-**** My extensions
+*** My extensions
 1. [[https://extensions.gnome.org/extension/16/auto-move-windows/][Auto Move Windows]]
 2. [[https://extensions.gnome.org/extension/517/caffeine/][Caffeine]]
 3. [[https://extensions.gnome.org/extension/307/dash-to-dock/][Dash to Dock]]
@@ -253,7 +262,7 @@ gnome-shell --version
 7. [[https://extensions.gnome.org/extension/800/remove-dropdown-arrows/][Remove Dropdown Arrows]]
 8. [[https://extensions.gnome.org/extension/120/system-monitor/][system-monitor]]
 
-*** HUGO
+** HUGO
 A Fast and Flexible Static Site Generator built with love by bep, spf13 and friends in Go.
 #+BEGIN_SRC shell
 # sudo snap install hugo  # version 0.80.0, or
@@ -266,7 +275,7 @@ sudo snap install hugo
 
 <2021-03-16 Tue>
 
-*** Java
+** Java
 Preparation: Download jre-8u251-linux-x64.tar.gz
 Download location: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]] 
 #+BEGIN_SRC shell
@@ -280,7 +289,7 @@ sudo rm -rf jre-8u251-linux-x64.tar.gz
 + Preparation: Download jre-8u251-linux-x64.tar.gz
 + Ref: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]]  
 
-*** KiCad
+** KiCad
 #+BEGIN_SRC shell
 sudo add-apt-repository --yes ppa:js-reynaud/kicad-4 ; &&\
 sudo apt-get update ; &&\
@@ -288,7 +297,7 @@ sudo apt-get install -y kicad
 #+END_SRC
 + Ref: [[https://kicad.org/download/ubuntu/][KiCad Install on Ubuntu]]
 
-*** Latex
+** Latex
 #+BEGIN_SRC shell
 sudo apt-get install texlive-base &&\
 sudo apt-get install texlive-latex-recommended &&\
@@ -298,12 +307,12 @@ sudo apt-get install texlive-xetex
 #+END_SRC
 + Ref: [[https://linuxconfig.org/how-to-install-latex-on-ubuntu-20-04-focal-fossa-linux][How to install LaTex on Ubuntu 20.04 Focal Fossa Linux]] 
 
-*** LINE
+** LINE
 + Ref: [[https://tedliou.com/archives/howto-install-line-on-ubuntu-20-04/][如何在 Ubuntu 20.04 中安裝 LINE 通訊軟體]]
 
 <2021-03-16 Tue>
 
-*** Linux Advanced Power Management (TLP)
+** Linux Advanced Power Management (TLP)
 TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.
 
 TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.
@@ -321,7 +330,7 @@ sudo tlp-stat | less
 + Ref: [[https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial][linux tlp tutorial]]
 + Ref: [[https://linrunner.de/tlp/][TLP - Optimize Linux Laptop Battery Life]] 
 
-*** linux-wifi-hotspot
+** linux-wifi-hotspot
 Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10).
 #+BEGIN_SRC shell
 sudo add-apt-repository ppa:lakinduakash/lwh
@@ -331,7 +340,7 @@ sudo apt install linux-wifi-hotspot
 
 <2021-03-19 Fri>
 
-*** lm Sensors
+** lm Sensors
 #+begin_src shell
 sudo apt install -y lm-sensors
 
@@ -344,7 +353,7 @@ sensors
 
 <2021-03-18 Thu>
 
-*** locate
+** locate
 #+begin_src shell
 sudo apt install -y mlocate
 #+end_src
@@ -353,7 +362,7 @@ sudo apt install -y mlocate
 
 <2021-03-19 Fri>
 
-*** Logitech MX Master
+** Logitech MX Master
 First:
 #+BEGIN_SRC shell
 sudo apt install -y cmake libevdev-dev libudev-dev libconfig++-dev &&\
@@ -377,14 +386,14 @@ bash install.sh
 + GitHub: [[https://github.com/shdennlin/logitech-mouse-config][shdennlin/logitech-mouse-config]]  
 + Ref: See GitHub
 
-*** MusixMatch
+** MusixMatch
 #+BEGIN_SRC shell
 sudo snap install musixmatch
 #+END_SRC
 + GitHub:   
 + Ref: [[https://snapcraft.io/musixmatch][Install Musixmatch on your Linux distribution]] 
 
-*** TODO NFS
+** TODO NFS
 #+begin_src shell
 sudo apt install -y nfs-kernel-server nfs-common
 #+end_src
@@ -396,7 +405,22 @@ systemctl status
 
 <2021-03-18 Thu>
 
-*** nomacs
+** NPM
+#+begin_src shell
+sudo apt install -y npm
+sudo npm i -g npm
+
+sudo npm install -g chokidar
+sudo npm install -g urix
+sudo npm install -g resolve-url
+
+
+sudo npm install -g vmd
+
+sudo npm audit fix
+#+end_src
+
+** nomacs
 nomacs is a free, open source image viewer, which supports multiple platforms. You can use it for viewing all common image formats including RAW and psd images.
 #+BEGIN_SRC shell
 sudo apt install nomacs &&\
@@ -404,7 +428,7 @@ sudo apt-get install nomacs-l10n
 #+END_SRC
 + Ref: [[https://nomacs.org/\\][nomacs.org]] 
 
-*** NVTOP
+** NVTOP
 Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.
 #+BEGIN_SRC shell
 sudo apt install cmake libncurses5-dev libncursesw5-dev
@@ -414,14 +438,14 @@ sudo apt install -y nvtop
 
 <2021-03-18 Thu>
 
-*** Okular
+** Okular
 Okular is a universal document viewer developed by KDE. Okular works on multiple platforms, including but not limited to Linux, Windows, macOS, *BSD, etc.
 #+BEGIN_SRC shell
 sudo apt-get install okular
 #+END_SRC
 + Ref: [[https://okular.kde.org/][okular.kde.org]] 
 
-*** Open Broadcaster Software Studio (OBS)
+** Open Broadcaster Software Studio (OBS)
 Free and open source software for video recording and live streaming.
 #+BEGIN_SRC shell
 sudo add-apt-repository ppa:obsproject/obs-studio ;\
@@ -431,20 +455,20 @@ sudo apt install -y obs-studio
 + Ref1: [[https://obsproject.com/][obsproject.com]] 
 + Ref2: [[https://itsfoss.com/best-linux-screen-recorders/][9 Best Screen Recorders For Linux]]
 
-*** rar, zip
+** rar, zip
 #+BEGIN_SRC shell
 apt-get install -y unrar &&\
 sudo apt install -y p7zip-full
 #+END_SRC
 
-*** screenfetch
+** screenfetch
 screenFetch is a "Bash Screenshot Information Tool". This handy Bash script can be used to generate one of those nifty terminal theme information + ASCII distribution logos you see in everyone's screenshots nowadays. It will auto-detect your distribution and display an ASCII version of that distribution's logo and some valuable information to the right. There are options to specify no ASCII art, colors, taking a screenshot upon displaying info, and even customizing the screenshot command! This script is very easy to add to and can easily be extended.
 #+BEGIN_SRC shell
 apt install screenfetch
 #+END_SRC
 + GitHub:  [[https://github.com/KittyKatt/screenFetch][KittyKatt/screenFetch]] 
 
-*** Spacemacs
+** Spacemacs
 Spacemacs is a new way to experience Emacs -- a sophisticated and polished set-up focused on ergonomics, mnemonics and consistency.
 
 Just clone it, launch it, then press the space bar to explore the interactive list of carefully-chosen key bindings. You can also press the home buffer's [?] button for some great first key bindings to try.
@@ -462,7 +486,7 @@ git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
 
 <2021-03-19 Fri>
 
-*** Spotify
+** Spotify
 #+BEGIN_SRC shell
 sudo snap install spotify
 #+END_SRC
@@ -472,7 +496,7 @@ sudo snap install spotify
 
 <2021-03-19 Fri> 
   
-*** systemback
+** systemback
 #+begin_src shell
 sudo apt install systemback
 #+end_src
@@ -482,14 +506,14 @@ sudo apt install systemback
 
 <2021-03-18 Thu>
 
-*** Tensorflow-gpu
+** Tensorflow-gpu
 #+BEGIN_SRC shell
 cd ~/Downloads
 wget http://tw.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run
 #+END_SRC
 + Ref: [[https://illya13.github.io/RL/tutorial/2020/04/26/installing-tensorflow-on-ubuntu-20.html][Installing TensorFlow 2 with GPU support on Ubuntu 20.04 LTS]] 
 
-*** Terminator
+** Terminator
 Originally created and developed for a long time by Chris Jones, the goal of this project is to produce a useful tool for arranging terminals. It is inspired by programs such as gnome-multi-term, quadkonsole, etc. in that the main focus is arranging terminals in grids (tabs is the most common default method, which Terminator also supports).
 
 Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)
@@ -503,7 +527,31 @@ sudo apt install -y terminator
 
 <2021-03-16 Tue>
 
-*** update & upgrade  
+** typora
+Typora gives you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Instead, it provides a real live preview feature to help you concentrate on the content itself.
+
+#+begin_src shell
+# or run:
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+
+# add Typora's repository
+
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+
+sudo apt-get update
+
+# install typora
+
+sudo apt-get install typora
+#+end_src
+
++ Official Website: https://typora.io/
+
+<2021-03-24 Wed>
+
+** update & upgrade  
 #+BEGIN_SRC shell
 sudo apt-get update && sudo apt-get -y upgrade
 #+END_SRC
@@ -514,7 +562,7 @@ sudo apt-get update && sudo apt-get -y dist-upgrade
 
 + Ref: [[https://blog.longwin.com.tw/2008/03/debian_ubuntu_apt_dist_upgrade_difference_2008/][APT upgrade 和 dist-upgrade 的差別]] 
     
-*** Vim
+** Vim
 #+BEGIN_SRC shell
 sudo apt purge vim
 sudo apt-get install vim-gtk3
@@ -522,20 +570,20 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #+END_SRC
 + Ref: [[https://github.com/shdennlin/dotfiles][shdennlin/dotfiles]] 
 
-*** Wine
+** Wine
 Wine (originally an acronym for "Wine Is Not an Emulator") is a compatibility layer capable of running Windows applications on several POSIX-compliant operating systems, such as Linux, macOS, & BSD. Instead of simulating internal Windows logic like a virtual machine or emulator, Wine translates Windows API calls into POSIX calls on-the-fly, eliminating the performance and memory penalties of other methods and allowing you to cleanly integrate Windows applications into your desktop.
 + Ref: [[https://wiki.winehq.org/Download][Supported Wine]] 
 + Ref: [[https://wiki.winehq.org][winehq.org]] 
 
-*** xclip
+** xclip
 xclip is a command line interface to the X11 clipboard. It allows you to put the output of a command directly into the clipboard so that you don't have to copy&paste from the terminal manually (which can be a tedious task especially if the output is very long). It also allows you to put the contents of a file directly into the clipboard. 
 #+BEGIN_SRC shell
 sudo apt-get install -y xclip
 #+END_SRC
 + Ref: [[https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu][Command-Line Copy&Paste With xclip (Debian/Ubuntu)]]
 
-*** System Problem
-**** OS Information
+** System Problem
+*** OS Information
 =cat /etc/os-release=
 #+begin_src shell
 NAME="Ubuntu"
@@ -605,7 +653,7 @@ UBUNTU_CODENAME=focal
 
 <2021-03-20 Sat>
 
-**** Doesn't auto enable Bluetooth when system startup.
+*** Doesn't auto enable Bluetooth when system startup.
 18.04* users who don't naturally have a /etc/rc.local, you'll need to create one and make it executable. To make things slightly easier, you can just paste the following command into a terminal:
 #+begin_src shell
 sudo install -b -m 755 /dev/stdin /etc/rc.local << EOF
@@ -619,28 +667,28 @@ EOF
 
 <2021-03-18 Thu>
 
-**** System doesn't resume after suspend
+*** System doesn't resume after suspend
 [ =V= ] means it's work for me
 [ =X= ] means it's not work for me
 <2021-03-20 Sat>
 
-***** [ =X= ] Suspend and hibernate configuration in Debian Jessie
+**** [ =X= ] Suspend and hibernate configuration in Debian Jessie
 1. edit =/etc/systemd/logind.conf=
 2. create the file =/etc/systemd/system/suspend-sedation.service=
 
 Ref: https://wiki.debian.org/Hibernation
 Ref: https://wiki.debian.org/SystemdSuspendSedation
 
-***** [ =X= ] Hibernate with hibernate command
+**** [ =X= ] Hibernate with hibernate command
 #+begin_src shell
 sudo apt-get install hibernate
 sudo hibernate
 #+end_src
 
-***** [ =X= ] edit =/etc/systemd/logind.conf= 
+**** [ =X= ] edit =/etc/systemd/logind.conf= 
 Ref: https://askubuntu.com/a/1245763/1193335
 
-***** [ =X= ] edit =/etc/default/grub= file
+**** [ =X= ] edit =/etc/default/grub= file
 #+begin_src shell
 GRUB_CMDLINE_LINUX="nouveau.modeset=0"
 #+end_src
@@ -653,7 +701,7 @@ sudo reboot
 
 Ref: https://askubuntu.com/a/1041395/1193335
 
-***** [ =X= ] sudo apt-get install pm-utils
+**** [ =X= ] sudo apt-get install pm-utils
 I got a workaround for suspend working on Ubuntu 18.04 with a NVIDIA
 GeForce GTX 1050 Mobile and proprietary nvidia drivers 390. I installed
 pm-suspend via =sudo apt-get install pm-utils=. Then, I switch from
@@ -663,7 +711,7 @@ Shell via Ctrl+Alt+f1. Done!
 
 Ref: https://askubuntu.com/a/1081639/1193335
 
-***** [ =V= ] add-apt-repository ppa:graphics-drivers/ppa 
+**** [ =V= ] add-apt-repository ppa:graphics-drivers/ppa 
 #+begin_src shell
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
@@ -673,7 +721,7 @@ sudo reboot
 
 Ref: https://bugs.launchpad.net/ubuntu/+source/nvidia-graphics-drivers-460/+bug/1911055 #9
 
-***** [ =not test= ] edit =/etc/gdm3/custom.conf=
+**** [ =not test= ] edit =/etc/gdm3/custom.conf=
 If your desktop does not load after installing the corresponding driver, then do the following:
 =sudo nano /etc/gdm3/custom.conf=
 then remove the comment (# symbol) from the line that says 
@@ -682,9 +730,9 @@ and save. Then reboot. If this still does not work, then please disable Secure B
 
 Ref: https://askubuntu.com/a/61433/1193335 1. The quick way
 
-**** Change the login screen resolution in Ubuntu 20.04
+*** Change the login screen resolution in Ubuntu 20.04
 
-***** [ =X= ] edit =/etc/default/grub= file
+**** [ =X= ] edit =/etc/default/grub= file
 Step:
 1. Open a terminal and enter:
    #+begin_src shell
@@ -698,7 +746,7 @@ Step:
 
 Ref: https://askubuntu.com/a/1041697/1193335
 
-***** [ =V= ] edit =/etc/default/grub= file
+**** [ =V= ] edit =/etc/default/grub= file
 Just want to add that I found a way to change the login screen resolution. That part of my problem has been asked and answered, see [[https://askubuntu.com/questions/912052/how-do-i-change-gdm3-login-screen-resolution][how to change gdm3 thread]].
 
 After setting up the monitor resolution and zoom level I wanted, I simply copy the settings to gdm3 .config directory, make any further changes you need and then reboot the PC.
@@ -713,5 +761,8 @@ sudo dpkg-reconfigure gdm3
 
 Ref: https://askubuntu.com/a/1041697/1193335
 
-**** TODO Changing login background automatically
+*** TODO Changing login background automatically
 Ref: https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme-or-background-in-ubuntu-20-04
+
+*** Login Screen language doesn't Chinese
+Ref: [[https://www.arthurtoday.com/2015/02/how-to-make-ubuntu-terminal-speak-your-language.html][Ubuntu 用指令設定終端機顯示中文訊息]]

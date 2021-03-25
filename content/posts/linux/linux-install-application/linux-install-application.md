@@ -2,7 +2,7 @@
 title = "My Install Application in Linux"
 author = ["Shawn Dennis Lin"]
 date = 2021-03-16T00:00:00+08:00
-lastmod = 2021-03-21T18:17:36+08:00
+lastmod = 2021-03-25T11:40:57+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -162,6 +162,18 @@ bash install.sh &&\
 -   GitHub: <https://github.com/shdennlin/dotfiles>
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
+
+### draw.io {#draw-dot-io}
+
+```shell
+sudo snap install drawio
+```
+
+-   GitHub: <https://github.com/jgraph/drawio-desktop>
+-   Snapcraft: <https://snapcraft.io/drawio>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-23 Tue&gt;</span></span>  
 
 
 ### Emacs {#emacs}
@@ -508,6 +520,23 @@ systemctl status
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
 
 
+### NPM {#npm}
+
+```shell
+sudo apt install -y npm
+sudo npm i -g npm
+
+sudo npm install -g chokidar
+sudo npm install -g urix
+sudo npm install -g resolve-url
+
+
+sudo npm install -g vmd
+
+sudo npm audit fix
+```
+
+
 ### nomacs {#nomacs}
 
 nomacs is a free, open source image viewer, which supports multiple platforms. You can use it for viewing all common image formats including RAW and psd images.  
@@ -649,6 +678,32 @@ sudo apt install -y terminator
 -   My configuration: <https://github.com/shdennlin/dotfiles>
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
+
+### typora {#typora}
+
+Typora gives you a seamless experience as both a reader and a writer. It removes the preview window, mode switcher, syntax symbols of markdown source code, and all other unnecessary distractions. Instead, it provides a real live preview feature to help you concentrate on the content itself.  
+
+```shell
+# or run:
+# sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+
+# add Typora's repository
+
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+
+sudo apt-get update
+
+# install typora
+
+sudo apt-get install typora
+```
+
+-   Official Website: <https://typora.io/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-24 Wed&gt;</span></span>  
 
 
 ### update & upgrade {#update-and-upgrade}
@@ -926,4 +981,9 @@ EOF
 
 #### <span class="org-todo todo TODO">TODO</span> Changing login background automatically {#changing-login-background-automatically}
 
-Ref: <https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme-or-background-in-ubuntu-20-04>
+Ref: <https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme-or-background-in-ubuntu-20-04>  
+
+
+#### Login Screen language doesn't Chinese {#login-screen-language-doesn-t-chinese}
+
+Ref: [Ubuntu 用指令設定終端機顯示中文訊息](https://www.arthurtoday.com/2015/02/how-to-make-ubuntu-terminal-speak-your-language.html)
