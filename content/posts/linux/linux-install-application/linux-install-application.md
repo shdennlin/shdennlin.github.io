@@ -2,7 +2,7 @@
 title = "My Install Application in Linux"
 author = ["Shawn Dennis Lin"]
 date = 2021-03-16T00:00:00+08:00
-lastmod = 2021-03-25T11:40:57+08:00
+lastmod = 2021-03-25T13:53:00+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -504,6 +504,25 @@ sudo snap install musixmatch
 -   Ref: [Install Musixmatch on your Linux distribution](https://snapcraft.io/musixmatch)
 
 
+### MySQL {#mysql}
+
+```shell
+sudo apt-get install mysql-server
+sudo apt install mysql-client
+sudo apt install libmysqlclient-dev
+```
+
+check insall  
+
+```shell
+sudo netstat -tap | grep mysql
+```
+
+-   Ref: [Install Musixmatch on your Linux distribution](https://snapcraft.io/musixmatch)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-25 Thu&gt;</span></span>  
+
+
 ### <span class="org-todo todo TODO">TODO</span> NFS {#nfs}
 
 ```shell
@@ -986,4 +1005,17 @@ Ref: <https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme
 
 #### Login Screen language doesn't Chinese {#login-screen-language-doesn-t-chinese}
 
-Ref: [Ubuntu 用指令設定終端機顯示中文訊息](https://www.arthurtoday.com/2015/02/how-to-make-ubuntu-terminal-speak-your-language.html)
+Ref: [Ubuntu 用指令設定終端機顯示中文訊息](https://www.arthurtoday.com/2015/02/how-to-make-ubuntu-terminal-speak-your-language.html)  
+
+
+## Program Design {#program-design}
+
+
+### Ruby-RVM {#ruby-rvm}
+
+Ruby Version Manager (RVM)  
+
+RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems.  
+
+-   Official Website: <https://rvm.io/>
+-   Install tutorial: <https://rvm.io/rvm/install>

@@ -393,6 +393,22 @@ sudo snap install musixmatch
 + GitHub:   
 + Ref: [[https://snapcraft.io/musixmatch][Install Musixmatch on your Linux distribution]] 
 
+** MySQL
+#+BEGIN_SRC shell
+sudo apt-get install mysql-server
+sudo apt install mysql-client
+sudo apt install libmysqlclient-dev
+#+END_SRC
+
+check insall
+#+begin_src shell
+sudo netstat -tap | grep mysql
+#+end_src
+
++ Ref: [[https://snapcraft.io/musixmatch][Install Musixmatch on your Linux distribution]]
+
+<2021-03-25 Thu>
+
 ** TODO NFS
 #+begin_src shell
 sudo apt install -y nfs-kernel-server nfs-common
@@ -766,3 +782,29 @@ Ref: https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme-
 
 *** Login Screen language doesn't Chinese
 Ref: [[https://www.arthurtoday.com/2015/02/how-to-make-ubuntu-terminal-speak-your-language.html][Ubuntu 用指令設定終端機顯示中文訊息]]
+
+
+* Program Design
+** Ruby-RVM
+Ruby Version Manager (RVM)
+
+RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. 
+
+Install Step:
+1. To see =Install tutorial=
+2. after Install, type
+    #+begin_src sh
+    echo "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && . \"$HOME/.rvm/scripts/rvm\"" >> ~/.profile
+    #+end_src
+3. reboot
+
+
++ Official Website: https://rvm.io/
++ Install tutorial: https://rvm.io/rvm/install
+
+
+
+# + GitHub: 
+# + Official Website: https://rvm.io/
+# + Install tutorial: https://rvm.io/rvm/install
+# + Ref:
