@@ -2,7 +2,7 @@
 title = "My Install Application in Linux"
 author = ["Shawn Dennis Lin"]
 date = 2021-03-16T00:00:00+08:00
-lastmod = 2021-03-25T20:10:28+08:00
+lastmod = 2021-03-26T14:34:54+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -557,20 +557,24 @@ conda activate tf-gpu
 
 ### Java {#java}
 
-Preparation: Download jre-8u251-linux-x64.tar.gz  
-Download location: [Java Downloads for Linux](https://java.com/en/download/linux%5Fmanual.jsp)   
-
 ``````shell
-cd /usr &&\
-sudo mkdir java &&\
-cd java &&\
-sudo mv ~/Downloads/jre-8u251-linux-x64.tar.gz . &&\
-sudo tar zxvf jre-8u251-linux-x64.tar.gz &&\
-sudo rm -rf jre-8u251-linux-x64.tar.gz
+# install open JRE
+sudo apt install openjdk-8-jre
+# change default version in Ubuntu
+sudo update-alternatives --config java
+# check java version
+java -version
+# set JAVA_HOME environment variable
+echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/" >> ~/.bashrc
+echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
+echo $PATH | grep java
 ``````
 
--   Preparation: Download jre-8u251-linux-x64.tar.gz
--   Ref: [Java Downloads for Linux](https://java.com/en/download/linux%5Fmanual.jsp)
+-   Official Website: <https://www.oracle.com/java/>
+-   Install tutorial: <https://www.oracle.com/java/technologies/javase-downloads.html>
+-   Open JRE: <https://ubuntu.com/tutorials/install-jre>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;</span></span>  
 
 
 ### JavaScirpt-Node Package Manager(NPM) {#javascirpt-node-package-manager--npm}
@@ -641,6 +645,25 @@ sudo netstat -tap | grep mysql
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-25 Thu&gt;</span></span>  
 
 
+### Nginx {#nginx}
+
+Nginx (pronounced "engine X"), stylized as NGINX, nginx or NginX, is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004. Nginx is free and open-source software, released under the terms of the 2-clause BSD license. A large fraction of web servers use NGINX, often as a load balancer.  
+
+``````sh
+sudo apt-get install -y nginx
+sudo nginx -v
+sudo nginx
+curl -I 127.0.0.1
+``````
+
+-   GitHub: <https://github.com/nginx/nginx>
+-   Repository: <https://hg.nginx.org/nginx>
+-   Official Website: <https://www.nginx.com/>
+-   Install tutorial: <https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;</span></span>  
+
+
 ### Ruby-RVM {#ruby-rvm}
 
 Ruby Version Manager (RVM)  
@@ -655,7 +678,7 @@ Install Step:
     ``````sh
     echo "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && . \"$HOME/.rvm/scripts/rvm\"" >> ~/.profile
     ``````
-3.  reboot
+3.  reboot system
 
 <!--listend-->
 
@@ -671,6 +694,23 @@ wget http://tw.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_
 ``````
 
 -   Ref: [Installing TensorFlow 2 with GPU support on Ubuntu 20.04 LTS](https://illya13.github.io/RL/tutorial/2020/04/26/installing-tensorflow-on-ubuntu-20.html)
+
+
+### Redis {#redis}
+
+Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.  
+
+``````sh
+sudo add-apt-repository ppa:redislabs/redis &&\
+sudo apt-get update &&\
+sudo apt-get install -y redis
+``````
+
+-   GitHub: <https://github.com/redis/redis>
+-   Official Website: <https://redis.io/>
+-   Install tutorial: <https://redis.io/download>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt; </span></span>   
 
 
 ## Engineering Tool {#engineering-tool}
@@ -742,6 +782,52 @@ sudo snap install hugo
 -   GitHub: <https://github.com/gohugoio/hugo>
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
+
+### Elastic Search {#elastic-search}
+
+Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in Java and is dual-licensed under the source-available Server Side Public License and the Elastic license, while other parts fall under the proprietary (source-available) Elastic License. Official clients are available in Java, .NET (C#), PHP, Python, Apache Groovy, Ruby and many other languages. According to the DB-Engines ranking, Elasticsearch is the most popular enterprise search engine followed by Apache Solr, also based on Lucene.  
+
+``````sh
+# APT or YUM (RECOMMEND)(to see Install with Repositories)
+wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
+sudo apt-get update && sudo apt-get install elasticsearch
+whereis elasticsearch
+sudo update-rc.d elasticsearch defaults 95 10
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable elasticsearch.service
+
+# install manually
+cd ~/Downloads
+curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz
+tar -xvf elasticsearch-2.4.6.tar.gz
+cd elasticsearch-2.4.6/bin
+./elasticsearch
+./elasticsearch --cluster.name my_cluster_name --node.name my_node_name
+``````
+
+-   Official Website: <https://www.elastic.co/>
+-   Install tutorial: <https://www.elastic.co/guide/en/elasticsearch/reference/index.html>
+-   Install with Repositories: <https://www.elastic.co/guide/en/elasticsearch/reference/index.html>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;</span></span>  
+
+
+### Memcached {#memcached}
+
+Memcached is a high performance multithreaded event-based key/value cache store intended to be used in a distributed system.  
+
+``````sh
+sudo apt-get install libevent-dev
+sudo apt-get install memcached
+``````
+
+-   GitHub: <https://github.com/memcached/memcached>
+-   Official Website: <https://memcached.org/>
+-   Install tutorial: <https://github.com/memcached/memcached/wiki/Install>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;</span></span>  
 
 
 ## Terminal Tool {#terminal-tool}
@@ -896,6 +982,31 @@ sudo apt-get install -y xclip
 ``````
 
 -   Ref: [Command-Line Copy&Paste With xclip (Debian/Ubuntu)](https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu)
+
+
+### ImageMagick {#imagemagick}
+
+ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images. Created in 1987 by John Cristy, it can read and write over 200 image file formats. It and its components are widely used in open-source applications.  
+
+``````sh
+cd ~/Downloads &&\
+git clone --depth 1 https://github.com/ImageMagick/ImageMagick.git ImageMagick-7.0.11 &&\
+cd ImageMagick-7.0.11 &&\
+./configure &&\
+make
+
+./configure --with-modules
+sudo make install
+sudo ldconfig /usr/local/lib
+/usr/local/bin/convert logo: logo.gif
+magick identify -version
+``````
+
+-   GitHub: <https://github.com/ImageMagick/ImageMagick>
+-   Official Website: <https://imagemagick.org/index.php>
+-   Install tutorial: <https://imagemagick.org/script/install-source.php>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;  </span></span>    
 
 
 ## Life Tool {#life-tool}

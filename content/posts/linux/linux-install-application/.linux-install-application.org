@@ -448,18 +448,23 @@ conda create -n tf-gpu tensorflow-gpu
 conda activate tf-gpu
 #+END_SRC
 ** Java
-Preparation: Download jre-8u251-linux-x64.tar.gz
-Download location: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]] 
 #+BEGIN_SRC shell
-cd /usr &&\
-sudo mkdir java &&\
-cd java &&\
-sudo mv ~/Downloads/jre-8u251-linux-x64.tar.gz . &&\
-sudo tar zxvf jre-8u251-linux-x64.tar.gz &&\
-sudo rm -rf jre-8u251-linux-x64.tar.gz
+# install open JRE
+sudo apt install openjdk-8-jre
+# change default version in Ubuntu
+sudo update-alternatives --config java
+# check java version
+java -version
+# set JAVA_HOME environment variable
+echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/" >> ~/.bashrc
+echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
+echo $PATH | grep java
 #+END_SRC
-+ Preparation: Download jre-8u251-linux-x64.tar.gz
-+ Ref: [[https://java.com/en/download/linux_manual.jsp][Java Downloads for Linux]]  
++ Official Website: https://www.oracle.com/java/
++ Install tutorial: https://www.oracle.com/java/technologies/javase-downloads.html
++ Open JRE: https://ubuntu.com/tutorials/install-jre
+
+<2021-03-26 Fri>
 
 ** JavaScirpt-Node Package Manager(NPM)
 npm (originally short for Node Package Manager)[4] is a package manager for the JavaScript programming language. 
@@ -517,6 +522,22 @@ sudo netstat -tap | grep mysql
 
 <2021-03-25 Thu>
 
+** Nginx
+Nginx (pronounced "engine X"), stylized as NGINX, nginx or NginX, is a web server that can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and publicly released in 2004. Nginx is free and open-source software, released under the terms of the 2-clause BSD license. A large fraction of web servers use NGINX, often as a load balancer. 
+#+begin_src sh
+sudo apt-get install -y nginx
+sudo nginx -v
+sudo nginx
+curl -I 127.0.0.1
+#+end_src
+
++ GitHub: https://github.com/nginx/nginx
++ Repository: https://hg.nginx.org/nginx
++ Official Website: https://www.nginx.com/
++ Install tutorial: https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/
+
+<2021-03-26 Fri>
+
 ** Ruby-RVM
 Ruby Version Manager (RVM)
 
@@ -528,7 +549,7 @@ Install Step:
     #+begin_src sh
     echo "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && . \"$HOME/.rvm/scripts/rvm\"" >> ~/.profile
     #+end_src
-3. reboot
+3. reboot system
 
 
 + Official Website: https://rvm.io/
@@ -540,6 +561,19 @@ cd ~/Downloads
 wget http://tw.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run
 #+END_SRC
 + Ref: [[https://illya13.github.io/RL/tutorial/2020/04/26/installing-tensorflow-on-ubuntu-20.html][Installing TensorFlow 2 with GPU support on Ubuntu 20.04 LTS]] 
+
+** Redis
+Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.
+#+begin_src sh
+sudo add-apt-repository ppa:redislabs/redis &&\
+sudo apt-get update &&\
+sudo apt-get install -y redis
+#+end_src
++ GitHub: https://github.com/redis/redis
++ Official Website: https://redis.io/
++ Install tutorial: https://redis.io/download
+
+<2021-03-26 Fri> 
 
 * Engineering Tool
 ** Angry IP scanner
@@ -592,6 +626,46 @@ sudo snap install hugo
 + GitHub: [[https://github.com/gohugoio/hugo]]
 
 <2021-03-16 Tue>
+
+** Elastic Search
+Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents. Elasticsearch is developed in Java and is dual-licensed under the source-available Server Side Public License and the Elastic license, while other parts fall under the proprietary (source-available) Elastic License. Official clients are available in Java, .NET (C#), PHP, Python, Apache Groovy, Ruby and many other languages. According to the DB-Engines ranking, Elasticsearch is the most popular enterprise search engine followed by Apache Solr, also based on Lucene. 
+#+begin_src sh
+# APT or YUM (RECOMMEND)(to see Install with Repositories)
+wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
+sudo apt-get update && sudo apt-get install elasticsearch
+whereis elasticsearch
+sudo update-rc.d elasticsearch defaults 95 10
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable elasticsearch.service
+
+# install manually
+cd ~/Downloads
+curl -L -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.4.6/elasticsearch-2.4.6.tar.gz
+tar -xvf elasticsearch-2.4.6.tar.gz
+cd elasticsearch-2.4.6/bin
+./elasticsearch
+./elasticsearch --cluster.name my_cluster_name --node.name my_node_name
+#+end_src
+
++ Official Website: https://www.elastic.co/
++ Install tutorial: https://www.elastic.co/guide/en/elasticsearch/reference/index.html
++ Install with Repositories: https://www.elastic.co/guide/en/elasticsearch/reference/index.html
+
+<2021-03-26 Fri>
+
+** Memcached
+Memcached is a high performance multithreaded event-based key/value cache store intended to be used in a distributed system.
+#+begin_src sh
+sudo apt-get install libevent-dev
+sudo apt-get install memcached
+#+end_src
+
++ GitHub: https://github.com/memcached/memcached
++ Official Website: https://memcached.org/
++ Install tutorial: https://github.com/memcached/memcached/wiki/Install
+
+<2021-03-26 Fri>
 
 * Terminal Tool
 ** ag
@@ -709,6 +783,28 @@ xclip is a command line interface to the X11 clipboard. It allows you to put the
 sudo apt-get install -y xclip
 #+END_SRC
 + Ref: [[https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu][Command-Line Copy&Paste With xclip (Debian/Ubuntu)]]
+
+** ImageMagick
+ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images. Created in 1987 by John Cristy, it can read and write over 200 image file formats. It and its components are widely used in open-source applications. 
+#+begin_src sh
+cd ~/Downloads &&\
+git clone --depth 1 https://github.com/ImageMagick/ImageMagick.git ImageMagick-7.0.11 &&\
+cd ImageMagick-7.0.11 &&\
+./configure &&\
+make
+
+./configure --with-modules
+sudo make install
+sudo ldconfig /usr/local/lib
+/usr/local/bin/convert logo: logo.gif
+magick identify -version
+#+end_src
+
++ GitHub: https://github.com/ImageMagick/ImageMagick
++ Official Website: https://imagemagick.org/index.php
++ Install tutorial: https://imagemagick.org/script/install-source.php
+
+<2021-03-26 Fri>  
 
 * Life Tool
 ** BingWall - Bing wallpaper of the day
