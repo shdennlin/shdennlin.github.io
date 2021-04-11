@@ -2,7 +2,7 @@
 title = "My Install Application in Linux"
 author = ["Shawn Dennis Lin"]
 date = 2021-03-16T00:00:00+08:00
-lastmod = 2021-03-26T14:34:54+08:00
+lastmod = 2021-04-11T22:50:33+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -102,13 +102,23 @@ sudo apt-get install -y fcitx fcitx-table-boshiamy fcitx-chewing
 ### font {#font}
 
 ``````shell
-cd ~/Downloads &&\
-git clone https://github.com/shdennlin/linux-configuration.git &&\
-cd ~/Downloads/linux-configuration/fonts &&\
-bash install.sh
+# cd ~/Downloads &&\
+# git clone https://github.com/shdennlin/linux-configuration.git &&\
+# cd ~/Downloads/linux-configuration/fonts &&\
+# bash install.sh
+cd ~/Downloads
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts
+./install.sh
+
+sudo apt-get install fonts-powerline
+
+
 ``````
 
--   GitHub: [shdennlin/linux-configuration](https://github.com/shdennlin/linux-configuration)
+-   GitHub: <https://github.com/powerline/fonts>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-11 Sun&gt;</span></span>  
 
 
 ### GNOME {#gnome}
@@ -547,12 +557,38 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ### Anaconda {#anaconda}
 
 ``````shell
+## Install
+sudo apt-get install -y libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6
 cd ~/Downloads
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
-bash ~/Dwonloads/Anaconda3-2020.02-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+sh ~/Downloads/Anaconda3-2020.11-Linux-x86_64.sh
+
+
+## For Spacemacs
+# for import sorting
+pip install pyls-isort
+# for mypy checking (python 3.4+ is needed)
+pip install pyls-mypy
+pip install pyls-black
+# Syntax checking uses flake8 package: 
+pip install flake8
+# To be able to suppress unused imports easily
+pip install autoflake
+# To use dap-mode for debugging do: 
+pip install "ptvsd>=4.2"
+pip install importmagic epc
+
+echo "export PYTHONPATH=/home/$(whoami)/anaconda3/bin/" >> ~/.bashrc
+
+
 conda create -n tf-gpu tensorflow-gpu
 conda activate tf-gpu
 ``````
+
+-   Official Website: <https://docs.anaconda.com/>
+-   Install tutorial: <https://docs.anaconda.com/anaconda/install/linux/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-30 Tue&gt;</span></span>  
 
 
 ### Java {#java}
@@ -640,9 +676,19 @@ check insall
 sudo netstat -tap | grep mysql
 ``````
 
--   Ref: [Install Musixmatch on your Linux distribution](https://snapcraft.io/musixmatch)
-
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-25 Thu&gt;</span></span>  
+
+
+### phpMyAdmin {#phpmyadmin}
+
+``````sh
+sudo apt-get install phpmyadmin -y
+``````
+
+-   Official Website: <https://www.phpmyadmin.net/>
+-   Documentation: <https://docs.phpmyadmin.net/en/latest/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-01 Thu&gt;</span></span>  
 
 
 ### Nginx {#nginx}
@@ -656,10 +702,10 @@ sudo nginx
 curl -I 127.0.0.1
 ``````
 
--   GitHub: <https://github.com/nginx/nginx>
--   Repository: <https://hg.nginx.org/nginx>
--   Official Website: <https://www.nginx.com/>
--   Install tutorial: <https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/>
+-   GitHub: [https://github.com/nginx/nginx](https://github.com/nginx/nginx)
+-   Repository: [https://hg.nginx.org/nginx](https://hg.nginx.org/nginx)
+-   Official Website: [https://www.nginx.com/](https://www.nginx.com/)
+-   Install tutorial: [https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/](https://docs.nginx.com/nginx/admin-guide/installing-nginx/installing-nginx-open-source/)
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;</span></span>  
 
@@ -696,6 +742,15 @@ wget http://tw.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_
 -   Ref: [Installing TensorFlow 2 with GPU support on Ubuntu 20.04 LTS](https://illya13.github.io/RL/tutorial/2020/04/26/installing-tensorflow-on-ubuntu-20.html)
 
 
+### PHP {#php}
+
+``````sh
+sudo apt install php
+``````
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-01 Thu&gt;</span></span>  
+
+
 ### Redis {#redis}
 
 Redis is an in-memory database that persists on disk. The data model is key-value, but many different kind of values are supported: Strings, Lists, Sets, Sorted Sets, Hashes, Streams, HyperLogLogs, Bitmaps.  
@@ -711,6 +766,22 @@ sudo apt-get install -y redis
 -   Install tutorial: <https://redis.io/download>
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt; </span></span>   
+
+
+### Jenkins {#jenkins}
+
+``````sh
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > \
+    /etc/apt/sources.list.d/jenkins.list'
+sudo apt-get update
+sudo apt-get install jenkins
+``````
+
+-   Official Website: <https://www.jenkins.io/>
+-   Install tutorial: <https://www.jenkins.io/download/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-30 Tue&gt;</span></span>  
 
 
 ## Engineering Tool {#engineering-tool}
@@ -830,185 +901,6 @@ sudo apt-get install memcached
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;</span></span>  
 
 
-## Terminal Tool {#terminal-tool}
-
-
-### ag {#ag}
-
-A code searching tool similar to ack, with a focus on speed.  
-
-``````shell
-sudo apt-get install -y silversearcher-ag
-``````
-
--   GitHub: <https://github.com/ggreer/the%5Fsilver%5Fsearcher>
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
-
-
-### gdrive {#gdrive}
-
-``````shell
-cd ~/Downloads &&\
-wget -O drive https://drive.google.com/uc?id=0B3X9GlR6Embnb095MGxEYmJhY2c &&\
-sudo install drive /usr/local/bin/drive
-``````
-
--   GitHub: [prasmussen/gdrive](https://github.com/prasmussen/gdrive)
--   Ref: [如何在終端機介面使用 Google Drive (gdrive cmd)](https://hiraku.tw/2020/01/5894/)
-
-
-### Linux Advanced Power Management (TLP) {#linux-advanced-power-management--tlp}
-
-TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.  
-
-TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.  
-
-Nevertheless TLP is highly customizable to fulfil your specific requirements.  
-
-``````shell
-sudo add-apt-repository ppa:linrunner/tlp &&\
-sudo apt update &&\
-sudo apt install tlp tlp-rdw &&\
-sudo apt-get install smartmontools &&\
-sudo systemctl start tlp &&\
-sudo tlp-stat | less
-``````
-
--   Ref: [linux tlp tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial)
--   Ref: [TLP - Optimize Linux Laptop Battery Life](https://linrunner.de/tlp/)
-
-
-### lm Sensors {#lm-sensors}
-
-``````shell
-sudo apt install -y lm-sensors
-
-sudo sensors-detect
-
-sensors
-``````
-
--   Ref: [How to Install lm Sensors on Linux](https://linoxide.com/install-lm-sensors-linux/)
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
-
-
-### locate {#locate}
-
-``````shell
-sudo apt install -y mlocate
-``````
-
--   Ref: [搜尋指令 which, whereis, locate, find的差別](http://blog.faq-book.com/?p=1013)
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
-
-
-### rar, zip {#rar-zip}
-
-``````shell
-apt-get install -y unrar &&\
-sudo apt install -y p7zip-full
-``````
-
-
-### screenfetch {#screenfetch}
-
-screenFetch is a "Bash Screenshot Information Tool". This handy Bash script can be used to generate one of those nifty terminal theme information + ASCII distribution logos you see in everyone's screenshots nowadays. It will auto-detect your distribution and display an ASCII version of that distribution's logo and some valuable information to the right. There are options to specify no ASCII art, colors, taking a screenshot upon displaying info, and even customizing the screenshot command! This script is very easy to add to and can easily be extended.  
-
-``````shell
-sudo apt install screenfetch
-``````
-
--   GitHub: <https://github.com/KittyKatt/screenFetch>
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-25 Thu&gt;</span></span>  
-
-
-### Terminator {#terminator}
-
-Originally created and developed for a long time by Chris Jones, the goal of this project is to produce a useful tool for arranging terminals. It is inspired by programs such as gnome-multi-term, quadkonsole, etc. in that the main focus is arranging terminals in grids (tabs is the most common default method, which Terminator also supports).  
-
-Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)  
-
-``````shell
-sudo apt install -y terminator
-``````
-
--   Official Website: <https://gnometerminator.blogspot.com/>
--   Install tutorial: <https://gnometerminator.blogspot.com/p/introduction.html>
--   My configuration: <https://github.com/shdennlin/dotfiles>
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
-
-
-### top-bpytop {#top-bpytop}
-
-Resource monitor that shows usage and stats for processor, memory, disks, network and processes. Python port of bashtop.  
-
-``````shell
-cd ~/Downloads &&\
-git clone https://github.com/aristocratos/bpytop.git &&\
-cd bpytop &&\
-sudo make install
-``````
-
--   GitHub: <https://github.com/aristocratos/bpytop>
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
-
-
-### top-NVTOP {#top-nvtop}
-
-Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.  
-
-``````shell
-sudo apt install cmake libncurses5-dev libncursesw5-dev
-sudo apt install -y nvtop
-``````
-
--   GitHub: <https://github.com/Syllo/nvtop>
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
-
-
-### xclip {#xclip}
-
-xclip is a command line interface to the X11 clipboard. It allows you to put the output of a command directly into the clipboard so that you don't have to copy&paste from the terminal manually (which can be a tedious task especially if the output is very long). It also allows you to put the contents of a file directly into the clipboard.  
-
-``````shell
-sudo apt-get install -y xclip
-``````
-
--   Ref: [Command-Line Copy&Paste With xclip (Debian/Ubuntu)](https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu)
-
-
-### ImageMagick {#imagemagick}
-
-ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images. Created in 1987 by John Cristy, it can read and write over 200 image file formats. It and its components are widely used in open-source applications.  
-
-``````sh
-cd ~/Downloads &&\
-git clone --depth 1 https://github.com/ImageMagick/ImageMagick.git ImageMagick-7.0.11 &&\
-cd ImageMagick-7.0.11 &&\
-./configure &&\
-make
-
-./configure --with-modules
-sudo make install
-sudo ldconfig /usr/local/lib
-/usr/local/bin/convert logo: logo.gif
-magick identify -version
-``````
-
--   GitHub: <https://github.com/ImageMagick/ImageMagick>
--   Official Website: <https://imagemagick.org/index.php>
--   Install tutorial: <https://imagemagick.org/script/install-source.php>
-
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;  </span></span>    
-
-
 ## Life Tool {#life-tool}
 
 
@@ -1024,6 +916,23 @@ sudo snap install bing-wall
 -   GitHub: <https://github.com/keshavbhatt/BingWall>
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
+
+### Bitwarden {#bitwarden}
+
+``````sh
+# desktop application
+sudo snap install bitwarden
+
+# command-line tool(CLI)
+sudo npm install -g @bitwarden/cli
+``````
+
+-   GitHub: <https://github.com/bitwarden>
+-   Official Website: <https://bitwarden.com/>
+-   Install tutorial: <https://bitwarden.com/download/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-27 Sat&gt;</span></span>  
 
 
 ### Crow Translate {#crow-translate}
@@ -1165,6 +1074,26 @@ sudo apt install -y obs-studio
 -   Ref2: [9 Best Screen Recorders For Linux](https://itsfoss.com/best-linux-screen-recorders/)
 
 
+### Rclone {#rclone}
+
+``````sh
+curl https://rclone.org/install.sh | sudo bash
+rclone config
+
+# Mount Google drive Locally
+# https://www.youtube.com/watch?v=f8K-V3HHDA0
+rclone mount --daemon shdennlin: /home/shdennlin/gdrive-shdennlin/
+df -h
+``````
+
+-   GitHub: <https://github.com/rclone/rclone>
+-   Official Website: <https://rclone.org/>
+-   Install tutorial: <https://rclone.org/install/>
+-   Drive Install tutorial: <https://rclone.org/drive/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-27 Sat&gt;</span></span>  
+
+
 ### Spotify {#spotify}
 
 ``````shell
@@ -1175,6 +1104,253 @@ sudo snap install spotify
 -   Snapcraft: <https://snapcraft.io/spotify>
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt; </span></span>   
+
+
+## Terminal Tool {#terminal-tool}
+
+
+### ag {#ag}
+
+A code searching tool similar to ack, with a focus on speed.  
+
+``````shell
+sudo apt-get install -y silversearcher-ag
+``````
+
+-   GitHub: <https://github.com/ggreer/the%5Fsilver%5Fsearcher>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
+
+### gdrive {#gdrive}
+
+``````shell
+cd ~/Downloads &&\
+wget -O drive https://drive.google.com/uc?id=0B3X9GlR6Embnb095MGxEYmJhY2c &&\
+sudo install drive /usr/local/bin/drive
+``````
+
+-   GitHub: [prasmussen/gdrive](https://github.com/prasmussen/gdrive)
+-   Ref: [如何在終端機介面使用 Google Drive (gdrive cmd)](https://hiraku.tw/2020/01/5894/)
+
+
+### Linux Advanced Power Management (TLP) {#linux-advanced-power-management--tlp}
+
+TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.  
+
+TLP’s default settings are already optimized for battery life and implement Powertop’s recommendations out of the box. So you may just install and forget it.  
+
+Nevertheless TLP is highly customizable to fulfil your specific requirements.  
+
+``````shell
+sudo add-apt-repository ppa:linrunner/tlp &&\
+sudo apt update &&\
+sudo apt install tlp tlp-rdw &&\
+sudo apt-get install smartmontools &&\
+sudo systemctl start tlp &&\
+sudo tlp-stat | less
+``````
+
+-   Ref: [linux tlp tutorial](https://github.com/twtrubiks/linux-note/tree/master/linux-tlp-tutorial)
+-   Ref: [TLP - Optimize Linux Laptop Battery Life](https://linrunner.de/tlp/)
+
+
+### lm Sensors {#lm-sensors}
+
+``````shell
+sudo apt install -y lm-sensors
+
+sudo sensors-detect
+
+sensors
+``````
+
+-   Ref: [How to Install lm Sensors on Linux](https://linoxide.com/install-lm-sensors-linux/)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
+
+
+### locate {#locate}
+
+``````shell
+sudo apt install -y mlocate
+``````
+
+-   Ref: [搜尋指令 which, whereis, locate, find的差別](http://blog.faq-book.com/?p=1013)
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
+
+### rar, zip {#rar-zip}
+
+``````shell
+apt-get install -y unrar &&\
+sudo apt install -y p7zip-full
+``````
+
+
+### screenfetch {#screenfetch}
+
+screenFetch is a "Bash Screenshot Information Tool". This handy Bash script can be used to generate one of those nifty terminal theme information + ASCII distribution logos you see in everyone's screenshots nowadays. It will auto-detect your distribution and display an ASCII version of that distribution's logo and some valuable information to the right. There are options to specify no ASCII art, colors, taking a screenshot upon displaying info, and even customizing the screenshot command! This script is very easy to add to and can easily be extended.  
+
+``````shell
+sudo apt install screenfetch
+``````
+
+-   GitHub: <https://github.com/KittyKatt/screenFetch>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-25 Thu&gt;</span></span>  
+
+
+### Snap {#snap}
+
+``````sh
+sudo apt install snapd
+``````
+
+-   Ref: <https://codeburst.io/how-to-install-and-use-snap-on-ubuntu-18-04-9fcb6e3b34f9>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-28 Sun&gt;</span></span>  
+
+
+### Terminator {#terminator}
+
+Originally created and developed for a long time by Chris Jones, the goal of this project is to produce a useful tool for arranging terminals. It is inspired by programs such as gnome-multi-term, quadkonsole, etc. in that the main focus is arranging terminals in grids (tabs is the most common default method, which Terminator also supports).  
+
+Much of the behaviour of Terminator is based on GNOME Terminal, and we are adding more features from that as time goes by, but we also want to extend out in different directions with useful features for sysadmins and other users. If you have any suggestions, please file wishlist bugs! (see below for the address)  
+
+``````shell
+sudo apt install -y terminator
+``````
+
+-   Official Website: <https://gnometerminator.blogspot.com/>
+-   Install tutorial: <https://gnometerminator.blogspot.com/p/introduction.html>
+-   My configuration: <https://github.com/shdennlin/dotfiles>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
+
+### top-bpytop {#top-bpytop}
+
+Resource monitor that shows usage and stats for processor, memory, disks, network and processes. Python port of bashtop.  
+
+``````shell
+cd ~/Downloads &&\
+git clone https://github.com/aristocratos/bpytop.git &&\
+cd bpytop &&\
+sudo make install
+``````
+
+-   GitHub: <https://github.com/aristocratos/bpytop>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
+
+### top-NVTOP {#top-nvtop}
+
+Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.  
+
+``````shell
+sudo apt install cmake libncurses5-dev libncursesw5-dev
+sudo apt install -y nvtop
+``````
+
+-   GitHub: <https://github.com/Syllo/nvtop>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-18 Thu&gt;</span></span>  
+
+
+### xclip {#xclip}
+
+xclip is a command line interface to the X11 clipboard. It allows you to put the output of a command directly into the clipboard so that you don't have to copy&paste from the terminal manually (which can be a tedious task especially if the output is very long). It also allows you to put the contents of a file directly into the clipboard.  
+
+``````shell
+sudo apt-get install -y xclip
+``````
+
+-   Ref: [Command-Line Copy&Paste With xclip (Debian/Ubuntu)](https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu)
+
+
+### ImageMagick {#imagemagick}
+
+ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images. Created in 1987 by John Cristy, it can read and write over 200 image file formats. It and its components are widely used in open-source applications.  
+
+``````sh
+cd ~/Downloads &&\
+git clone --depth 1 https://github.com/ImageMagick/ImageMagick.git ImageMagick-7.0.11 &&\
+cd ImageMagick-7.0.11 &&\
+./configure &&\
+make
+
+./configure --with-modules
+sudo make install
+sudo ldconfig /usr/local/lib
+/usr/local/bin/convert logo: logo.gif
+magick identify -version
+``````
+
+-   GitHub: <https://github.com/ImageMagick/ImageMagick>
+-   Official Website: <https://imagemagick.org/index.php>
+-   Install tutorial: <https://imagemagick.org/script/install-source.php>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-26 Fri&gt;  </span></span>    
+
+
+### lighttpd {#lighttpd}
+
+``````nil
+sudo apt install lighttpd
+``````
+
+
+### ZSH {#zsh}
+
+``````sh
+# =============== install zsh ===============
+sudo apt install -y zsh
+
+# set zsh as default in user
+chsh -s $(which zsh)
+# logout GUI if you use GUI desktop
+# login
+echo $SHELL
+
+# set zsh as default in root
+sudo su
+chsh -s $(which zsh) root
+echo $SHELL
+
+# =============== install extension ===============
+# install ohmyzsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# install theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
+# install icon ====> to see font to install
+
+# alias
+echo "source $HOME/.aliases" >> ~/.zshrc
+# ====> install .aliases from my dot file
+
+# =============== install extension for root ===============
+sudo ln -s $HOME/.oh-my-zsh           /root/.oh-my-zsh
+sudo ln -s $HOME/.zshrc               /root/.zshrc
+sudo ln -s $HOME/.p10k.zsh            /root/.p10k.zsh
+``````
+
+-   Official Website: <https://www.zsh.org/>
+-   Oh My Zsh Official Website: <https://ohmyz.sh/>
+-   Oh My Zsh GitHub: <https://github.com/ohmyzsh/ohmyzsh>
+-   powerlevel10k GitHub: <https://github.com/romkatv/powerlevel10k>
+-   My zsh configuration:
+
+-   My Plugins  
+    1.  [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)  
+        `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
+    2.  [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
+    3.  [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)  
+        `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
 
 
 ## Communication {#communication}
@@ -1196,4 +1372,16 @@ sudo snap install discord
 
 -   Ref: [如何在 Ubuntu 20.04 中安裝 LINE 通訊軟體](https://tedliou.com/archives/howto-install-line-on-ubuntu-20-04/)
 
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+
+
+### Telegram Desktop {#telegram-desktop}
+
+``````sh
+sudo snap install telegram-desktop
+``````
+
+-   Official Website: <https://telegram.org/>
+-   Snapcraft: <https://snapcraft.io/telegram-desktop>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-29 Mon&gt;</span></span>
