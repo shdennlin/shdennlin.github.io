@@ -369,6 +369,20 @@ Ref: https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme-
 *** Login Screen language doesn't Chinese
 Ref: [[https://www.arthurtoday.com/2015/02/how-to-make-ubuntu-terminal-speak-your-language.html][Ubuntu 用指令設定終端機顯示中文訊息]]
 
+*** 解決Linux系統的中文變成細明體或是標楷體的問題
+#+begin_src sh
+sudo apt-get remove fonts-arphic-ukai fonts-arphic-uming
+#+end_src
+Ref: [[https://magiclen.org/linux-font-remove-kai/][解決Linux系統的中文變成細明體或是標楷體的問題]]
+
+*** Fix time modification on your computer with dual boot (Windows 10 and Ubuntu 20.04) 
+#+begin_src sh
+timedatectl
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+#+end_src
+Ref: [[https://ourcodeworld.com/articles/read/1063/how-to-fix-time-modification-on-your-computer-with-dual-boot-windows-10-and-ubuntu-18-04][How to fix time modification on your computer with dual boot (Windows 10 and Ubuntu 18.04)]]
+
 * Editor & IDE
 ** Emacs
 An extensible, customizable, free/libre text editor — and more.
@@ -891,14 +905,73 @@ sudo snap install spotify
 <2021-03-19 Fri> 
   
 * Terminal Tool
-** ag
+** aria2
+aria2 is a lightweight multi-protocol & multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.
+#+BEGIN_SRC shell
+sudo apt-get install -y aria2
+#+END_SRC
++ GitHub: https://github.com/aria2/aria2
++ Official Website: https://aria2.github.io/
+ 
+<2021-04-17 Sat>
+
+** autojump
+a faster way to navigate your filesystem
+#+BEGIN_SRC shell
+sudo apt install autojump
+#+END_SRC
++ GitHub: https://github.com/wting/autojump
+ 
+<2021-04-17 Sat>
+
+** exa & bat
+*exa*
+exa is a modern replacement for ls.
+#+BEGIN_SRC shell
+# ubuntu 20.10 and later
+sudo apt install exa
+# ubuntu 20.10 before
+curl https://sh.rustup.rs -sSf | sh
+cargo install exa
+#+END_SRC
++ GitHub: https://github.com/ogham/exa
++ Official Website: https://the.exa.website/
++ Install tutorial: https://the.exa.website/install
+
+*bat*
+A code searching tool similar to ack, with a focus on speed.
+#+BEGIN_SRC shell
+sudo apt install -y bat
+#+END_SRC
++ GitHub: https://github.com/sharkdp/bat
+ 
+<2021-04-17 Sat>
+  
+** fd & ag
+*fd*
+fd is a program to find entries in your filesytem. It is a simple, fast and user-friendly alternative to find. While it does not aim to support all of find's powerful functionality, it provides sensible (opinionated) defaults for a majority of use cases.
+#+BEGIN_SRC shell
+sudo apt install fd-find
+#+END_SRC
++ GitHub: https://github.com/sharkdp/fd
+
+*ag*
 A code searching tool similar to ack, with a focus on speed.
 #+BEGIN_SRC shell
 sudo apt-get install -y silversearcher-ag
 #+END_SRC
 + GitHub: https://github.com/ggreer/the_silver_searcher
  
-<2021-03-16 Tue>
+<2021-04-17 Sat>
+  
+** fzf
+fzf is a general-purpose command-line fuzzy finder.
+#+BEGIN_SRC shell
+sudo apt-get install fzf
+#+END_SRC
++ GitHub: https://github.com/junegunn/fzf
+ 
+<2021-04-17 Sat>
   
 ** gdrive
 #+BEGIN_SRC shell
@@ -908,6 +981,16 @@ sudo install drive /usr/local/bin/drive
 #+END_SRC
 + GitHub: [[https://github.com/prasmussen/gdrive][prasmussen/gdrive]]  
 + Ref: [[https://hiraku.tw/2020/01/5894/][如何在終端機介面使用 Google Drive (gdrive cmd)]] 
+
+** jq
+Command-line JSON processor 
+#+BEGIN_SRC shell
+sudo apt-get install -y jq
+#+END_SRC
++ GitHub: https://github.com/stedolan/jq
++ Official Website: https://stedolan.github.io/jq/
+ 
+<2021-04-17 Sat>
 
 ** Linux Advanced Power Management (TLP)
 TLP is a feature-rich command line utility for Linux, saving laptop battery power without the need to delve deeper into technical details.
@@ -948,6 +1031,24 @@ sudo apt install -y mlocate
 + Ref: [[http://blog.faq-book.com/?p=1013][搜尋指令 which, whereis, locate, find的差別]]
 
 <2021-03-19 Fri>
+
+** mosh
+Mosh is a remote terminal application that supports intermittent connectivity, allows roaming, and provides speculative local echo and line editing of user keystrokes.
+#+BEGIN_SRC shell
+sudo apt-get install mosh
+#+END_SRC
++ GitHub: https://github.com/mobile-shell/mosh
++ Official Website: https://mosh.org/
+ 
+<2021-04-17 Sat>
+
+** NCdU
+Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a remote server where you don't have an entire graphical setup available, but it is a useful tool even on regular desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like environment with ncurses installed.
+#+begin_src sh
+sudo apt install ncdu
+#+end_src
+
+<2021-04-17 Sat>
 
 ** rar, zip
 #+BEGIN_SRC shell
@@ -1081,14 +1182,20 @@ sudo ln -s $HOME/.p10k.zsh            /root/.p10k.zsh
 + Oh My Zsh Official Website: https://ohmyz.sh/
 + Oh My Zsh GitHub: [[https://github.com/ohmyzsh/ohmyzsh]]
 + powerlevel10k GitHub: https://github.com/romkatv/powerlevel10k
-+ My zsh configuration:
++ My zsh configuration: https://github.com/shdennlin/dotfiles/blob/main/.zshrc
 
-+ My Plugins
++ My Plugins by manual install
   1. [[https://github.com/zsh-users/zsh-autosuggestions][zsh-autosuggestions]]
      ~git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions~
-  2. [[https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found][command-not-found]]
-  3. [[https://github.com/zsh-users/zsh-syntax-highlighting][zsh-syntax-highlighting]]
+  2. [[https://github.com/zsh-users/zsh-syntax-highlighting][zsh-syntax-highlighting]]
      ~git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting~
+  3. [[https://github.com/wting/autojump][autojump]]
+     ~sudo apt install autojump~
+  4. [[https://github.com/zsh-users/zsh-completions][zsh-completions]]
+     ~git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions~
+  5. [[https://github.com/junegunn/fzf][fzf]]
+     ~sudo apt-get install fzf~
+
 
 # + powerlevel10k: yyyy121223422n1
 

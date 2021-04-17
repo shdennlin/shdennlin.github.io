@@ -2,7 +2,7 @@
 title = "My Install Application in Linux"
 author = ["Shawn Dennis Lin"]
 date = 2021-03-16T00:00:00+08:00
-lastmod = 2021-04-11T22:50:33+08:00
+lastmod = 2021-04-17T21:37:28+08:00
 tags = ["linux"]
 categories = ["OS"]
 draft = false
@@ -443,6 +443,26 @@ Ref: <https://askubuntu.com/questions/1227070/how-do-i-change-login-screen-theme
 #### Login Screen language doesn't Chinese {#login-screen-language-doesn-t-chinese}
 
 Ref: [Ubuntu 用指令設定終端機顯示中文訊息](https://www.arthurtoday.com/2015/02/how-to-make-ubuntu-terminal-speak-your-language.html)  
+
+
+#### 解決Linux系統的中文變成細明體或是標楷體的問題 {#解決linux系統的中文變成細明體或是標楷體的問題}
+
+``````sh
+sudo apt-get remove fonts-arphic-ukai fonts-arphic-uming
+``````
+
+Ref: [解決Linux系統的中文變成細明體或是標楷體的問題](https://magiclen.org/linux-font-remove-kai/)  
+
+
+#### Fix time modification on your computer with dual boot (Windows 10 and Ubuntu 20.04) {#fix-time-modification-on-your-computer-with-dual-boot--windows-10-and-ubuntu-20-dot-04}
+
+``````sh
+timedatectl
+timedatectl set-local-rtc 1 --adjust-system-clock
+timedatectl
+``````
+
+Ref: [How to fix time modification on your computer with dual boot (Windows 10 and Ubuntu 18.04)](https://ourcodeworld.com/articles/read/1063/how-to-fix-time-modification-on-your-computer-with-dual-boot-windows-10-and-ubuntu-18-04)  
 
 
 ## Editor & IDE {#editor-and-ide}
@@ -1109,8 +1129,74 @@ sudo snap install spotify
 ## Terminal Tool {#terminal-tool}
 
 
-### ag {#ag}
+### aria2 {#aria2}
 
+aria2 is a lightweight multi-protocol & multi-source command-line download utility. It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. aria2 can be manipulated via built-in JSON-RPC and XML-RPC interfaces.  
+
+``````shell
+sudo apt-get install -y aria2
+``````
+
+-   GitHub: <https://github.com/aria2/aria2>
+-   Official Website: <https://aria2.github.io/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-17 Sat&gt;</span></span>  
+
+
+### autojump {#autojump}
+
+a faster way to navigate your filesystem  
+
+``````shell
+sudo apt install autojump
+``````
+
+-   GitHub: <https://github.com/wting/autojump>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-17 Sat&gt;</span></span>  
+
+
+### exa & bat {#exa-and-bat}
+
+**exa**  
+exa is a modern replacement for ls.  
+
+``````shell
+# ubuntu 20.10 and later
+sudo apt install exa
+# ubuntu 20.10 before
+curl https://sh.rustup.rs -sSf | sh
+cargo install exa
+``````
+
+-   GitHub: <https://github.com/ogham/exa>
+-   Official Website: <https://the.exa.website/>
+-   Install tutorial: <https://the.exa.website/install>
+
+**bat**  
+A code searching tool similar to ack, with a focus on speed.  
+
+``````shell
+sudo apt install -y bat
+``````
+
+-   GitHub: <https://github.com/sharkdp/bat>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-17 Sat&gt;</span></span>  
+
+
+### fd & ag {#fd-and-ag}
+
+**fd**  
+fd is a program to find entries in your filesytem. It is a simple, fast and user-friendly alternative to find. While it does not aim to support all of find's powerful functionality, it provides sensible (opinionated) defaults for a majority of use cases.  
+
+``````shell
+sudo apt install fd-find
+``````
+
+-   GitHub: <https://github.com/sharkdp/fd>
+
+**ag**  
 A code searching tool similar to ack, with a focus on speed.  
 
 ``````shell
@@ -1119,7 +1205,20 @@ sudo apt-get install -y silversearcher-ag
 
 -   GitHub: <https://github.com/ggreer/the%5Fsilver%5Fsearcher>
 
-<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-16 Tue&gt;</span></span>  
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-17 Sat&gt;</span></span>  
+
+
+### fzf {#fzf}
+
+fzf is a general-purpose command-line fuzzy finder.  
+
+``````shell
+sudo apt-get install fzf
+``````
+
+-   GitHub: <https://github.com/junegunn/fzf>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-17 Sat&gt;</span></span>  
 
 
 ### gdrive {#gdrive}
@@ -1132,6 +1231,20 @@ sudo install drive /usr/local/bin/drive
 
 -   GitHub: [prasmussen/gdrive](https://github.com/prasmussen/gdrive)
 -   Ref: [如何在終端機介面使用 Google Drive (gdrive cmd)](https://hiraku.tw/2020/01/5894/)
+
+
+### jq {#jq}
+
+Command-line JSON processor  
+
+``````shell
+sudo apt-get install -y jq
+``````
+
+-   GitHub: <https://github.com/stedolan/jq>
+-   Official Website: <https://stedolan.github.io/jq/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-17 Sat&gt;</span></span>  
 
 
 ### Linux Advanced Power Management (TLP) {#linux-advanced-power-management--tlp}
@@ -1179,6 +1292,31 @@ sudo apt install -y mlocate
 -   Ref: [搜尋指令 which, whereis, locate, find的差別](http://blog.faq-book.com/?p=1013)
 
 <span class="timestamp-wrapper"><span class="timestamp">&lt;2021-03-19 Fri&gt;</span></span>  
+
+
+### mosh {#mosh}
+
+Mosh is a remote terminal application that supports intermittent connectivity, allows roaming, and provides speculative local echo and line editing of user keystrokes.  
+
+``````shell
+sudo apt-get install mosh
+``````
+
+-   GitHub: <https://github.com/mobile-shell/mosh>
+-   Official Website: <https://mosh.org/>
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-17 Sat&gt;</span></span>  
+
+
+### NCdU {#ncdu}
+
+Ncdu is a disk usage analyzer with an ncurses interface. It is designed to find space hogs on a remote server where you don't have an entire graphical setup available, but it is a useful tool even on regular desktop systems. Ncdu aims to be fast, simple and easy to use, and should be able to run in any minimal POSIX-like environment with ncurses installed.  
+
+``````sh
+sudo apt install ncdu
+``````
+
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-04-17 Sat&gt;</span></span>  
 
 
 ### rar, zip {#rar-zip}
@@ -1343,14 +1481,19 @@ sudo ln -s $HOME/.p10k.zsh            /root/.p10k.zsh
 -   Oh My Zsh Official Website: <https://ohmyz.sh/>
 -   Oh My Zsh GitHub: <https://github.com/ohmyzsh/ohmyzsh>
 -   powerlevel10k GitHub: <https://github.com/romkatv/powerlevel10k>
--   My zsh configuration:
+-   My zsh configuration: <https://github.com/shdennlin/dotfiles/blob/main/.zshrc>
 
--   My Plugins  
+-   My Plugins by manual install  
     1.  [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)  
         `git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions`
-    2.  [command-not-found](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/command-not-found)
-    3.  [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)  
+    2.  [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)  
         `git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting`
+    3.  [autojump](https://github.com/wting/autojump)  
+        `sudo apt install autojump`
+    4.  [zsh-completions](https://github.com/zsh-users/zsh-completions)  
+        `git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions`
+    5.  [fzf](https://github.com/junegunn/fzf)  
+        `sudo apt-get install fzf`
 
 
 ## Communication {#communication}
