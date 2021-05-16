@@ -423,12 +423,17 @@ Spacemacs can be used naturally by both Emacs and Vim users -- you can even mix 
 
 Spacemacs is currently in beta, and contributions are very welcome.
 #+BEGIN_SRC shell
+# spacemacs
 git clone https://github.com/syl20bnr/spacemacs.git ~/.emacs.d &&\
+# my spzcemacs config
 git clone https://github.com/shdennlin/spacemacs-private.git ~/.spacemacs.d
+# fzf layer
+git clone git@github.com:ashyisme/fzf-spacemacs-layer.git ~/.emacs.d/private/fzf
 #+END_SRC
-+ GitHub1: [[https://github.com/syl20bnr/spacemacs][syl20bnr/spacemacs]] 
-+ GitHub2: [[https://github.com/shdennlin/spacemacs-private][shdennlin/spacemacs-private]] 
-+ Ref: [[https://www.spacemacs.org/][spacemacs.org]]  
++ GitHub(spacemacs): https://github.com/syl20bnr/spacemacs
++ GitHub(my spacemacs config): https://github.com/shdennlin/spacemacs-private
++ GitHub(fzf layer): https://github.com/AshyIsMe/fzf-spacemacs-layer
++ Ref: https://develop.spacemacs.org/
 
 <2021-03-19 Fri>
 
@@ -487,8 +492,10 @@ pip install autoflake
 # To use dap-mode for debugging do: 
 pip install "ptvsd>=4.2"
 pip install importmagic epc
+# anaconda company-jedi upgrade 
+pip install jedi --upgrade
 
-echo "export PYTHONPATH=/home/$(whoami)/anaconda3/bin/" >> ~/.bashrc
+# echo "export PYTHONPATH=/home/$(whoami)/anaconda3/bin/" >> ~/.bashrc
 
 
 conda create -n tf-gpu tensorflow-gpu
@@ -655,6 +662,47 @@ sudo apt-get install jenkins
 
 <2021-03-30 Tue>
 
+** ImageMagick
+ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images. Created in 1987 by John Cristy, it can read and write over 200 image file formats. It and its components are widely used in open-source applications. 
+#+begin_src sh
+cd ~/Downloads
+git clone --depth 1 https://github.com/ImageMagick/ImageMagick.git ImageMagick-7.0.11
+cd ImageMagick-7.0.11
+./configure --with-modules
+make
+sudo make install
+sudo ldconfig /usr/local/lib
+/usr/local/bin/convert logo: logo.gif
+make check
+
+# check
+magick identify -version
+#+end_src
+
++ GitHub: https://github.com/ImageMagick/ImageMagick
++ Official Website: https://imagemagick.org/index.php
++ Install tutorial: https://imagemagick.org/script/install-source.php
+
+<2021-05-12 Wed>  
+
+** Ghostscript
+Ghostscript is an interpreter for the PostScript®  language and PDF files. It is available under either the GNU GPL Affero license or  licensed for commercial use from Artifex Software, Inc. It has been under active development for over 30 years and has been ported to several different systems during this time. Ghostscript consists of a PostScript interpreter layer and a graphics library.
+#+begin_src sh
+wget https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/download/gs9540/ghostscript-9.54.0-linux-x86_64.tgz
+tar -xvzf ghostscript-9.54.0-linux-x86_64.tgz
+rm -rf ghostscript-9.54.0-linux-x86_64.tgz
+cd ghostscript-9.54.0-linux-x86_64.tgz
+./configure
+make 
+sudo make install
+#+end_src
+
++ GitHub: 
++ Official Website: https://www.ghostscript.com/
++ Install tutorial: 
+
+<2021-05-12 Wed>  
+
 * Engineering Tool
 ** Angry IP scanner
 Angry IP Scanner - fast and friendly network scanner 
@@ -810,6 +858,36 @@ sudo apt install fsearch-trunk
 
 + GitHub: [[https://github.com/cboxdoerfer/fsearch][cboxdoerfer/fsearch]] 
   
+** libinput-gestures & gestures
+#+BEGIN_SRC shell
+## libinput-gestures
+sudo gpasswd -a $USER input
+sudo apt-get install libinput-tools
+
+cd ~/Downloads
+git clone git@github.com:bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo make install
+
+libinput-gestures-setup autostart
+libinput-gestures-setup start
+
+## gestures
+sudo apt install python3 python3-gi python-gobject meson xdotool libinput-tools gettext
+cd ~/Downloads
+git clone https://gitlab.com/cunidev/gestures.git
+cd gestures
+meson build --prefix=/usr
+ninja -C build
+sudo ninja -C build install
+#+END_SRC
++ libinput-gestures: https://github.com/bulletmark/libinput-gestures
++ gestures: https://gitlab.com/cunidev/gestures
++ xdotool list of key codes: https://gitlab.com/cunidev/gestures/-/wikis/xdotool-list-of-key-codes
++ Flathub: https://flathub.org/apps/details/com.gitlab.cunidev.Gestures
+
+<2021-05-10 Mon>
+
 ** linux-wifi-hotspot
 Feature-rich wifi hotspot creator for Linux which provides both GUI and command-line interface. It is also able to create a hotspot using the same wifi card which is connected to an AP already ( Similar to Windows 10).
 #+BEGIN_SRC shell
@@ -893,6 +971,15 @@ df -h
 + Drive Install tutorial: https://rclone.org/drive/
 
 <2021-03-27 Sat>
+
+** Remmina
+#+begin_src sh
+sudo apt install -y remmina remmina-plugin-vnc
+#+end_src
+
++ Ref: https://www.linuxtechi.com/access-remote-windows-desktop-ubuntu/
+
+<2021-04-29 Thu>
 
 ** Spotify
 #+BEGIN_SRC shell
@@ -1117,27 +1204,31 @@ sudo apt-get install -y xclip
 #+END_SRC
 + Ref: [[https://www.howtoforge.com/command-line-copy-and-paste-with-xclip-debian-ubuntu][Command-Line Copy&Paste With xclip (Debian/Ubuntu)]]
 
-** ImageMagick
-ImageMagick is a free and open-source cross-platform software suite for displaying, creating, converting, modifying, and editing raster images. Created in 1987 by John Cristy, it can read and write over 200 image file formats. It and its components are widely used in open-source applications. 
-#+begin_src sh
-cd ~/Downloads &&\
-git clone --depth 1 https://github.com/ImageMagick/ImageMagick.git ImageMagick-7.0.11 &&\
-cd ImageMagick-7.0.11 &&\
-./configure &&\
-make
+** xxh
+:rocket: Bring your favorite shell wherever you go through the ssh.
+#+BEGIN_SRC sh
+## install xxh
+# pip3
+pip3 install xxh-xxh
+# or Linux portable binary
+mkdir ~/xxh && cd ~/xxh
+wget https://github.com/xxh/xxh/releases/download/0.8.7/xxh-portable-musl-alpine-Linux-x86_64.tar.gz
+tar -xzf xxh-portable-musl-alpine-Linux-x86_64.tar.gz
+./xxh
 
-./configure --with-modules
-sudo make install
-sudo ldconfig /usr/local/lib
-/usr/local/bin/convert logo: logo.gif
-magick identify -version
-#+end_src
+# Oh My Zsh plugin for xxh-shell-zsh. 
+xxh +I xxh-plugin-zsh-ohmyzsh
 
-+ GitHub: https://github.com/ImageMagick/ImageMagick
-+ Official Website: https://imagemagick.org/index.php
-+ Install tutorial: https://imagemagick.org/script/install-source.php
+# powerlevel10k xxh plugin for xxh-shell-zsh.
+xxh +I xxh-plugin-zsh-powerlevel10k
 
-<2021-03-26 Fri>  
+# first Connect
+xxh <yourhost> +s zsh +i
+
+#+END_SRC
++ GitHub: https://github.com/xxh/xxh
+
+<2021-05-12 Wed>
 
 ** lighttpd
 #+begin_src 
@@ -1149,7 +1240,7 @@ sudo apt install lighttpd
 sudo apt install -y zsh
 
 # set zsh as default in user
-chsh -s $(which zsh)
+sudo chsh -s /bin/zsh $USER
 # logout GUI if you use GUI desktop
 # login
 echo $SHELL
@@ -1195,9 +1286,11 @@ sudo ln -s $HOME/.p10k.zsh            /root/.p10k.zsh
      ~git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions~
   5. [[https://github.com/junegunn/fzf][fzf]]
      ~sudo apt-get install fzf~
+  6. [[https://github.com/guiferpa/aterminal][aterminal]]
+     ~bash < <(curl -s -S -L https://raw.githubusercontent.com/guiferpa/aterminal/master/installer.sh)~
+     
 
-
-# + powerlevel10k: yyyy121223422n1
+# + powerlevel10k: yyyy121223412n1(y)
 
 * Communication
 ** Discord
